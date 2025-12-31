@@ -1,0 +1,99 @@
+{
+  "digital_marble_collection": {
+    "description": "Simplicity Agency - Digital Marble Visual Identity Prompts",
+    "created": "2024-12",
+    "concept": "Classical Wisdom Meets Digital Innovation"
+  },
+  "prompts": {
+    "the_strategist": {
+      "name": "The Strategist",
+      "level": 2,
+      "use_case": "Hero images, homepage, presentations",
+      "fal_config": {
+        "prompt": "Greek marble bust statue of a philosopher wearing minimalist matte black wireless earbuds, contemplative upward gaze, dramatic chiaroscuro lighting from upper left, subtle golden rim light, dark charcoal gray background with very faint floating golden data particles, blend of classical antiquity and modern technology, museum quality marble texture, high detail, photorealistic, 8k resolution, premium boutique aesthetic, elegant and sophisticated",
+        "image_size": "landscape_16_9",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    },
+    "the_visionary": {
+      "name": "The Visionary",
+      "level": 3,
+      "use_case": "AI campaigns, innovation, technology",
+      "fal_config": {
+        "prompt": "Roman marble statue profile wearing translucent AR smart glasses displaying subtle holographic data, serene contemplative expression, dramatic side lighting with cyan digital glow, dark luxurious background, golden circuit patterns barely visible on classical draped fabric, fusion of ancient wisdom and future technology, premium aesthetic, photorealistic, 8k",
+        "image_size": "landscape_16_9",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    },
+    "the_builder": {
+      "name": "The Builder",
+      "level": 2,
+      "use_case": "Services page, growth ads",
+      "fal_config": {
+        "prompt": "Classical marble sculpture hands elegantly holding a sleek modern tablet showing growth chart graphics, minimalist composition, dramatic top-down lighting, dark background with subtle golden particles, blend of timeless craftsmanship and digital tools, museum quality, photorealistic, premium boutique aesthetic, 8k",
+        "image_size": "square_hd",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    },
+    "wisdom_speaks": {
+      "name": "Wisdom Speaks",
+      "level": 1,
+      "use_case": "Instagram posts, quotes, educational content",
+      "fal_config": {
+        "prompt": "Close-up of Greek marble statue face focusing on mouth and chin, dramatic lighting, dark background with very subtle floating data particles emanating from lips like digital words, classical meets digital concept, high detail marble texture, premium aesthetic, photorealistic, square format, 8k",
+        "image_size": "square_hd",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    },
+    "connected_minds": {
+      "name": "Connected Minds",
+      "level": 2,
+      "use_case": "Collaboration, networking, community",
+      "fal_config": {
+        "prompt": "Two Greek marble busts in profile facing each other, connected by subtle golden neural network lines between them, dramatic lighting on faces, dark background, representing connection and collaboration, classical sculptures with digital connection, museum quality, photorealistic, 8k, landscape format",
+        "image_size": "landscape_16_9",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    },
+    "digital_fragment": {
+      "name": "Digital Fragment",
+      "level": 1,
+      "use_case": "Decorative elements, overlays",
+      "fal_config": {
+        "prompt": "Fragment of classical marble hand with partially visible golden circuit pattern integrated into the stone, isolated on pure black background, dramatic lighting, high contrast, suitable for transparent overlay, museum quality marble texture, 8k detail",
+        "image_size": "square_hd",
+        "num_images": 1,
+        "enable_safety_checker": true,
+        "safety_tolerance": "2",
+        "guidance_scale": 7.5,
+        "num_inference_steps": 50
+      }
+    }
+  },
+  "recommended_models": [
+    "fal-ai/flux-pro/v1.1",
+    "fal-ai/flux/dev",
+    "fal-ai/recraft-v3"
+  ],
+  "api_endpoint": "https://fal.run/{model_id}"
+}

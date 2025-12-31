@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marble Generator - Simplicity Agency</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #0f0f1a 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #C9A227, #E8D5A3);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .subtitle {
+            color: #888;
+            margin-bottom: 40px;
+            font-size: 1.1rem;
+        }
+        .prompt-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(201, 162, 39, 0.3);
+            border-radius: 12px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .prompt-card h2 {
+            color: #C9A227;
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+        .prompt-card p {
+            color: #aaa;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+        .prompt-text {
+            background: #0a0a14;
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 20px;
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            color: #e0e0e0;
+            margin-bottom: 15px;
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        .btn-group {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .btn-copy {
+            background: #C9A227;
+            color: #000;
+        }
+        .btn-copy:hover {
+            background: #E8D5A3;
+            transform: translateY(-2px);
+        }
+        .btn-link {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .btn-link:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .platforms {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 40px;
+        }
+        .platform-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .platform-card:hover {
+            border-color: #C9A227;
+            transform: translateY(-3px);
+        }
+        .platform-card h3 {
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        .platform-card a {
+            color: #C9A227;
+            text-decoration: none;
+        }
+        .platform-card a:hover {
+            text-decoration: underline;
+        }
+        .copied {
+            background: #22c55e !important;
+        }
+        .level-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            margin-left: 10px;
+        }
+        .level-1 { background: rgba(34, 197, 94, 0.2); color: #22c55e; }
+        .level-2 { background: rgba(201, 162, 39, 0.2); color: #C9A227; }
+        .level-3 { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+        footer {
+            margin-top: 60px;
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Marble Generator</h1>
+        <p class="subtitle">Prompts listos para generar la nueva identidad visual de Simplicity Agency</p>
+
+        <!-- Hero Prompt -->
+        <div class="prompt-card">
+            <h2>The Strategist - Hero Image <span class="level-badge level-2">Nivel 2</span></h2>
+            <p>Ideal para: Homepage hero, presentaciones, headers principales</p>
+            <div class="prompt-text" id="prompt1">Greek marble bust statue of a philosopher wearing minimalist matte black wireless earbuds, contemplative upward gaze, dramatic chiaroscuro lighting from upper left, subtle golden rim light, dark charcoal gray background with very faint floating golden data particles, blend of classical antiquity and modern technology, museum quality marble texture, high detail, photorealistic, 8k resolution, premium boutique aesthetic, elegant and sophisticated</div>
+            <div class="btn-group">
+                <button class="btn btn-copy" onclick="copyPrompt('prompt1', this)">📋 Copiar Prompt</button>
+                <a href="https://ideogram.ai/t/explore" target="_blank" class="btn btn-link">Abrir Ideogram</a>
+                <a href="https://www.midjourney.com/" target="_blank" class="btn btn-link">Abrir Midjourney</a>
+            </div>
+        </div>
+
+        <!-- Visionary Prompt -->
+        <div class="prompt-card">
+            <h2>The Visionary - Innovación/AI <span class="level-badge level-3">Nivel 3</span></h2>
+            <p>Ideal para: Campañas de AI, innovación, tecnología</p>
+            <div class="prompt-text" id="prompt2">Roman marble statue profile wearing translucent AR smart glasses displaying subtle holographic data, serene contemplative expression, dramatic side lighting with cyan digital glow, dark luxurious background, golden circuit patterns barely visible on classical draped fabric, fusion of ancient wisdom and future technology, premium aesthetic, photorealistic, 8k</div>
+            <div class="btn-group">
+                <button class="btn btn-copy" onclick="copyPrompt('prompt2', this)">📋 Copiar Prompt</button>
+                <a href="https://ideogram.ai/t/explore" target="_blank" class="btn btn-link">Abrir Ideogram</a>
+            </div>
+        </div>
+
+        <!-- Builder Prompt -->
+        <div class="prompt-card">
+            <h2>The Builder - Servicios/Growth <span class="level-badge level-2">Nivel 2</span></h2>
+            <p>Ideal para: Página de servicios, ads de growth</p>
+            <div class="prompt-text" id="prompt3">Classical marble sculpture hands elegantly holding a sleek modern tablet showing growth chart graphics, minimalist composition, dramatic top-down lighting, dark background with subtle golden particles, blend of timeless craftsmanship and digital tools, museum quality, photorealistic, premium boutique aesthetic, 8k</div>
+            <div class="btn-group">
+                <button class="btn btn-copy" onclick="copyPrompt('prompt3', this)">📋 Copiar Prompt</button>
+                <a href="https://ideogram.ai/t/explore" target="_blank" class="btn btn-link">Abrir Ideogram</a>
+            </div>
+        </div>
+
+        <!-- Wisdom Prompt -->
+        <div class="prompt-card">
+            <h2>Wisdom Speaks - Posts Educativos <span class="level-badge level-1">Nivel 1</span></h2>
+            <p>Ideal para: Quotes, tips, contenido educativo en Instagram</p>
+            <div class="prompt-text" id="prompt4">Close-up of Greek marble statue face focusing on mouth and chin, dramatic lighting, dark background with very subtle floating data particles emanating from lips like digital words, classical meets digital concept, high detail marble texture, premium aesthetic, photorealistic, square format, 8k</div>
+            <div class="btn-group">
+                <button class="btn btn-copy" onclick="copyPrompt('prompt4', this)">📋 Copiar Prompt</button>
+                <a href="https://ideogram.ai/t/explore" target="_blank" class="btn btn-link">Abrir Ideogram</a>
+            </div>
+        </div>
+
+        <!-- Platforms -->
+        <h2 style="margin-top: 50px; margin-bottom: 20px; color: #C9A227;">🎨 Plataformas Recomendadas</h2>
+        <div class="platforms">
+            <div class="platform-card">
+                <h3>Ideogram</h3>
+                <p style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Mejor para texto + imagen</p>
+                <a href="https://ideogram.ai/t/explore" target="_blank">Abrir →</a>
+            </div>
+            <div class="platform-card">
+                <h3>Midjourney</h3>
+                <p style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Mejor calidad artística</p>
+                <a href="https://www.midjourney.com/" target="_blank">Abrir →</a>
+            </div>
+            <div class="platform-card">
+                <h3>Leonardo.ai</h3>
+                <p style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Buena opción gratuita</p>
+                <a href="https://leonardo.ai/" target="_blank">Abrir →</a>
+            </div>
+            <div class="platform-card">
+                <h3>DALL-E 3</h3>
+                <p style="color: #888; font-size: 0.85rem; margin-bottom: 10px;">Integrado en ChatGPT</p>
+                <a href="https://chat.openai.com/" target="_blank">Abrir →</a>
+            </div>
+        </div>
+
+        <footer>
+            <p>Simplicity Agency - Digital Marble Visual Identity</p>
+            <p style="margin-top: 5px;">Concepto: "Classical Wisdom Meets Digital Innovation"</p>
+        </footer>
+    </div>
+
+    <script>
+        function copyPrompt(id, btn) {
+            const text = document.getElementById(id).innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '✓ Copiado!';
+                btn.classList.add('copied');
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
