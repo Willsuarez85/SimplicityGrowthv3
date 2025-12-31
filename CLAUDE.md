@@ -566,6 +566,43 @@ lospaisas_creative_storyboard-promo1_v1.md
 
 ---
 
+## Git & GitHub Repository
+
+### Repository Information
+- **Remote URL:** `https://github.com/Willsuarez85/SimplicityGrowthv3.git`
+- **Main Branch:** `main`
+- **Owner:** Willsuarez85
+
+### Git Commands Reference
+```bash
+# Check status
+git status
+
+# Stage and commit changes
+git add .
+git commit -m "Description of changes"
+
+# Push to GitHub
+git push origin main
+
+# Pull latest changes
+git pull origin main
+```
+
+### Commit Message Convention
+```
+[type]: Brief description
+
+Types:
+- feat: New feature or functionality
+- fix: Bug fix
+- docs: Documentation changes
+- refactor: Code refactoring
+- chore: Maintenance tasks
+```
+
+---
+
 ## Integration Notes
 
 ### MCP Tools Available
