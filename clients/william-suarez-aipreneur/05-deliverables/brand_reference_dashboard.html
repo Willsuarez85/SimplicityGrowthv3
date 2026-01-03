@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPreneur - Brand Reference Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --gray-90: #1A1A1A;
+            --gray-80: #333333;
+            --gray-60: #666666;
+            --gray-40: #999999;
+            --gray-20: #CCCCCC;
+            --gray-10: #E5E5E5;
+            --sage-green: #87A96B;
+            --font-primary: 'Inter', sans-serif;
+            --font-display: 'Space Grotesk', sans-serif;
+            --font-body: 'DM Sans', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background: var(--gray-90);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        /* Header */
+        .header {
+            background: var(--black);
+            padding: 2rem;
+            border-bottom: 1px solid var(--gray-80);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+
+        .brand-title span {
+            color: var(--sage-green);
+        }
+
+        .header-meta {
+            text-align: right;
+            font-size: 0.875rem;
+            color: var(--gray-40);
+        }
+
+        /* Navigation */
+        .nav {
+            background: var(--gray-90);
+            padding: 1rem 2rem;
+            border-bottom: 1px solid var(--gray-80);
+            position: sticky;
+            top: 80px;
+            z-index: 99;
+        }
+
+        .nav-links {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .nav-link {
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--gray-60);
+            color: var(--gray-20);
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: var(--font-primary);
+            font-size: 0.875rem;
+            transition: all 0.2s;
+        }
+
+        .nav-link:hover, .nav-link.active {
+            background: var(--sage-green);
+            border-color: var(--sage-green);
+            color: var(--black);
+        }
+
+        /* Main Content */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 3rem;
+            background: var(--black);
+            border-radius: 8px;
+            padding: 2rem;
+            border: 1px solid var(--gray-80);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            padding-bottom: 0.75rem;
+            border-bottom: 2px solid var(--sage-green);
+            display: inline-block;
+        }
+
+        /* Color Palette */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .color-swatch {
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--gray-60);
+        }
+
+        .color-preview {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: monospace;
+            font-size: 0.75rem;
+        }
+
+        .color-info {
+            padding: 0.75rem;
+            background: var(--gray-90);
+        }
+
+        .color-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .color-hex {
+            font-family: monospace;
+            font-size: 0.75rem;
+            color: var(--gray-40);
+            cursor: pointer;
+        }
+
+        .color-hex:hover {
+            color: var(--sage-green);
+        }
+
+        /* Typography */
+        .typography-grid {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        .font-card {
+            padding: 1.5rem;
+            background: var(--gray-90);
+            border-radius: 8px;
+            border: 1px solid var(--gray-80);
+        }
+
+        .font-name {
+            font-size: 0.875rem;
+            color: var(--sage-green);
+            margin-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .font-sample-inter {
+            font-family: 'Inter', sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .font-sample-space {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .font-sample-dm {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 2rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+
+        .font-use {
+            font-size: 0.875rem;
+            color: var(--gray-40);
+        }
+
+        /* Avatar Specs */
+        .avatar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .avatar-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--gray-80);
+        }
+
+        .avatar-card h4 {
+            color: var(--sage-green);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .spec-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-80);
+            font-size: 0.875rem;
+        }
+
+        .spec-row:last-child {
+            border-bottom: none;
+        }
+
+        .spec-label {
+            color: var(--gray-40);
+        }
+
+        .spec-value {
+            font-weight: 500;
+        }
+
+        /* Content Pillars */
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .pillar-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--gray-80);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pillar-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--sage-green);
+        }
+
+        .pillar-number {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--gray-80);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-name {
+            font-size: 1.125rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-percent {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--sage-green);
+            margin-bottom: 0.5rem;
+        }
+
+        .pillar-desc {
+            font-size: 0.875rem;
+            color: var(--gray-40);
+        }
+
+        /* Platform Strategy */
+        .platform-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .platform-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--gray-80);
+        }
+
+        .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .platform-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .platform-phase {
+            font-size: 0.75rem;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            background: var(--sage-green);
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .platform-phase.secondary {
+            background: var(--gray-60);
+            color: var(--white);
+        }
+
+        .platform-kpi {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--gray-80);
+            font-size: 0.875rem;
+        }
+
+        .platform-kpi:last-child {
+            border-bottom: none;
+        }
+
+        .kpi-label {
+            color: var(--gray-40);
+        }
+
+        .kpi-value {
+            font-weight: 600;
+        }
+
+        /* Prompts Section */
+        .prompt-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid var(--gray-80);
+        }
+
+        .prompt-title {
+            color: var(--sage-green);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .prompt-text {
+            font-family: monospace;
+            font-size: 0.8125rem;
+            background: var(--black);
+            padding: 1rem;
+            border-radius: 4px;
+            border: 1px solid var(--gray-80);
+            white-space: pre-wrap;
+            line-height: 1.5;
+            color: var(--gray-20);
+        }
+
+        .copy-btn {
+            margin-top: 0.75rem;
+            padding: 0.5rem 1rem;
+            background: transparent;
+            border: 1px solid var(--sage-green);
+            color: var(--sage-green);
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.75rem;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: var(--sage-green);
+            color: var(--black);
+        }
+
+        /* Quick Links */
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+        }
+
+        .link-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1rem 1.25rem;
+            border: 1px solid var(--gray-80);
+            text-decoration: none;
+            color: var(--white);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .link-card:hover {
+            border-color: var(--sage-green);
+            background: var(--gray-80);
+        }
+
+        .link-icon {
+            width: 40px;
+            height: 40px;
+            background: var(--gray-80);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+        }
+
+        .link-info h4 {
+            font-size: 0.9375rem;
+            font-weight: 600;
+            margin-bottom: 0.125rem;
+        }
+
+        .link-info p {
+            font-size: 0.75rem;
+            color: var(--gray-40);
+        }
+
+        /* Blue Ocean Card */
+        .blue-ocean {
+            background: linear-gradient(135deg, var(--black) 0%, var(--gray-90) 100%);
+            border: 2px solid var(--sage-green);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .blue-ocean h3 {
+            font-family: var(--font-display);
+            font-size: 1.75rem;
+            margin-bottom: 1rem;
+        }
+
+        .blue-ocean-formula {
+            font-size: 1.125rem;
+            color: var(--sage-green);
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .blue-ocean-result {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .blue-ocean p {
+            color: var(--gray-40);
+            font-size: 0.875rem;
+        }
+
+        /* Expression Guide */
+        .expression-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+
+        .expression-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1rem;
+            border: 1px solid var(--gray-80);
+            text-align: center;
+        }
+
+        .expression-card.approved {
+            border-color: var(--sage-green);
+        }
+
+        .expression-card.avoid {
+            border-color: #8B0000;
+        }
+
+        .expression-emoji {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .expression-name {
+            font-weight: 600;
+            font-size: 0.875rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .expression-desc {
+            font-size: 0.75rem;
+            color: var(--gray-40);
+        }
+
+        /* Wardrobe Section */
+        .wardrobe-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .wardrobe-card {
+            background: var(--gray-90);
+            border-radius: 8px;
+            padding: 1.5rem;
+            border: 1px solid var(--gray-80);
+        }
+
+        .wardrobe-card h4 {
+            color: var(--sage-green);
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+        }
+
+        .wardrobe-percent {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+        }
+
+        .wardrobe-items {
+            font-size: 0.875rem;
+            color: var(--gray-20);
+        }
+
+        .wardrobe-items li {
+            margin-bottom: 0.25rem;
+            list-style: none;
+        }
+
+        .wardrobe-items li::before {
+            content: "•";
+            color: var(--sage-green);
+            margin-right: 0.5rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--black);
+            padding: 2rem;
+            text-align: center;
+            border-top: 1px solid var(--gray-80);
+            margin-top: 2rem;
+        }
+
+        .footer p {
+            color: var(--gray-40);
+            font-size: 0.875rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+
+            .header-meta {
+                text-align: center;
+            }
+
+            .nav-links {
+                justify-content: center;
+            }
+
+            .wardrobe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Utility */
+        .hidden {
+            display: none !important;
+        }
+
+        .mt-2 {
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <h1 class="brand-title">AI<span>preneur</span> Brand Reference</h1>
+            <div class="header-meta">
+                <div>William Suarez</div>
+                <div>Version 1.0 | 2026-01-03</div>
+            </div>
+        </div>
+    </header>
+
+    <nav class="nav">
+        <div class="nav-links">
+            <button class="nav-link active" data-section="colors">Colors</button>
+            <button class="nav-link" data-section="typography">Typography</button>
+            <button class="nav-link" data-section="avatar">Avatar</button>
+            <button class="nav-link" data-section="pillars">Pillars</button>
+            <button class="nav-link" data-section="platforms">Platforms</button>
+            <button class="nav-link" data-section="prompts">Prompts</button>
+            <button class="nav-link" data-section="positioning">Positioning</button>
+            <button class="nav-link" data-section="links">Quick Links</button>
+        </div>
+    </nav>
+
+    <main class="main">
+        <!-- Colors Section -->
+        <section id="colors" class="section">
+            <h2 class="section-title">Color Palette</h2>
+
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin-bottom: 1rem;">BASE COLORS (90-95%)</h3>
+            <div class="color-grid">
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #000000; color: #FFFFFF;">#000000</div>
+                    <div class="color-info">
+                        <div class="color-name">Deep Black</div>
+                        <div class="color-hex" onclick="copyToClipboard('#000000')">#000000 (click to copy)</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #1A1A1A; color: #FFFFFF;">#1A1A1A</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 90%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#1A1A1A')">#1A1A1A</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #333333; color: #FFFFFF;">#333333</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 80%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#333333')">#333333</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #666666; color: #FFFFFF;">#666666</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 60%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#666666')">#666666</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #999999; color: #000000;">#999999</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 40%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#999999')">#999999</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #CCCCCC; color: #000000;">#CCCCCC</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 20%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#CCCCCC')">#CCCCCC</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #E5E5E5; color: #000000;">#E5E5E5</div>
+                    <div class="color-info">
+                        <div class="color-name">Gray 10%</div>
+                        <div class="color-hex" onclick="copyToClipboard('#E5E5E5')">#E5E5E5</div>
+                    </div>
+                </div>
+                <div class="color-swatch">
+                    <div class="color-preview" style="background: #FFFFFF; color: #000000;">#FFFFFF</div>
+                    <div class="color-info">
+                        <div class="color-name">Clean White</div>
+                        <div class="color-hex" onclick="copyToClipboard('#FFFFFF')">#FFFFFF</div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">ACCENT COLOR (5-8% max)</h3>
+            <div class="color-grid">
+                <div class="color-swatch" style="border: 2px solid var(--sage-green);">
+                    <div class="color-preview" style="background: #87A96B; color: #000000;">#87A96B</div>
+                    <div class="color-info">
+                        <div class="color-name">Sage Green</div>
+                        <div class="color-hex" onclick="copyToClipboard('#87A96B')">#87A96B (click to copy)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding: 1rem; background: var(--gray-90); border-radius: 8px; font-size: 0.875rem;">
+                <strong>Usage Rules:</strong>
+                <ul style="margin-top: 0.5rem; padding-left: 1.5rem; color: var(--gray-20);">
+                    <li>Sage green ONLY for: underlines, highlights, active states, CTAs</li>
+                    <li>NEVER for: backgrounds, large areas, primary text</li>
+                    <li>No gradients (except subtle photo backgrounds)</li>
+                    <li>No additional colors - ever</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section id="typography" class="section hidden">
+            <h2 class="section-title">Typography</h2>
+            <div class="typography-grid">
+                <div class="font-card">
+                    <div class="font-name">Primary - Inter</div>
+                    <div class="font-sample-inter">The quick brown fox jumps over the lazy dog</div>
+                    <div class="font-use">All-purpose, highly legible. Use for body text, UI, labels.</div>
+                </div>
+                <div class="font-card">
+                    <div class="font-name">Display - Space Grotesk</div>
+                    <div class="font-sample-space">The quick brown fox jumps over the lazy dog</div>
+                    <div class="font-use">Headlines, impact statements, hero text. Bold weights.</div>
+                </div>
+                <div class="font-card">
+                    <div class="font-name">Body - DM Sans</div>
+                    <div class="font-sample-dm">The quick brown fox jumps over the lazy dog</div>
+                    <div class="font-use">Extended reading, paragraphs, descriptions. Highly readable.</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--gray-90); border-radius: 8px;">
+                <h4 style="color: var(--sage-green); font-size: 0.875rem; margin-bottom: 1rem;">SIZE HIERARCHY</h4>
+                <div style="display: grid; gap: 0.75rem; font-size: 0.875rem;">
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--gray-80); padding-bottom: 0.5rem;">
+                        <span style="color: var(--gray-40);">HEADLINE</span>
+                        <span>48-72px (hero) | 32-40px (section)</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--gray-80); padding-bottom: 0.5rem;">
+                        <span style="color: var(--gray-40);">SUBHEAD</span>
+                        <span>24-28px (support) | 18-20px (cards)</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; border-bottom: 1px solid var(--gray-80); padding-bottom: 0.5rem;">
+                        <span style="color: var(--gray-40);">BODY</span>
+                        <span>16-18px (paragraph) | 14-16px (captions)</span>
+                    </div>
+                    <div style="display: flex; justify-content: space-between;">
+                        <span style="color: var(--gray-40);">MICRO</span>
+                        <span>12-14px (labels, metadata)</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Avatar Section -->
+        <section id="avatar" class="section hidden">
+            <h2 class="section-title">William Suarez - Avatar Specs</h2>
+
+            <div class="avatar-grid">
+                <div class="avatar-card">
+                    <h4>Physical Characteristics</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Ethnicity</span>
+                        <span class="spec-value">Hispanic male</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Age Range</span>
+                        <span class="spec-value">Mid-30s to mid-40s</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Build</span>
+                        <span class="spec-value">Athletic/medium</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Face Shape</span>
+                        <span class="spec-value">Oval to rectangular</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Skin Tone</span>
+                        <span class="spec-value">Olive/tan, warm undertones</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card">
+                    <h4>Hair & Facial Hair</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Hair Color</span>
+                        <span class="spec-value">Dark brown/black</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Hair Style</span>
+                        <span class="spec-value">Short cut, textured top, slight wave</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Facial Hair</span>
+                        <span class="spec-value">Well-groomed short beard/goatee</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Beard Style</span>
+                        <span class="spec-value">Trimmed, neat edges, connects mustache</span>
+                    </div>
+                </div>
+
+                <div class="avatar-card">
+                    <h4>Eyes & Expression</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">Eye Color</span>
+                        <span class="spec-value">Brown</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Gaze</span>
+                        <span class="spec-value">Direct, focused, intentional</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Expression</span>
+                        <span class="spec-value">Neutral to confident</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Core Message</span>
+                        <span class="spec-value">"I understand systems. I can teach you."</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Expressions -->
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">APPROVED EXPRESSIONS</h3>
+            <div class="expression-grid">
+                <div class="expression-card approved">
+                    <div class="expression-name">Neutral Confident</div>
+                    <div class="expression-desc">Default. Relaxed face, slight intensity in eyes.</div>
+                </div>
+                <div class="expression-card approved">
+                    <div class="expression-name">Thoughtful</div>
+                    <div class="expression-desc">Educational content. Slight furrow, contemplative.</div>
+                </div>
+                <div class="expression-card approved">
+                    <div class="expression-name">Direct/Serious</div>
+                    <div class="expression-desc">Authority pieces. Strong eye contact.</div>
+                </div>
+                <div class="expression-card approved">
+                    <div class="expression-name">Subtle Smile</div>
+                    <div class="expression-desc">Approachable content. Corners slightly raised.</div>
+                </div>
+            </div>
+
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">EXPRESSIONS TO AVOID</h3>
+            <div class="expression-grid">
+                <div class="expression-card avoid">
+                    <div class="expression-name">Broad Smiles</div>
+                    <div class="expression-desc">Too casual for brand.</div>
+                </div>
+                <div class="expression-card avoid">
+                    <div class="expression-name">Surprised</div>
+                    <div class="expression-desc">Exaggerated expressions.</div>
+                </div>
+                <div class="expression-card avoid">
+                    <div class="expression-name">Confused</div>
+                    <div class="expression-desc">Undermines authority.</div>
+                </div>
+                <div class="expression-card avoid">
+                    <div class="expression-name">Laughing</div>
+                    <div class="expression-desc">Too playful/casual.</div>
+                </div>
+            </div>
+
+            <!-- Wardrobe -->
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">WARDROBE</h3>
+            <div class="wardrobe-grid">
+                <div class="wardrobe-card">
+                    <h4>Primary</h4>
+                    <div class="wardrobe-percent">80%</div>
+                    <ul class="wardrobe-items">
+                        <li>Plain black t-shirt (crew neck)</li>
+                        <li>No logos, no graphics, no text</li>
+                        <li>High-quality fabric appearance</li>
+                    </ul>
+                </div>
+                <div class="wardrobe-card">
+                    <h4>Secondary</h4>
+                    <div class="wardrobe-percent">15%</div>
+                    <ul class="wardrobe-items">
+                        <li>Dark gray t-shirt or henley</li>
+                        <li>Charcoal crew neck sweater</li>
+                        <li>Black button-up (casual, rolled sleeves)</li>
+                    </ul>
+                </div>
+                <div class="wardrobe-card">
+                    <h4>Accent</h4>
+                    <div class="wardrobe-percent">5%</div>
+                    <ul class="wardrobe-items">
+                        <li>White t-shirt (high contrast)</li>
+                        <li>Dark olive/sage green</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Content Pillars Section -->
+        <section id="pillars" class="section hidden">
+            <h2 class="section-title">Content Pillars</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <div class="pillar-number">01</div>
+                    <div class="pillar-name">IA Aplicada a Operaciones</div>
+                    <div class="pillar-percent">30%</div>
+                    <div class="pillar-desc">Donde y como automatizar procesos reales en tu negocio. Casos de uso concretos, ROI visible.</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">02</div>
+                    <div class="pillar-name">Sistemas sin Codigo</div>
+                    <div class="pillar-percent">30%</div>
+                    <div class="pillar-desc">Claude Code, MCP, agentes, arquitectura. "Disena el sistema, no escribas el codigo."</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">03</div>
+                    <div class="pillar-name">Metodo IDEAL</div>
+                    <div class="pillar-percent">25%</div>
+                    <div class="pillar-desc">Framework de implementacion paso a paso. Identificar, Disenar, Ejecutar, Automatizar, Lanzar.</div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-number">04</div>
+                    <div class="pillar-name">Marco Mental del Operador</div>
+                    <div class="pillar-percent">15%</div>
+                    <div class="pillar-desc">Mentalidad de arquitecto vs usuario. "Deja de ser usuario, se operador."</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--gray-90); border-radius: 8px; border-left: 4px solid var(--sage-green);">
+                <h4 style="margin-bottom: 0.5rem;">Content Filter Rule</h4>
+                <p style="font-size: 0.9375rem; color: var(--gray-20);">"Esto ayuda a un AIpreneur a implementar IA real en su negocio?"</p>
+                <p style="font-size: 0.875rem; color: var(--gray-40); margin-top: 0.5rem;">Si NO = No publicar | Si SI = Verificar formato correcto</p>
+            </div>
+        </section>
+
+        <!-- Platforms Section -->
+        <section id="platforms" class="section hidden">
+            <h2 class="section-title">Platform Strategy</h2>
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <span class="platform-name">YouTube</span>
+                        <span class="platform-phase">FASE 1</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--sage-green); margin-bottom: 1rem;">"Aqui aprendo a implementar de verdad."</p>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Long-Form</span>
+                        <span class="kpi-value">1x/semana (10-20 min)</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Shorts</span>
+                        <span class="kpi-value">3x/semana (30-60 seg)</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Lives</span>
+                        <span class="kpi-value">1-2x/mes</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Meta Mes 6</span>
+                        <span class="kpi-value">5,000 subs</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <span class="platform-name">Instagram</span>
+                        <span class="platform-phase">FASE 1</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--sage-green); margin-bottom: 1rem;">"Este contenido es para mi."</p>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Reels</span>
+                        <span class="kpi-value">3-4x/semana (60-90 seg)</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Carruseles</span>
+                        <span class="kpi-value">1-2x/semana (5-8 slides)</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Stories</span>
+                        <span class="kpi-value">Diario</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Meta Mes 6</span>
+                        <span class="kpi-value">10,000 seguidores</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <span class="platform-name">LinkedIn</span>
+                        <span class="platform-phase secondary">FASE 2</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--gray-40); margin-bottom: 1rem;">"Vision de negocio con IA."</p>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Posts</span>
+                        <span class="kpi-value">2-3x/semana</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Focus</span>
+                        <span class="kpi-value">B2B, Thought Leadership</span>
+                    </div>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-header">
+                        <span class="platform-name">X/Twitter</span>
+                        <span class="platform-phase secondary">FASE 2</span>
+                    </div>
+                    <p style="font-size: 0.875rem; color: var(--gray-40); margin-bottom: 1rem;">"Conversacion y comunidad."</p>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Threads</span>
+                        <span class="kpi-value">1-2x/semana</span>
+                    </div>
+                    <div class="platform-kpi">
+                        <span class="kpi-label">Engagement</span>
+                        <span class="kpi-value">Daily</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prompts Section -->
+        <section id="prompts" class="section hidden">
+            <h2 class="section-title">Imagen 4 Prompt Templates</h2>
+
+            <div class="prompt-card">
+                <div class="prompt-title">Base Portrait Prompt</div>
+                <div class="prompt-text">Editorial portrait of a Hispanic man in his late 30s, short dark hair with slight wave, well-groomed short beard, brown eyes, wearing a plain black t-shirt, neutral confident expression with direct gaze to camera, dark gradient background, studio lighting, professional photography, high contrast, sharp focus on face, shallow depth of field</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-title">Black & White Editorial</div>
+                <div class="prompt-text">Black and white editorial portrait, Hispanic man in his late 30s, short dark hair styled with texture, trimmed beard, wearing plain black t-shirt, neutral confident expression, direct powerful gaze, dark gradient background, dramatic studio lighting, high contrast, sharp details, professional photography, monochrome</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-title">Whiteboard Diagram (Light Mode)</div>
+                <div class="prompt-text">Minimalist whiteboard diagram showing [CONCEPT], hand-drawn marker style on pure white background, black strokes only, simple geometric shapes connected by arrows, clean sans-serif labels, imperfect human-drawn quality, high contrast, no colors, no decorative elements</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-title">Whiteboard Diagram (Dark Mode)</div>
+                <div class="prompt-text">Minimalist diagram on pure black background, white marker-style strokes, [CONCEPT] visualized with simple geometric shapes, hand-drawn quality, high contrast white on black, no gradients, confident imperfect lines, professional whiteboard aesthetic inverted</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-title">YouTube Thumbnail</div>
+                <div class="prompt-text">YouTube thumbnail, clean dark background with subtle gradient, bold white geometric sans-serif text "[TITLE]", single hand-drawn marker-style diagram element in white, sage green (#87A96B) underline accent, high contrast, professional minimal design, 16:9 aspect ratio</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div class="prompt-card">
+                <div class="prompt-title">Instagram Reel Cover</div>
+                <div class="prompt-text">Vertical Instagram cover, 9:16 aspect ratio, pure white background, bold black geometric sans-serif text "[SHORT TEXT]", hand-drawn marker underline in sage green (#87A96B), minimalist composition, high contrast, clean professional aesthetic</div>
+                <button class="copy-btn" onclick="copyPrompt(this)">Copy Prompt</button>
+            </div>
+
+            <div style="margin-top: 1.5rem; padding: 1rem; background: var(--gray-90); border-radius: 8px;">
+                <h4 style="color: var(--sage-green); font-size: 0.875rem; margin-bottom: 0.75rem;">MODEL SELECTION</h4>
+                <div style="display: grid; gap: 0.5rem; font-size: 0.875rem;">
+                    <div><strong>Imagen 4</strong> - Primary for hero images, portraits</div>
+                    <div><strong>Ideogram V3</strong> - Text-heavy graphics, diagrams with labels</div>
+                    <div><strong>FLUX Dev</strong> - Fast iterations, testing concepts</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Positioning Section -->
+        <section id="positioning" class="section hidden">
+            <h2 class="section-title">Blue Ocean Positioning</h2>
+
+            <div class="blue-ocean">
+                <h3>Blue Ocean Confirmed</h3>
+                <div class="blue-ocean-formula">SPANISH + CLAUDE CODE + MCP + HISPANIC ENTREPRENEURS</div>
+                <div class="blue-ocean-result">= ZERO COMPETITION</div>
+                <p>This positioning territory is COMPLETELY UNOCCUPIED.</p>
+            </div>
+
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">COMPETITIVE MOAT</h3>
+            <div class="avatar-grid">
+                <div class="avatar-card">
+                    <h4>Language</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Spanish focus</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">English</span>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <h4>Depth</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Implementation</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">Inspiration</span>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <h4>Specificity</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Claude Code/MCP</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">Generic AI</span>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <h4>Framework</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Systems thinking</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">Tool reviews</span>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <h4>Proof</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Real agency cases</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">Demos only</span>
+                    </div>
+                </div>
+                <div class="avatar-card">
+                    <h4>Audience</h4>
+                    <div class="spec-row">
+                        <span class="spec-label">AIPreneur</span>
+                        <span class="spec-value">Hispanic entrepreneurs</span>
+                    </div>
+                    <div class="spec-row">
+                        <span class="spec-label">Competitors</span>
+                        <span class="spec-value">General</span>
+                    </div>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem; padding: 1.5rem; background: var(--gray-90); border-radius: 8px; border-left: 4px solid var(--sage-green);">
+                <h4 style="margin-bottom: 0.75rem;">Key Message Framework</h4>
+                <p style="font-size: 1.125rem; font-weight: 600; margin-bottom: 0.5rem;">"Herramienta vs Sistema - cual tienes?"</p>
+                <p style="font-size: 0.875rem; color: var(--gray-40);">Tools solve problems. Systems build infrastructure. AIpreneurs build systems.</p>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section id="links" class="section hidden">
+            <h2 class="section-title">Quick Links - Brand Documents</h2>
+            <div class="links-grid">
+                <a href="../02-strategy/brand-dna/williamsuarez_brand_complete-profile_v3.md" class="link-card">
+                    <div class="link-icon">📋</div>
+                    <div class="link-info">
+                        <h4>Brand Profile v3</h4>
+                        <p>Complete brand identity document</p>
+                    </div>
+                </a>
+                <a href="../02-strategy/brand-dna/graphic_line_guide.md" class="link-card">
+                    <div class="link-icon">🎨</div>
+                    <div class="link-info">
+                        <h4>Graphic Line Guide</h4>
+                        <p>Visual identity system</p>
+                    </div>
+                </a>
+                <a href="../04-assets/references/william-avatar/avatar_reference_guide.md" class="link-card">
+                    <div class="link-icon">👤</div>
+                    <div class="link-info">
+                        <h4>Avatar Reference</h4>
+                        <p>William's visual specs</p>
+                    </div>
+                </a>
+                <a href="../02-strategy/content-strategy/platform_strategies_v2.md" class="link-card">
+                    <div class="link-icon">📱</div>
+                    <div class="link-info">
+                        <h4>Platform Strategies</h4>
+                        <p>YouTube + Instagram focus</p>
+                    </div>
+                </a>
+                <a href="../02-strategy/content-strategy/content_pillars_and_distribution.md" class="link-card">
+                    <div class="link-icon">📊</div>
+                    <div class="link-info">
+                        <h4>Content Pillars</h4>
+                        <p>4 pillars with distribution</p>
+                    </div>
+                </a>
+                <a href="../01-research/competitor-analysis/competitor_analysis_executive_summary.md" class="link-card">
+                    <div class="link-icon">🎯</div>
+                    <div class="link-info">
+                        <h4>Competitor Analysis</h4>
+                        <p>Blue ocean positioning</p>
+                    </div>
+                </a>
+                <a href="../02-strategy/content-strategy/marketing_plan_q1_2026.md" class="link-card">
+                    <div class="link-icon">📈</div>
+                    <div class="link-info">
+                        <h4>Marketing Plan Q1</h4>
+                        <p>Community & monetization</p>
+                    </div>
+                </a>
+                <a href="../04-assets/references/william-avatar/" class="link-card">
+                    <div class="link-icon">📸</div>
+                    <div class="link-info">
+                        <h4>Reference Photos</h4>
+                        <p>William photo composites</p>
+                    </div>
+                </a>
+            </div>
+
+            <h3 style="font-size: 1rem; color: var(--gray-40); margin: 2rem 0 1rem;">FOLDER STRUCTURE</h3>
+            <div style="font-family: monospace; font-size: 0.8125rem; background: var(--gray-90); padding: 1.5rem; border-radius: 8px; line-height: 1.8;">
+                <div>clients/william-suarez-aipreneur/</div>
+                <div style="padding-left: 1.5rem;">├── 01-research/</div>
+                <div style="padding-left: 3rem;">├── brand-audit/</div>
+                <div style="padding-left: 3rem;">├── competitor-analysis/</div>
+                <div style="padding-left: 3rem;">└── trend-research/</div>
+                <div style="padding-left: 1.5rem;">├── 02-strategy/</div>
+                <div style="padding-left: 3rem;">├── brand-dna/</div>
+                <div style="padding-left: 3rem;">└── content-strategy/</div>
+                <div style="padding-left: 1.5rem;">├── 03-creative/</div>
+                <div style="padding-left: 3rem;">├── storyboards/</div>
+                <div style="padding-left: 3rem;">├── scripts/</div>
+                <div style="padding-left: 3rem;">└── prompts/</div>
+                <div style="padding-left: 1.5rem;">├── 04-assets/</div>
+                <div style="padding-left: 3rem;">├── images/</div>
+                <div style="padding-left: 3rem;">├── videos/</div>
+                <div style="padding-left: 3rem;">└── references/</div>
+                <div style="padding-left: 1.5rem;">└── 05-deliverables/</div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>AIPreneur Brand Reference Dashboard | William Suarez | v1.0 | 2026-01-03</p>
+        <p style="margin-top: 0.5rem; font-size: 0.75rem;">"Clarity over personality. Systems over style."</p>
+    </footer>
+
+    <script>
+        // Navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function() {
+                // Update active state
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+
+                // Show/hide sections
+                const sectionId = this.dataset.section;
+                document.querySelectorAll('.section').forEach(section => {
+                    if (section.id === sectionId) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            });
+        });
+
+        // Copy color to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast(`Copied: ${text}`);
+            });
+        }
+
+        // Copy prompt to clipboard
+        function copyPrompt(button) {
+            const promptText = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(promptText).then(() => {
+                button.textContent = 'Copied!';
+                button.style.background = 'var(--sage-green)';
+                button.style.color = 'var(--black)';
+                setTimeout(() => {
+                    button.textContent = 'Copy Prompt';
+                    button.style.background = 'transparent';
+                    button.style.color = 'var(--sage-green)';
+                }, 2000);
+            });
+        }
+
+        // Toast notification
+        function showToast(message) {
+            const toast = document.createElement('div');
+            toast.style.cssText = `
+                position: fixed;
+                bottom: 2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                background: var(--sage-green);
+                color: var(--black);
+                padding: 0.75rem 1.5rem;
+                border-radius: 4px;
+                font-size: 0.875rem;
+                font-weight: 500;
+                z-index: 1000;
+            `;
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(() => toast.remove(), 2000);
+        }
+    </script>
+</body>
+</html>

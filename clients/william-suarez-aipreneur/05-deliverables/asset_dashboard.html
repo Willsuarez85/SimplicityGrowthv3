@@ -1,0 +1,1474 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIPreneur Creative Dashboard | William Suarez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+            min-height: 100vh;
+            color: #ffffff;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: linear-gradient(135deg, #87A96B 0%, #6B8E50 100%);
+            color: #000;
+            padding: 8px 20px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 8px;
+        }
+
+        .header .subtitle {
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* ==================================
+           EXECUTIVE SUMMARY - THE BIG IDEA
+           ================================== */
+        .executive-summary {
+            background: linear-gradient(135deg, rgba(135, 169, 107, 0.15) 0%, rgba(135, 169, 107, 0.03) 100%);
+            border: 2px solid rgba(135, 169, 107, 0.4);
+            border-radius: 28px;
+            padding: 50px 40px;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .summary-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: #87A96B;
+            margin-bottom: 20px;
+        }
+
+        .core-message {
+            font-size: 32px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .core-message .highlight {
+            background: linear-gradient(135deg, #87A96B 0%, #6B8E50 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .summary-explanation {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        /* The Framework Visual */
+        .framework-visual {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .framework-path {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .framework-path:hover {
+            border-color: rgba(135, 169, 107, 0.4);
+            transform: translateY(-4px);
+        }
+
+        .framework-path.highlighted {
+            border-color: #87A96B;
+            background: rgba(135, 169, 107, 0.1);
+        }
+
+        .path-number {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 0 auto 12px;
+        }
+
+        .framework-path.highlighted .path-number {
+            background: #87A96B;
+            color: #000;
+        }
+
+        .path-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .path-desc {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .framework-path.highlighted .path-desc {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .framework-arrow {
+            display: none;
+        }
+
+        /* ==================================
+           EMOTIONAL ARC / TIMELINE
+           ================================== */
+        .emotional-arc {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .arc-title {
+            text-align: center;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 30px;
+        }
+
+        .arc-timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            position: relative;
+            padding: 0 10px;
+        }
+
+        .arc-timeline::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 50px;
+            right: 50px;
+            height: 2px;
+            background: linear-gradient(90deg,
+                rgba(135, 169, 107, 0.3) 0%,
+                rgba(135, 169, 107, 0.6) 50%,
+                rgba(135, 169, 107, 0.3) 100%);
+        }
+
+        .arc-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            width: 120px;
+        }
+
+        .arc-dot {
+            width: 40px;
+            height: 40px;
+            background: #1a1a2e;
+            border: 2px solid rgba(135, 169, 107, 0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            margin-bottom: 12px;
+        }
+
+        .arc-step.peak .arc-dot {
+            background: #87A96B;
+            border-color: #87A96B;
+        }
+
+        .arc-emotion {
+            font-size: 13px;
+            font-weight: 600;
+            color: #87A96B;
+            margin-bottom: 4px;
+        }
+
+        .arc-time {
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.4);
+            font-family: 'SF Mono', monospace;
+        }
+
+        /* ==================================
+           SIGNATURE PHRASE (HERO)
+           ================================== */
+        .signature-hero {
+            text-align: center;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, rgba(135, 169, 107, 0.08) 0%, rgba(0, 0, 0, 0) 100%);
+            border: 1px solid rgba(135, 169, 107, 0.2);
+            border-radius: 24px;
+            margin-bottom: 40px;
+        }
+
+        .signature-label {
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 16px;
+        }
+
+        .signature-text {
+            font-size: 48px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #ffffff 0%, #87A96B 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* ==================================
+           NAVIGATION
+           ================================== */
+        .nav-tabs {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .nav-tab {
+            padding: 12px 28px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px;
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .nav-tab:hover {
+            background: rgba(135, 169, 107, 0.1);
+            border-color: rgba(135, 169, 107, 0.3);
+            color: #87A96B;
+        }
+
+        .nav-tab.active {
+            background: linear-gradient(135deg, #87A96B 0%, #6B8E50 100%);
+            color: #000;
+            border-color: transparent;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* ==================================
+           VISUAL PREVIEW (NEW)
+           ================================== */
+        .visual-preview {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .preview-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .preview-title h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .preview-title p {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .storyboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .story-frame {
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .story-frame:hover {
+            border-color: rgba(135, 169, 107, 0.4);
+            transform: scale(1.02);
+        }
+
+        .story-frame img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+
+        .story-frame-info {
+            padding: 12px;
+        }
+
+        .story-frame-time {
+            font-size: 10px;
+            font-family: 'SF Mono', monospace;
+            color: #87A96B;
+            margin-bottom: 4px;
+        }
+
+        .story-frame-text {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* ==================================
+           SECTION STYLES
+           ================================== */
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 30px;
+            margin-top: 50px;
+        }
+
+        .section-title:first-child {
+            margin-top: 0;
+        }
+
+        .section-title h3 {
+            font-size: 24px;
+            font-weight: 600;
+        }
+
+        .section-title .count {
+            background: rgba(135, 169, 107, 0.2);
+            color: #87A96B;
+            padding: 4px 14px;
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        /* Script Section */
+        .script-container {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 32px;
+            margin-bottom: 40px;
+        }
+
+        .script-block {
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .script-block:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .script-timestamp {
+            display: inline-block;
+            background: rgba(135, 169, 107, 0.2);
+            color: #87A96B;
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            font-family: 'SF Mono', monospace;
+            margin-bottom: 12px;
+        }
+
+        .script-section-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .script-text {
+            font-size: 20px;
+            line-height: 1.6;
+            color: #fff;
+            font-weight: 500;
+            margin-bottom: 12px;
+        }
+
+        .script-delivery {
+            font-size: 13px;
+            color: rgba(135, 169, 107, 0.8);
+            font-style: italic;
+        }
+
+        /* Hook Options */
+        .hook-option {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .hook-option.recommended {
+            border-color: rgba(135, 169, 107, 0.5);
+            background: rgba(135, 169, 107, 0.05);
+        }
+
+        .hook-option:hover {
+            border-color: rgba(135, 169, 107, 0.4);
+        }
+
+        .hook-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+
+        .hook-name {
+            font-size: 16px;
+            font-weight: 600;
+        }
+
+        .hook-badge {
+            background: linear-gradient(135deg, #87A96B 0%, #6B8E50 100%);
+            color: #000;
+            padding: 3px 10px;
+            border-radius: 100px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .hook-text {
+            font-size: 18px;
+            color: #fff;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .hook-why {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* Caption Section */
+        .caption-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 24px;
+        }
+
+        .caption-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            padding: 28px;
+        }
+
+        .caption-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .caption-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .caption-icon.instagram {
+            background: linear-gradient(135deg, #833AB4, #FD1D1D, #F77737);
+        }
+
+        .caption-icon.tiktok {
+            background: #000;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .caption-platform {
+            font-size: 18px;
+            font-weight: 600;
+        }
+
+        .caption-text {
+            font-size: 14px;
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: pre-line;
+        }
+
+        .caption-hashtags {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 13px;
+            color: #87A96B;
+            line-height: 1.8;
+        }
+
+        .copy-btn {
+            margin-top: 20px;
+            width: 100%;
+            padding: 12px;
+            background: rgba(135, 169, 107, 0.2);
+            border: 1px solid rgba(135, 169, 107, 0.3);
+            border-radius: 10px;
+            color: #87A96B;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(135, 169, 107, 0.3);
+        }
+
+        .copy-btn.copied {
+            background: #87A96B;
+            color: #000;
+        }
+
+        /* Text Overlays Table */
+        .overlay-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .overlay-table th,
+        .overlay-table td {
+            padding: 16px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .overlay-table th {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .overlay-table td {
+            font-size: 15px;
+        }
+
+        .overlay-table .time {
+            font-family: 'SF Mono', monospace;
+            color: #87A96B;
+        }
+
+        .overlay-table .text {
+            font-weight: 500;
+        }
+
+        /* Asset Grid */
+        .asset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .asset-card {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .asset-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(135, 169, 107, 0.4);
+            box-shadow: 0 20px 60px rgba(135, 169, 107, 0.15);
+        }
+
+        .asset-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            display: block;
+            background: #1a1a1a;
+        }
+
+        .asset-info {
+            padding: 20px;
+        }
+
+        .asset-type {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 10px;
+        }
+
+        .asset-type.whiteboard {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .asset-type.broll {
+            background: rgba(135, 169, 107, 0.2);
+            color: #87A96B;
+        }
+
+        .asset-type.avatar {
+            background: rgba(147, 112, 219, 0.2);
+            color: #9370DB;
+        }
+
+        .asset-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #fff;
+        }
+
+        .asset-description {
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.5;
+        }
+
+        .asset-file {
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 11px;
+            color: rgba(255, 255, 255, 0.3);
+            font-family: 'SF Mono', 'Fira Code', monospace;
+            word-break: break-all;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 40px;
+        }
+
+        .footer-brand {
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.4);
+            margin-bottom: 8px;
+        }
+
+        .footer-date {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.25);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: 8px;
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 50%;
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .framework-visual {
+                grid-template-columns: 1fr;
+                max-width: 350px;
+            }
+
+            .arc-timeline {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .arc-timeline::before {
+                display: none;
+            }
+
+            .arc-step {
+                width: 100px;
+            }
+
+            .core-message {
+                font-size: 24px;
+            }
+
+            .signature-text {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 28px;
+            }
+
+            .asset-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .caption-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-tabs {
+                gap: 8px;
+            }
+
+            .nav-tab {
+                padding: 10px 20px;
+                font-size: 13px;
+            }
+
+            .storyboard-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="brand-badge">AIPRENEUR</div>
+            <h1>Reel: Como Monetizar con IA</h1>
+            <p class="subtitle">Creative Dashboard | William Suarez</p>
+        </header>
+
+        <!-- ==================================
+             EXECUTIVE SUMMARY - THE BIG IDEA
+             ================================== -->
+        <section class="executive-summary">
+            <div class="summary-label">La Idea Central del Reel</div>
+            <h2 class="core-message">
+                La IA no es el negocio.<br>
+                <span class="highlight">El negocio es lo que construyes CON IA.</span>
+            </h2>
+            <p class="summary-explanation">
+                Este reel desmonta el mito de que saber usar herramientas de IA = ganar dinero.
+                Presenta las <strong>3 formas reales</strong> de monetizar con IA, guiando a la audiencia
+                hacia la mas poderosa: construir sistemas de agentes.
+            </p>
+
+            <!-- The 3 Paths Framework -->
+            <div class="framework-visual">
+                <div class="framework-path">
+                    <div class="path-number">1</div>
+                    <div class="path-title">SERVICIO</div>
+                    <div class="path-desc">La IA hace el trabajo mejor o mas rapido</div>
+                </div>
+                <div class="framework-path">
+                    <div class="path-number">2</div>
+                    <div class="path-title">PRODUCTO</div>
+                    <div class="path-desc">La IA te ayuda a crearlo</div>
+                </div>
+                <div class="framework-path highlighted">
+                    <div class="path-number">3</div>
+                    <div class="path-title">SISTEMA</div>
+                    <div class="path-desc">Agentes que trabajan para ti 24/7</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================
+             EMOTIONAL ARC / JOURNEY
+             ================================== -->
+        <section class="emotional-arc">
+            <div class="arc-title">Arco Narrativo del Reel (85 segundos)</div>
+            <div class="arc-timeline">
+                <div class="arc-step">
+                    <div class="arc-dot">?</div>
+                    <div class="arc-emotion">Curiosidad</div>
+                    <div class="arc-time">0:00</div>
+                </div>
+                <div class="arc-step">
+                    <div class="arc-dot">!</div>
+                    <div class="arc-emotion">Reconocimiento</div>
+                    <div class="arc-time">0:10</div>
+                </div>
+                <div class="arc-step">
+                    <div class="arc-dot">*</div>
+                    <div class="arc-emotion">Desafio</div>
+                    <div class="arc-time">0:25</div>
+                </div>
+                <div class="arc-step peak">
+                    <div class="arc-dot">3</div>
+                    <div class="arc-emotion">Claridad</div>
+                    <div class="arc-time">0:35</div>
+                </div>
+                <div class="arc-step">
+                    <div class="arc-dot">-></div>
+                    <div class="arc-emotion">Motivacion</div>
+                    <div class="arc-time">1:05</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================================
+             SIGNATURE PHRASE
+             ================================== -->
+        <section class="signature-hero">
+            <div class="signature-label">Frase Firma</div>
+            <div class="signature-text">Menos tareas. Mas agentes.</div>
+        </section>
+
+        <!-- ==================================
+             NAVIGATION TABS
+             ================================== -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" onclick="showTab('preview')">Vista Previa</button>
+            <button class="nav-tab" onclick="showTab('script')">Script Completo</button>
+            <button class="nav-tab" onclick="showTab('hooks')">Hooks</button>
+            <button class="nav-tab" onclick="showTab('captions')">Captions</button>
+            <button class="nav-tab" onclick="showTab('overlays')">Text Overlays</button>
+            <button class="nav-tab" onclick="showTab('assets')">Assets Visuales</button>
+        </div>
+
+        <!-- ==================================
+             TAB: VISUAL PREVIEW
+             ================================== -->
+        <div class="tab-content active" id="tab-preview">
+            <div class="visual-preview">
+                <div class="preview-title">
+                    <h3>Storyboard Visual</h3>
+                    <p>Asi fluye el contenido visualmente de principio a fin</p>
+                </div>
+
+                <div class="storyboard-grid">
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_tool-overload_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_tool-overload_v1.jpg" alt="Hook">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">0:00 - 0:10</div>
+                            <div class="story-frame-text">Hook + El Problema</div>
+                        </div>
+                    </div>
+
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tools-vs-systems_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tools-vs-systems_v1.jpg" alt="Truth">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">0:10 - 0:25</div>
+                            <div class="story-frame-text">La Verdad: Tools vs Systems</div>
+                        </div>
+                    </div>
+
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_number-3_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_number-3_v1.jpg" alt="Framework">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">0:25 - 0:35</div>
+                            <div class="story-frame-text">Intro del Framework: "3"</div>
+                        </div>
+                    </div>
+
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_three-paths_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_three-paths_v1.jpg" alt="Three Paths">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">0:35 - 0:50</div>
+                            <div class="story-frame-text">Las 3 Formas de Monetizar</div>
+                        </div>
+                    </div>
+
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_agent-system_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_agent-system_v1.jpg" alt="Real Game">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">0:50 - 1:05</div>
+                            <div class="story-frame-text">El Juego Real: Sistemas</div>
+                        </div>
+                    </div>
+
+                    <div class="story-frame" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tareas-vs-agentes_v1.jpg')">
+                        <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tareas-vs-agentes_v1.jpg" alt="CTA">
+                        <div class="story-frame-info">
+                            <div class="story-frame-time">1:05 - 1:25</div>
+                            <div class="story-frame-text">Tareas vs Agentes + CTA</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Stats -->
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 16px; margin-top: 30px;">
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: 700; color: #87A96B;">85s</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Duracion</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: 700; color: #87A96B;">8</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Assets</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: 700; color: #87A96B;">9:16</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Formato</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 24px; text-align: center;">
+                    <div style="font-size: 32px; font-weight: 700; color: #87A96B;">3</div>
+                    <div style="font-size: 12px; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 1px;">Hooks</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================================
+             TAB: SCRIPT
+             ================================== -->
+        <div class="tab-content" id="tab-script">
+            <div class="section-title">
+                <h3>Script Completo</h3>
+            </div>
+
+            <div class="script-container">
+                <div class="script-block">
+                    <span class="script-timestamp">0:00 - 0:03</span>
+                    <div class="script-section-name">Hook</div>
+                    <p class="script-text">"El 90% de la gente que intenta monetizar con IA... lo esta haciendo mal."</p>
+                    <p class="script-delivery">Delivery: Directo, calmado, pausa leve despues de "IA"</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:03 - 0:10</span>
+                    <div class="script-section-name">El Problema</div>
+                    <p class="script-text">"Estan copiando prompts, probando herramientas nuevas cada semana, y esperando que algo magicamente genere ingresos."</p>
+                    <p class="script-delivery">Delivery: Ritmo ligeramente mas rapido, conversacional</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:10 - 0:18</span>
+                    <div class="script-section-name">La Verdad</div>
+                    <p class="script-text">"Pero aqui esta la verdad que nadie te dice:<br><strong>La IA no es el negocio.<br>El negocio es lo que construyes CON IA.</strong>"</p>
+                    <p class="script-delivery">Delivery: Bajar velocidad en "La IA no es el negocio" - dejar que aterrice</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:18 - 0:25</span>
+                    <div class="script-section-name">El Cambio</div>
+                    <p class="script-text">"No es cuantas herramientas conoces. Es si puedes construir algo que genere valor sin que tu estes ahi todo el tiempo."</p>
+                    <p class="script-delivery">Delivery: Enfasis en "sin que tu estes ahi"</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:25 - 0:35</span>
+                    <div class="script-section-name">Intro del Framework</div>
+                    <p class="script-text">"Hay exactamente tres formas reales de monetizar con IA. No diez. No cincuenta. <strong>Tres.</strong>"</p>
+                    <p class="script-delivery">Delivery: Confiado, directo al punto</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:35 - 0:50</span>
+                    <div class="script-section-name">Las Tres Formas</div>
+                    <p class="script-text">"<strong>UNO:</strong> Vender un servicio que la IA hace mejor o mas rapido. Analisis, creacion de contenido, automatizaciones.<br><br><strong>DOS:</strong> Crear un producto digital que la IA te ayudo a construir. Un curso, una herramienta, una plantilla.<br><br><strong>TRES:</strong> Construir un sistema de agentes que trabaje para tu negocio. Prospectando, atendiendo, vendiendo."</p>
+                    <p class="script-delivery">Delivery: Contar con los dedos. Bajar velocidad en "trabaje para tu negocio"</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">0:50 - 1:05</span>
+                    <div class="script-section-name">El Juego Real</div>
+                    <p class="script-text">"La mayoria se queda en el uno. Intercambiando tiempo por dinero, pero con IA.<br><br>Los que entienden el juego... <strong>construyen sistemas que generan valor mientras duermen.</strong>"</p>
+                    <p class="script-delivery">Delivery: Leve negacion con la cabeza, inclinarse hacia adelante en el insight</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">1:05 - 1:15</span>
+                    <div class="script-section-name">La Invitacion</div>
+                    <p class="script-text">"Yo pase de hacer tareas con IA... a construir agentes que hacen las tareas por mi."</p>
+                    <p class="script-delivery">Delivery: Personal, mostrando la transformacion</p>
+                </div>
+
+                <div class="script-block">
+                    <span class="script-timestamp">1:15 - 1:25</span>
+                    <div class="script-section-name">CTA</div>
+                    <p class="script-text">"Si quieres aprender a construir tu primer agente, sin codigo, paso a paso... <strong>sigueme.</strong><br><br>El siguiente video te muestro como."</p>
+                    <p class="script-delivery">Delivery: Calido, invitante, no agresivo. Promesa de valor.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================================
+             TAB: HOOKS
+             ================================== -->
+        <div class="tab-content" id="tab-hooks">
+            <div class="section-title">
+                <h3>Opciones de Hook</h3>
+                <span class="count">3</span>
+            </div>
+
+            <div class="hook-option recommended">
+                <div class="hook-label">
+                    <span class="hook-name">Hook A: "The Myth Buster"</span>
+                    <span class="hook-badge">Recomendado</span>
+                </div>
+                <p class="hook-text">"El 90% de la gente que intenta monetizar con IA... lo esta haciendo mal."</p>
+                <p class="hook-why"><strong>Por que funciona:</strong> Pattern interrupt + afirmacion audaz + habla directamente al pain point</p>
+            </div>
+
+            <div class="hook-option">
+                <div class="hook-label">
+                    <span class="hook-name">Hook B: "The Question"</span>
+                </div>
+                <p class="hook-text">"Cuantos prompts has copiado de internet esta semana?"</p>
+                <p class="hook-why"><strong>Por que funciona:</strong> Llama la atencion sobre comportamiento comun, crea auto-reflexion</p>
+            </div>
+
+            <div class="hook-option">
+                <div class="hook-label">
+                    <span class="hook-name">Hook C: "The Contradiction"</span>
+                </div>
+                <p class="hook-text">"Saber usar ChatGPT no te va a hacer rico."</p>
+                <p class="hook-why"><strong>Por que funciona:</strong> Contradice creencia popular, crea tension</p>
+            </div>
+        </div>
+
+        <!-- ==================================
+             TAB: CAPTIONS
+             ================================== -->
+        <div class="tab-content" id="tab-captions">
+            <div class="section-title">
+                <h3>Captions Listos para Publicar</h3>
+            </div>
+
+            <div class="caption-container">
+                <div class="caption-card">
+                    <div class="caption-header">
+                        <div class="caption-icon instagram">IG</div>
+                        <span class="caption-platform">Instagram</span>
+                    </div>
+                    <div class="caption-text" id="instagram-caption">El 90% de la gente que intenta monetizar con IA lo esta haciendo mal.
+
+Copian prompts. Prueban herramientas. Esperan magia.
+
+Pero aqui esta la verdad:
+La IA no es el negocio.
+El negocio es lo que construyes CON IA.
+
+3 formas reales de monetizar:
+
+1. SERVICIO - La IA hace el trabajo mejor/mas rapido
+2. PRODUCTO - La IA te ayudo a crearlo
+3. SISTEMA - Agentes que trabajan para ti 24/7
+
+La mayoria se queda en el 1.
+Los que entienden el juego... construyen sistemas.
+
+Menos tareas. Mas agentes.
+
+El siguiente video te muestro como construir tu primer agente.</div>
+                    <div class="caption-hashtags">#IAparaNegocios #AgentesDeIA #AIPreneur #MonetizarConIA #ClaudeCode #Emprendimiento #SistemasDeIA #FreelancerDigital #AutomatizacionIA #InteligenciaArtificial</div>
+                    <button class="copy-btn" onclick="copyCaption('instagram')">Copiar Caption</button>
+                </div>
+
+                <div class="caption-card">
+                    <div class="caption-header">
+                        <div class="caption-icon tiktok">TT</div>
+                        <span class="caption-platform">TikTok</span>
+                    </div>
+                    <div class="caption-text" id="tiktok-caption">La IA no es el negocio. El negocio es lo que construyes CON IA.
+
+3 formas reales de monetizar:
+1. Servicio
+2. Producto
+3. Sistema (este es el juego real)
+
+Menos tareas. Mas agentes.
+
+Sigueme para el tutorial de tu primer agente.</div>
+                    <div class="caption-hashtags">#IAparaNegocios #AgentesIA #AIPreneur #MonetizarConIA</div>
+                    <button class="copy-btn" onclick="copyCaption('tiktok')">Copiar Caption</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ==================================
+             TAB: TEXT OVERLAYS
+             ================================== -->
+        <div class="tab-content" id="tab-overlays">
+            <div class="section-title">
+                <h3>Text Overlays para Edicion</h3>
+            </div>
+
+            <div class="script-container">
+                <h4 style="margin-bottom: 20px; color: rgba(255,255,255,0.6);">Textos Principales (Grande, Centro)</h4>
+                <table class="overlay-table">
+                    <thead>
+                        <tr>
+                            <th>Tiempo</th>
+                            <th>Texto en Pantalla</th>
+                            <th>Estilo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">0:01</td>
+                            <td class="text">90%</td>
+                            <td>Grande, blanco, animacion tachado</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:12</td>
+                            <td class="text">La IA no es el negocio</td>
+                            <td>Aparece palabra por palabra</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:30</td>
+                            <td class="text">3</td>
+                            <td>Extra grande, estilo hand-drawn</td>
+                        </tr>
+                        <tr>
+                            <td class="time">1:12</td>
+                            <td class="text">Menos tareas. Mas agentes.</td>
+                            <td>Frase firma, centrado</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h4 style="margin: 40px 0 20px; color: rgba(255,255,255,0.6);">Textos Secundarios (Soporte)</h4>
+                <table class="overlay-table">
+                    <thead>
+                        <tr>
+                            <th>Tiempo</th>
+                            <th>Texto en Pantalla</th>
+                            <th>Posicion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="time">0:05</td>
+                            <td class="text">Copiando prompts...</td>
+                            <td>Tercio inferior</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:07</td>
+                            <td class="text">Probando herramientas...</td>
+                            <td>Tercio inferior</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:36</td>
+                            <td class="text">1. SERVICIO</td>
+                            <td>Alineado izquierda</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:41</td>
+                            <td class="text">2. PRODUCTO</td>
+                            <td>Alineado izquierda</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:46</td>
+                            <td class="text">3. SISTEMA</td>
+                            <td>Alineado izquierda, highlight</td>
+                        </tr>
+                        <tr>
+                            <td class="time">0:55</td>
+                            <td class="text">La mayoria</td>
+                            <td>Con flecha indicadora</td>
+                        </tr>
+                        <tr>
+                            <td class="time">1:00</td>
+                            <td class="text">Mientras duermen</td>
+                            <td>Abajo derecha</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- ==================================
+             TAB: ASSETS
+             ================================== -->
+        <div class="tab-content" id="tab-assets">
+            <!-- Whiteboard Section -->
+            <div class="section-title">
+                <h3>Whiteboard Diagrams</h3>
+                <span class="count">4</span>
+            </div>
+
+            <div class="asset-grid">
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tools-vs-systems_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tools-vs-systems_v1.jpg" alt="Tools vs Systems" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type whiteboard">Whiteboard</span>
+                        <h4 class="asset-name">Tools vs Systems</h4>
+                        <p class="asset-description">Diagrama comparativo: herramientas sueltas vs sistemas integrados.</p>
+                        <div class="asset-file">williamsuarez_whiteboard_tools-vs-systems_v1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_three-paths_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_three-paths_v1.jpg" alt="Three Paths" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type whiteboard">Whiteboard</span>
+                        <h4 class="asset-name">Three Paths</h4>
+                        <p class="asset-description">Los 3 caminos para monetizar con IA.</p>
+                        <div class="asset-file">williamsuarez_whiteboard_three-paths_v1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tareas-vs-agentes_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_tareas-vs-agentes_v1.jpg" alt="Tareas vs Agentes" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type whiteboard">Whiteboard</span>
+                        <h4 class="asset-name">Tareas vs Agentes</h4>
+                        <p class="asset-description">Diferencia clave: tareas manuales vs agentes autonomos.</p>
+                        <div class="asset-file">williamsuarez_whiteboard_tareas-vs-agentes_v1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_number-3_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_whiteboard_number-3_v1.jpg" alt="Number 3" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type whiteboard">Whiteboard</span>
+                        <h4 class="asset-name">Number 3</h4>
+                        <p class="asset-description">Elemento visual del numero 3.</p>
+                        <div class="asset-file">williamsuarez_whiteboard_number-3_v1.jpg</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- B-Roll Section -->
+            <div class="section-title">
+                <h3>B-Roll Visuals</h3>
+                <span class="count">3</span>
+            </div>
+
+            <div class="asset-grid">
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_tool-overload_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_tool-overload_v1.jpg" alt="Tool Overload" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type broll">B-Roll</span>
+                        <h4 class="asset-name">Tool Overload</h4>
+                        <p class="asset-description">Visualizacion del problema: sobrecarga de herramientas.</p>
+                        <div class="asset-file">williamsuarez_broll_tool-overload_v1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_night-workspace_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_night-workspace_v1.jpg" alt="Night Workspace" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type broll">B-Roll</span>
+                        <h4 class="asset-name">Night Workspace</h4>
+                        <p class="asset-description">Escena de trabajo nocturno, productividad enfocada.</p>
+                        <div class="asset-file">williamsuarez_broll_night-workspace_v1.jpg</div>
+                    </div>
+                </div>
+
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_agent-system_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_broll_agent-system_v1.jpg" alt="Agent System" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type broll">B-Roll</span>
+                        <h4 class="asset-name">Agent System</h4>
+                        <p class="asset-description">Sistema de agentes trabajando en conjunto.</p>
+                        <div class="asset-file">williamsuarez_broll_agent-system_v1.jpg</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Avatar Section -->
+            <div class="section-title">
+                <h3>Avatar Reference</h3>
+                <span class="count">1</span>
+            </div>
+
+            <div class="asset-grid">
+                <div class="asset-card" onclick="openLightbox('../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_avatar_reference-frame_v1.jpg')">
+                    <img src="../04-assets/images/reel-como-monetizar-con-ia/williamsuarez_avatar_reference-frame_v1.jpg" alt="Avatar Reference" class="asset-image">
+                    <div class="asset-info">
+                        <span class="asset-type avatar">Avatar</span>
+                        <h4 class="asset-name">Reference Frame</h4>
+                        <p class="asset-description">Frame de referencia del avatar para consistencia visual.</p>
+                        <div class="asset-file">williamsuarez_avatar_reference-frame_v1.jpg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-brand">Simplicity Growth Marketing | AIPreneur Brand</p>
+            <p class="footer-date">Dashboard v3.0 | Enero 2026</p>
+        </footer>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox-close" onclick="closeLightbox()">&times;</button>
+        <img src="" alt="Asset Preview" id="lightbox-img">
+    </div>
+
+    <script>
+        // Tab Navigation
+        function showTab(tabName) {
+            // Hide all tabs
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.querySelectorAll('.nav-tab').forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            // Show selected tab
+            document.getElementById('tab-' + tabName).classList.add('active');
+            event.target.classList.add('active');
+        }
+
+        // Lightbox
+        function openLightbox(src) {
+            document.getElementById('lightbox-img').src = src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+
+        // Copy Caption
+        function copyCaption(platform) {
+            const captionEl = document.getElementById(platform + '-caption');
+            const hashtagEl = captionEl.nextElementSibling;
+            const fullCaption = captionEl.textContent + '\n\n' + hashtagEl.textContent;
+
+            navigator.clipboard.writeText(fullCaption).then(() => {
+                const btn = captionEl.parentElement.querySelector('.copy-btn');
+                btn.textContent = 'Copiado!';
+                btn.classList.add('copied');
+
+                setTimeout(() => {
+                    btn.textContent = 'Copiar Caption';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
