@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{PROJECT_TITLE}} - Delivery Dashboard | Simplicity Growth</title>
+    <link rel="stylesheet" href="../assets/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="dashboard-header">
+        <div class="header-content">
+            <div class="brand">
+                <div class="logo">SG</div>
+                <div class="brand-text">
+                    <span class="brand-name">Simplicity Growth</span>
+                    <span class="brand-subtitle">Delivery Dashboard</span>
+                </div>
+            </div>
+            <div class="project-info">
+                <h1 class="project-title">{{PROJECT_TITLE}}</h1>
+                <div class="project-meta">
+                    <span class="meta-item">
+                        <span class="meta-icon">&#128197;</span>
+                        {{DELIVERY_DATE}}
+                    </span>
+                    <span class="meta-item">
+                        <span class="meta-icon">&#128196;</span>
+                        {{PROJECT_TYPE}}
+                    </span>
+                    <span class="meta-item status-badge status-{{STATUS_CLASS}}">
+                        {{STATUS}}
+                    </span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="dashboard-nav">
+        <div class="nav-content">
+            <a href="#overview" class="nav-link active">Overview</a>
+            <a href="#assets" class="nav-link">Assets ({{ASSET_COUNT}})</a>
+            <a href="#scripts" class="nav-link">Scripts</a>
+            <a href="#brand" class="nav-link">Brand Guidelines</a>
+            <a href="#actions" class="nav-link">Actions</a>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <!-- Overview Section -->
+        <section id="overview" class="section">
+            <div class="section-header">
+                <h2>Project Overview</h2>
+            </div>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <div class="card-icon">&#127916;</div>
+                    <div class="card-content">
+                        <span class="card-label">Format</span>
+                        <span class="card-value">{{FORMAT}}</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">&#9201;</div>
+                    <div class="card-content">
+                        <span class="card-label">Duration</span>
+                        <span class="card-value">{{DURATION}}</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">&#128444;</div>
+                    <div class="card-content">
+                        <span class="card-label">Scenes</span>
+                        <span class="card-value">{{SCENE_COUNT}}</span>
+                    </div>
+                </div>
+                <div class="overview-card">
+                    <div class="card-icon">&#128190;</div>
+                    <div class="card-content">
+                        <span class="card-label">Total Assets</span>
+                        <span class="card-value">{{ASSET_COUNT}} files</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Core Message -->
+            <div class="message-box">
+                <h3>Core Message</h3>
+                <blockquote class="core-message">
+                    "{{CORE_MESSAGE}}"
+                </blockquote>
+            </div>
+
+            <!-- Workflow Status -->
+            <div class="workflow-status">
+                <h3>Workflow Status</h3>
+                <div class="workflow-steps">
+                    {{WORKFLOW_STEPS}}
+                </div>
+            </div>
+        </section>
+
+        <!-- Assets Section -->
+        <section id="assets" class="section">
+            <div class="section-header">
+                <h2>Generated Assets</h2>
+                <div class="section-actions">
+                    <button class="btn btn-secondary" onclick="toggleViewMode()">
+                        <span class="btn-icon">&#9638;</span> Toggle View
+                    </button>
+                    <button class="btn btn-primary" onclick="downloadAllAssets()">
+                        <span class="btn-icon">&#8595;</span> Download All
+                    </button>
+                </div>
+            </div>
+
+            <div class="asset-grid" id="assetGrid">
+                {{ASSET_CARDS}}
+            </div>
+        </section>
+
+        <!-- Scripts Section -->
+        <section id="scripts" class="section">
+            <div class="section-header">
+                <h2>Script & Copy</h2>
+            </div>
+
+            <div class="script-container">
+                <!-- Scene Timeline -->
+                <div class="scene-timeline">
+                    <h3>Scene Timeline</h3>
+                    <div class="timeline">
+                        {{SCENE_TIMELINE}}
+                    </div>
+                </div>
+
+                <!-- Full Script -->
+                <div class="full-script">
+                    <h3>Complete Script</h3>
+                    <div class="script-box">
+                        <pre class="script-content">{{FULL_SCRIPT}}</pre>
+                    </div>
+                    <div class="script-actions">
+                        <button class="btn btn-secondary" onclick="copyScript()">
+                            <span class="btn-icon">&#128203;</span> Copy Script
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Captions -->
+                <div class="captions-section">
+                    <h3>Platform Captions</h3>
+                    <div class="caption-tabs">
+                        <button class="caption-tab active" data-platform="instagram">Instagram</button>
+                        <button class="caption-tab" data-platform="tiktok">TikTok</button>
+                    </div>
+                    <div class="caption-content" id="instagramCaption">
+                        <pre>{{INSTAGRAM_CAPTION}}</pre>
+                        <button class="btn btn-sm" onclick="copyCaption('instagram')">Copy</button>
+                    </div>
+                    <div class="caption-content hidden" id="tiktokCaption">
+                        <pre>{{TIKTOK_CAPTION}}</pre>
+                        <button class="btn btn-sm" onclick="copyCaption('tiktok')">Copy</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Guidelines Section -->
+        <section id="brand" class="section">
+            <div class="section-header">
+                <h2>Brand Guidelines</h2>
+            </div>
+
+            <div class="brand-grid">
+                <!-- Colors -->
+                <div class="brand-card">
+                    <h3>Color Palette</h3>
+                    <div class="color-swatches">
+                        {{COLOR_SWATCHES}}
+                    </div>
+                </div>
+
+                <!-- Typography -->
+                <div class="brand-card">
+                    <h3>Typography</h3>
+                    <div class="typography-specs">
+                        {{TYPOGRAPHY_SPECS}}
+                    </div>
+                </div>
+
+                <!-- Tone of Voice -->
+                <div class="brand-card">
+                    <h3>Tone of Voice</h3>
+                    <div class="voice-specs">
+                        <p><strong>Style:</strong> {{VOICE_STYLE}}</p>
+                        <p><strong>Emotional Posture:</strong> {{EMOTIONAL_POSTURE}}</p>
+                        <div class="voice-do-dont">
+                            <div class="do-list">
+                                <h4>Do</h4>
+                                <ul>{{VOICE_DO}}</ul>
+                            </div>
+                            <div class="dont-list">
+                                <h4>Don't</h4>
+                                <ul>{{VOICE_DONT}}</ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Audio Direction -->
+                <div class="brand-card">
+                    <h3>Audio Direction</h3>
+                    <div class="audio-specs">
+                        {{AUDIO_SPECS}}
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Actions Section -->
+        <section id="actions" class="section">
+            <div class="section-header">
+                <h2>Quick Actions</h2>
+            </div>
+
+            <div class="actions-grid">
+                <!-- Regenerate Asset -->
+                <div class="action-card">
+                    <div class="action-icon">&#128260;</div>
+                    <h3>Regenerate Asset</h3>
+                    <p>Generate a new version of any asset using the original prompt or with modifications.</p>
+                    <select id="assetSelect" class="action-select">
+                        <option value="">Select an asset...</option>
+                        {{ASSET_OPTIONS}}
+                    </select>
+                    <textarea id="promptModification" class="action-textarea" placeholder="Optional: Add modifications to the prompt..."></textarea>
+                    <button class="btn btn-primary" onclick="regenerateAsset()">
+                        Regenerate with fal.ai
+                    </button>
+                </div>
+
+                <!-- Improve Copy -->
+                <div class="action-card">
+                    <div class="action-icon">&#9998;</div>
+                    <h3>Improve Copy</h3>
+                    <p>Get AI suggestions to enhance scripts, hooks, or captions.</p>
+                    <select id="copySelect" class="action-select">
+                        <option value="">Select copy type...</option>
+                        <option value="hook">Hook/Opener</option>
+                        <option value="script">Full Script</option>
+                        <option value="caption">Caption</option>
+                        <option value="cta">Call-to-Action</option>
+                    </select>
+                    <textarea id="copyContext" class="action-textarea" placeholder="Paste the current copy or describe what you want to improve..."></textarea>
+                    <button class="btn btn-primary" onclick="improveCopy()">
+                        Get Suggestions
+                    </button>
+                </div>
+
+                <!-- Generate Variations -->
+                <div class="action-card">
+                    <div class="action-icon">&#128200;</div>
+                    <h3>Generate Variations</h3>
+                    <p>Create alternative versions of hooks, headlines, or visual concepts.</p>
+                    <select id="variationType" class="action-select">
+                        <option value="">Select what to vary...</option>
+                        <option value="hooks">Alternative Hooks</option>
+                        <option value="thumbnails">Thumbnail Concepts</option>
+                        <option value="angles">Content Angles</option>
+                    </select>
+                    <input type="number" id="variationCount" class="action-input" value="3" min="1" max="10" placeholder="Number of variations">
+                    <button class="btn btn-primary" onclick="generateVariations()">
+                        Generate Variations
+                    </button>
+                </div>
+
+                <!-- Export Package -->
+                <div class="action-card">
+                    <div class="action-icon">&#128230;</div>
+                    <h3>Export Package</h3>
+                    <p>Download a complete package with all assets and documentation.</p>
+                    <div class="export-options">
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Include assets
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Include scripts
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" checked> Include prompts
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox"> Include brand guidelines
+                        </label>
+                    </div>
+                    <button class="btn btn-secondary" onclick="exportPackage()">
+                        Prepare Export
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Documents -->
+        <section id="documents" class="section">
+            <div class="section-header">
+                <h2>Related Documents</h2>
+            </div>
+            <div class="documents-list">
+                {{RELATED_DOCUMENTS}}
+            </div>
+        </section>
+    </main>
+
+    <!-- Asset Modal -->
+    <div id="assetModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="">
+                </div>
+                <div class="modal-details">
+                    <h3 id="modalTitle"></h3>
+                    <div class="modal-meta">
+                        <p><strong>Scene:</strong> <span id="modalScene"></span></p>
+                        <p><strong>Timestamp:</strong> <span id="modalTimestamp"></span></p>
+                        <p><strong>Size:</strong> <span id="modalSize"></span></p>
+                    </div>
+                    <div class="modal-prompt">
+                        <h4>Generation Prompt</h4>
+                        <pre id="modalPrompt"></pre>
+                        <button class="btn btn-sm" onclick="copyPrompt()">Copy Prompt</button>
+                    </div>
+                    <div class="modal-actions">
+                        <button class="btn btn-primary" onclick="regenerateFromModal()">
+                            Regenerate
+                        </button>
+                        <a id="modalDownload" href="" download class="btn btn-secondary">
+                            Download
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- Footer -->
+    <footer class="dashboard-footer">
+        <div class="footer-content">
+            <p>Generated by SimplicityAgents v3.0 | Delivery Documentation Manager</p>
+            <p class="footer-timestamp">Report generated: {{GENERATION_TIMESTAMP}}</p>
+        </div>
+    </footer>
+
+    <script src="../assets/dashboard.js"></script>
+    <script>
+        // Project-specific data
+        const projectData = {
+            clientSlug: '{{CLIENT_SLUG}}',
+            projectSlug: '{{PROJECT_SLUG}}',
+            assets: {{ASSETS_JSON}},
+            prompts: {{PROMPTS_JSON}}
+        };
+    </script>
+</body>
+</html>

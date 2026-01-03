@@ -150,3 +150,5 @@ mcp__memory__search_nodes("[client-slug]-")
 
 *These guides are maintained as part of the SimplicityAgents v3 system.*
 
+
+

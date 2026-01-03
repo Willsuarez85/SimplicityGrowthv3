@@ -480,3 +480,5 @@ mcp__memory__search_nodes("[client-slug]-")
 
 *This document is maintained by the SimplicityAgents development team. Update when adding new entity types or modifying memory protocols.*
 
+
+

@@ -203,6 +203,177 @@ When writing documentation and communications:
 
 You make the system feel professional and effortless. You turn internal work into client results. You close the loop between systems and people.
 
+## Visual Dashboard Report Generation
+
+After completing creative work (storyboards, scripts, AI-generated assets), generate an interactive HTML report for visual review and action-taking.
+
+### When to Generate Visual Reports
+
+Generate a visual HTML report when:
+- AI assets have been generated via prompt-asset-engineer
+- Storyboards and scripts are finalized
+- A reel, video, or multi-asset creative project is ready for delivery
+- The client or editor needs a visual overview with action capabilities
+
+### Report Generation Workflow
+
+**Step 1: Gather Project Data**
+
+Collect from client folder structure:
+```
+clients/[client-slug]/
+├── 03-creative/scripts/          → Script content
+├── 03-creative/storyboards/      → Scene timeline
+├── 04-assets/images/[project]/   → Generated images
+└── 05-deliverables/              → Delivery summary
+```
+
+**Step 2: Query Memory for Brand Context**
+```javascript
+mcp__memory__open_nodes([
+  "[client-slug]-brand",
+  "[client-slug]-voice",
+  "[client-slug]-visual"
+])
+```
+Use retrieved data for brand guidelines section.
+
+**Step 3: Prepare Template Variables**
+
+The template at `/dashboard/templates/visual_report_template.html` uses these placeholders:
+
+| Variable | Source | Example |
+|----------|--------|---------|
+| `{{PROJECT_TITLE}}` | Project name | "Como Monetizar con IA" |
+| `{{CLIENT_SLUG}}` | Client folder name | "william-suarez-aipreneur" |
+| `{{PROJECT_SLUG}}` | URL-safe project name | "como-monetizar-con-ia" |
+| `{{DELIVERY_DATE}}` | Current date | "January 3, 2026" |
+| `{{PROJECT_TYPE}}` | Content format | "Instagram Reel" |
+| `{{STATUS}}` | Delivery status | "Complete" |
+| `{{STATUS_CLASS}}` | CSS class | "complete" or "pending" |
+| `{{FORMAT}}` | Video format | "Vertical 9:16" |
+| `{{DURATION}}` | Content length | "75-90 seconds" |
+| `{{SCENE_COUNT}}` | Number of scenes | "9" |
+| `{{ASSET_COUNT}}` | Number of files | "8" |
+| `{{CORE_MESSAGE}}` | Central theme | "AI monetization is accessible..." |
+| `{{WORKFLOW_STEPS}}` | HTML status steps | See format below |
+| `{{ASSET_CARDS}}` | HTML asset grid | See format below |
+| `{{SCENE_TIMELINE}}` | HTML timeline | See format below |
+| `{{FULL_SCRIPT}}` | Complete script text | Multi-line script |
+| `{{INSTAGRAM_CAPTION}}` | IG caption with hashtags | Platform caption |
+| `{{TIKTOK_CAPTION}}` | TikTok caption | Platform caption |
+| `{{COLOR_SWATCHES}}` | HTML color palette | From visual identity |
+| `{{TYPOGRAPHY_SPECS}}` | HTML font specs | From visual identity |
+| `{{VOICE_STYLE}}` | Language style | From tone of voice |
+| `{{EMOTIONAL_POSTURE}}` | Emotional tone | From tone of voice |
+| `{{VOICE_DO}}` | HTML list items | Do's from voice guide |
+| `{{VOICE_DONT}}` | HTML list items | Don'ts from voice guide |
+| `{{AUDIO_SPECS}}` | HTML audio direction | Music/VO notes |
+| `{{ASSET_OPTIONS}}` | HTML select options | For regeneration dropdown |
+| `{{RELATED_DOCUMENTS}}` | HTML document links | Links to source docs |
+| `{{GENERATION_TIMESTAMP}}` | ISO timestamp | Report creation time |
+| `{{ASSETS_JSON}}` | JSON object | Asset paths and metadata |
+| `{{PROMPTS_JSON}}` | JSON object | Asset prompts for regeneration |
+
+**Step 4: Generate HTML Report**
+
+Create the report file:
+```
+/dashboard/reports/[client-slug]/[project-slug]_[YYYYMMDD].html
+```
+
+Example: `/dashboard/reports/william-suarez-aipreneur/como-monetizar-con-ia_20260103.html`
+
+**Step 5: Update Master Dashboard Index**
+
+Add a new client card or report item to `/dashboard/index.html`:
+
+```html
+<li class="report-item">
+    <div class="report-info">
+        <span class="report-name">[Project Title]</span>
+        <div class="report-meta">
+            <span>&#128197; [Date]</span>
+            <span>&#127916; [Type]</span>
+            <span class="status-badge status-complete">Complete</span>
+        </div>
+    </div>
+    <a href="reports/[client-slug]/[filename].html" class="report-link">
+        View <span>&#8594;</span>
+    </a>
+</li>
+```
+
+Update the Recent Activity section with the new report generation.
+
+### HTML Component Formats
+
+**Asset Card Format:**
+```html
+<div class="asset-card"
+     data-id="scene_01"
+     data-src="../../../clients/[client]/04-assets/images/[project]/[file].jpg"
+     data-title="[Scene Title]"
+     data-scene="Scene 1"
+     data-timestamp="0:00-0:08"
+     data-size="1024x1792"
+     data-prompt="[Generation prompt text]">
+    <div class="asset-preview">
+        <img src="../../../clients/[client]/04-assets/images/[project]/[file].jpg" alt="[Scene Title]">
+    </div>
+    <div class="asset-info">
+        <span class="asset-title">[Scene Title]</span>
+        <span class="asset-meta">Scene 1 | 0:00-0:08</span>
+    </div>
+</div>
+```
+
+**Workflow Step Format:**
+```html
+<div class="workflow-step completed">
+    <span class="step-icon">&#10003;</span>
+    <span class="step-label">[Step Name]</span>
+</div>
+```
+
+**Timeline Item Format:**
+```html
+<div class="timeline-item">
+    <div class="timeline-time">[Timestamp]</div>
+    <div class="timeline-content">
+        <h4>[Scene Title]</h4>
+        <p>[Scene description or script excerpt]</p>
+    </div>
+</div>
+```
+
+### Report Features
+
+The generated HTML report provides:
+
+1. **Asset Gallery** - Visual grid of all generated images with modal preview
+2. **Script & Copy** - Full script with copy-to-clipboard functionality
+3. **Platform Captions** - Tab-switchable Instagram/TikTok captions
+4. **Brand Guidelines** - Color palette, typography, voice reference
+5. **Quick Actions:**
+   - Regenerate Asset (copies prompt to clipboard for fal.ai)
+   - Improve Copy (generates improvement prompt for Claude)
+   - Generate Variations (creates variation prompts)
+   - Export Package (prepares download bundle)
+
+### Verification Checklist for Visual Reports
+
+- [ ] All asset images are accessible via relative paths
+- [ ] Script content is complete and properly escaped
+- [ ] Captions include hashtags and platform-specific formatting
+- [ ] Brand colors match visual identity from memory
+- [ ] ASSETS_JSON contains valid paths and metadata
+- [ ] PROMPTS_JSON contains original generation prompts
+- [ ] Master index updated with new report link
+- [ ] Report loads without JavaScript errors
+
+---
+
 ## Memory Query Protocol
 
 Before assembling deliverables, query the MCP Knowledge Graph to gather complete client context:

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Dashboard | Simplicity Growth</title>
+    <link rel="stylesheet" href="assets/dashboard.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Index-specific styles */
+        .index-hero {
+            background: linear-gradient(135deg, var(--gray-900) 0%, var(--gray-800) 100%);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 1px solid var(--gray-700);
+        }
+
+        .index-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+
+        .index-hero p {
+            color: var(--gray-400);
+            font-size: 1.125rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .index-stats {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            margin-top: 2rem;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-400);
+        }
+
+        .stat-label {
+            font-size: 0.875rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .index-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid var(--gray-200);
+        }
+
+        .section-header h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gray-900);
+        }
+
+        .client-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .client-card {
+            background: white;
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--gray-200);
+            overflow: hidden;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .client-card:hover {
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-2px);
+            border-color: var(--primary-300);
+        }
+
+        .client-header {
+            background: linear-gradient(135deg, var(--primary-600) 0%, var(--primary-700) 100%);
+            padding: 1.25rem 1.5rem;
+            color: white;
+        }
+
+        .client-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .client-slug {
+            font-size: 0.75rem;
+            color: var(--primary-200);
+            font-family: var(--font-mono);
+        }
+
+        .client-body {
+            padding: 1.5rem;
+        }
+
+        .report-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .report-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.75rem 1rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-md);
+            margin-bottom: 0.5rem;
+            transition: var(--transition-fast);
+        }
+
+        .report-item:hover {
+            background: var(--primary-50);
+        }
+
+        .report-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .report-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .report-name {
+            font-weight: 500;
+            color: var(--gray-800);
+            font-size: 0.9375rem;
+        }
+
+        .report-meta {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 0.25rem;
+        }
+
+        .report-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.375rem;
+            padding: 0.375rem 0.75rem;
+            background: var(--primary-600);
+            color: white;
+            border-radius: var(--radius-md);
+            font-size: 0.8125rem;
+            font-weight: 500;
+            text-decoration: none;
+            transition: var(--transition-fast);
+        }
+
+        .report-link:hover {
+            background: var(--primary-700);
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 2rem;
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            border: 2px dashed var(--gray-300);
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .empty-state h3 {
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .empty-state p {
+            color: var(--gray-500);
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        .quick-actions {
+            background: var(--gray-50);
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .quick-actions h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 1rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .action-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.625rem 1rem;
+            background: white;
+            border: 1px solid var(--gray-300);
+            border-radius: var(--radius-md);
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-700);
+            cursor: pointer;
+            transition: var(--transition-fast);
+            text-decoration: none;
+        }
+
+        .action-btn:hover {
+            background: var(--gray-100);
+            border-color: var(--gray-400);
+        }
+
+        .action-btn.primary {
+            background: var(--primary-600);
+            border-color: var(--primary-600);
+            color: white;
+        }
+
+        .action-btn.primary:hover {
+            background: var(--primary-700);
+            border-color: var(--primary-700);
+        }
+
+        .index-footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--gray-200);
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        .brand-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .brand-logo {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--primary-500) 0%, var(--primary-600) 100%);
+            border-radius: var(--radius-md);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 0.875rem;
+        }
+
+        /* Status badges */
+        .status-badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.6875rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.025em;
+        }
+
+        .status-complete {
+            background: var(--accent-green-light, #d1fae5);
+            color: var(--accent-green, #059669);
+        }
+
+        .status-pending {
+            background: var(--accent-amber-light, #fef3c7);
+            color: var(--accent-amber, #d97706);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .index-hero h1 {
+                font-size: 1.875rem;
+            }
+
+            .index-stats {
+                gap: 1.5rem;
+            }
+
+            .client-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="index-hero">
+        <div class="brand-badge">
+            <div class="brand-logo">SG</div>
+        </div>
+        <h1>Delivery Dashboard</h1>
+        <p>Visual delivery reports for all client projects. Browse, review, and take action on creative assets.</p>
+
+        <div class="index-stats">
+            <div class="stat-item">
+                <div class="stat-value" id="clientCount">1</div>
+                <div class="stat-label">Clients</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="reportCount">1</div>
+                <div class="stat-label">Reports</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="assetCount">8</div>
+                <div class="stat-label">Assets</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="index-main">
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="action-buttons">
+                <a href="templates/visual_report_template.html" class="action-btn">
+                    <span>&#128196;</span> View Template
+                </a>
+                <a href="../docs/workflows/quick-creative.md" class="action-btn">
+                    <span>&#128218;</span> Workflow Guide
+                </a>
+                <button class="action-btn" onclick="refreshDashboard()">
+                    <span>&#8635;</span> Refresh
+                </button>
+            </div>
+        </div>
+
+        <!-- Client Reports Section -->
+        <section class="reports-section">
+            <div class="section-header">
+                <h2>Client Reports</h2>
+            </div>
+
+            <div class="client-grid" id="clientGrid">
+                <!-- William Suarez AIPreneur -->
+                <div class="client-card">
+                    <div class="client-header">
+                        <div class="client-name">William Suarez - AIPreneur</div>
+                        <div class="client-slug">william-suarez-aipreneur</div>
+                    </div>
+                    <div class="client-body">
+                        <ul class="report-list">
+                            <li class="report-item">
+                                <div class="report-info">
+                                    <span class="report-name">Como Monetizar con IA</span>
+                                    <div class="report-meta">
+                                        <span>&#128197; Jan 3, 2026</span>
+                                        <span>&#127916; Reel</span>
+                                        <span class="status-badge status-complete">Complete</span>
+                                    </div>
+                                </div>
+                                <a href="reports/william-suarez-aipreneur/como-monetizar-con-ia_20260103.html" class="report-link">
+                                    View <span>&#8594;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Placeholder for future clients -->
+                <!--
+                <div class="client-card">
+                    <div class="client-header">
+                        <div class="client-name">Client Name</div>
+                        <div class="client-slug">client-slug</div>
+                    </div>
+                    <div class="client-body">
+                        <ul class="report-list">
+                            <li class="report-item">
+                                <div class="report-info">
+                                    <span class="report-name">Project Name</span>
+                                    <div class="report-meta">
+                                        <span>&#128197; Date</span>
+                                        <span>&#127916; Type</span>
+                                    </div>
+                                </div>
+                                <a href="#" class="report-link">View <span>&#8594;</span></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                -->
+            </div>
+        </section>
+
+        <!-- Recent Activity -->
+        <section class="activity-section">
+            <div class="section-header">
+                <h2>Recent Activity</h2>
+            </div>
+
+            <div class="activity-timeline">
+                <div class="report-item">
+                    <div class="report-info">
+                        <span class="report-name">Generated: Como Monetizar con IA delivery report</span>
+                        <div class="report-meta">
+                            <span>&#128197; Jan 3, 2026</span>
+                            <span>&#128100; delivery-documentation-manager</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-complete">Complete</span>
+                </div>
+                <div class="report-item">
+                    <div class="report-info">
+                        <span class="report-name">Created: 8 AI-generated assets for reel project</span>
+                        <div class="report-meta">
+                            <span>&#128197; Jan 2, 2026</span>
+                            <span>&#128100; prompt-asset-engineer</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-complete">Complete</span>
+                </div>
+                <div class="report-item">
+                    <div class="report-info">
+                        <span class="report-name">Completed: Brand DNA v2 for William Suarez</span>
+                        <div class="report-meta">
+                            <span>&#128197; Jan 2, 2026</span>
+                            <span>&#128100; brand-dna-architect</span>
+                        </div>
+                    </div>
+                    <span class="status-badge status-complete">Complete</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="index-footer">
+        <p>SimplicityAgents v3.0 | Delivery Dashboard</p>
+        <p>Generated reports are static HTML for easy sharing and review.</p>
+    </footer>
+
+    <script>
+        // Dashboard index functionality
+        function refreshDashboard() {
+            // In a real implementation, this would scan for new reports
+            alert('Dashboard refresh triggered. In production, this would scan for new reports.');
+            location.reload();
+        }
+
+        // Update stats on load
+        document.addEventListener('DOMContentLoaded', () => {
+            // Count clients and reports from DOM
+            const clients = document.querySelectorAll('.client-card').length;
+            const reports = document.querySelectorAll('.report-item').length - 3; // Exclude activity items
+
+            document.getElementById('clientCount').textContent = clients;
+            document.getElementById('reportCount').textContent = Math.max(1, reports);
+        });
+    </script>
+</body>
+</html>
