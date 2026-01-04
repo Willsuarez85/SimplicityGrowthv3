@@ -24,6 +24,9 @@ mkdir -p clients/[name]/{01-research/{brand-audit,competitor-analysis,trend-rese
 mcp__fal-ai__ideogram_v3     # Text/diagrams
 mcp__fal-ai__flux_dev        # Fast iteration
 mcp__fal-ai__imagen4         # Hero images
+
+# Run Simplicity Viewer (visual client dashboard)
+cd simplicity-viewer && npm run dev  # http://localhost:3000
 ```
 
 ---

@@ -1,7 +1,7 @@
 # CHANGELOG.md - Development Progress Log
 
 > **Project:** Simplicity Growth Marketing AI Agent System
-> **Version:** 3.0.0-alpha.6
+> **Version:** 3.0.0-alpha.7
 > **Started:** 2025-01-01
 > **Last Updated:** 2026-01-04
 
@@ -314,6 +314,145 @@ Overall Progress: ~70% (Phase 1, 1.X, 2, and 3 COMPLETE!)
 ---
 
 ## Development Sessions Log
+
+### Session 2026-01-04 (SIMPLICITY VIEWER - Bug Fix: Webpack Cache + Phase Status)
+
+**Duration:** ~20 minutes
+**Focus:** Fix webpack cache corruption and verify phase status detection
+
+**Problem:**
+- Webpack cache corruption causing `TypeError: __webpack_modules__[moduleId] is not a function`
+- Static path generation failing for API routes
+
+**Solution:**
+- Cleared `.next` cache folder: `rm -rf .next`
+- Rebuilt project: `npm run build`
+- Build passed with no errors
+
+**Verification:**
+- API returns correct phase statuses:
+  ```
+  01-research: complete (13 files)
+  02-strategy: complete (21 files)
+  03-creative: pending (12 files)
+  04-assets: pending (9 files)
+  05-deliverables: pending (5 files)
+  ```
+- Phase 6 (Polish & Test) complete
+
+---
+
+### Session 2026-01-04 (SIMPLICITY VIEWER - Bug Fix: Infinite Image Loading)
+
+**Duration:** ~30 minutes
+**Focus:** Fix critical infinite loading bug in AssetGallery component
+
+**Problem:**
+- Images in the Asset Gallery were fetching infinitely in a loop
+- Same 8 images were being requested 8+ times each repeatedly
+- Server logs showed continuous GET requests that never stopped
+
+**Failed Approaches:**
+- `React.memo()` wrapper - didn't prevent re-renders
+- `useRef` guard flag - got reset on component remount
+- Primitive props - wasn't the root cause
+
+**Working Solution:**
+- Module-level cache using `Map<string, string>` **outside** React component lifecycle
+- Added `Set<string>` (fetchingSet) to track in-progress fetches
+- Three-tier protection:
+  1. Initialize state from cache on mount
+  2. Check cache in useEffect before fetching
+  3. Check fetchingSet to prevent duplicate in-flight requests
+
+**Verification:**
+- Server logs now show each image fetched exactly ONCE
+- No more duplicate requests after initial load
+- Images display correctly with proper caching
+
+**File Modified:**
+- `simplicity-viewer/src/components/AssetGallery.tsx` - Module-level caching fix
+
+---
+
+### Session 2026-01-04 (SIMPLICITY VIEWER - Client Dashboard)
+
+**Duration:** ~2 hours
+**Focus:** Build read-only Next.js dashboard for client project visibility
+
+**Problem Solved:**
+- "Ver archivos organizados, la información no es fácil de digerir y saber que se ha generado y que no para un cliente"
+- Users needed visual way to see project status at a glance
+- No clear visibility into what's been generated vs pending per client
+
+**Accomplished:**
+
+1. **Project Setup**
+   - Next.js 14 with App Router (Server Components)
+   - shadcn/ui with custom theme
+   - TypeScript + Tailwind CSS
+   - Dependencies: `js-yaml`, `@types/js-yaml`, `lucide-react`
+
+2. **Core Library (`/src/lib/clients.ts`)**
+   - `getClientSlugs()` - List all client folders
+   - `getClientConfig()` - Parse `client_config.yaml`
+   - `getPhaseStatuses()` - Detect phase completion from `client_index.md`
+   - `getAssets()` - Scan 04-assets folder for generated files
+   - `getDeliverables()` - Scan 05-deliverables for handoff status
+   - `getClient()` / `getAllClients()` - Full client data aggregation
+   - `getFolderTree()` - Recursive folder structure for file browser
+
+3. **UI Components (`/src/components/`)**
+   - `Sidebar.tsx` / `SidebarWrapper.tsx` - Client navigation with status indicators
+   - `ClientCard.tsx` - Overview card with phase progress mini-view
+   - `PhaseProgress.tsx` - 5-phase visual progress bar (Research → Deliverables)
+   - `FolderTree.tsx` - Expandable/collapsible file browser
+   - `AssetGallery.tsx` - Image grid with type badges
+   - `StatusBadge.tsx` - Reusable status indicators (complete/pending/in_progress)
+
+4. **Pages**
+   - `/` (page.tsx) - Client overview grid with aggregate stats
+   - `/client/[slug]` (page.tsx) - Client detail with phases, files, assets, deliverables
+
+5. **Status Detection Logic**
+   - Phase status: Regex match for `✅ Complete` / `⏳ Pending` in `client_index.md`
+   - Deliverable status: Check for `Status: COMPLETE` in markdown files
+   - Asset status: File existence = generated
+
+**Files Created (16 new):**
+```
+simplicity-viewer/src/lib/clients.ts
+simplicity-viewer/src/lib/utils.ts
+simplicity-viewer/src/components/Sidebar.tsx
+simplicity-viewer/src/components/SidebarWrapper.tsx
+simplicity-viewer/src/components/ClientCard.tsx
+simplicity-viewer/src/components/PhaseProgress.tsx
+simplicity-viewer/src/components/FolderTree.tsx
+simplicity-viewer/src/components/AssetGallery.tsx
+simplicity-viewer/src/components/StatusBadge.tsx
+simplicity-viewer/src/components/ui/badge.tsx
+simplicity-viewer/src/components/ui/card.tsx
+simplicity-viewer/src/components/ui/scroll-area.tsx
+simplicity-viewer/src/app/page.tsx
+simplicity-viewer/src/app/layout.tsx
+simplicity-viewer/src/app/globals.css
+simplicity-viewer/src/app/client/[slug]/page.tsx
+```
+
+**Technical Notes:**
+- READ-ONLY: No writes to filesystem, Claude Code remains primary interface
+- Server Components: All data fetching happens at build/request time
+- Filesystem-based: Reads existing `/clients/` folder structure directly
+- Fixed strict mode ES5 issue: Converted nested function declarations to arrow functions
+
+**To Run:**
+```bash
+cd simplicity-viewer
+npm run dev
+# Open http://localhost:3000
+```
+
+---
 
 ### Session 2026-01-04 (HYBRID SYSTEM IMPLEMENTATION)
 
@@ -645,6 +784,7 @@ After completing a task:
 
 | Version | Date | Summary |
 |---------|------|---------|
+| 3.0.0-alpha.7 | 2026-01-04 | SIMPLICITY VIEWER: Read-only Next.js dashboard for client project visibility |
 | 3.0.0-alpha.6 | 2026-01-04 | HYBRID SYSTEM: Multi-client architecture with extensions, experiment validated |
 | 3.0.0-alpha.5 | 2025-12-31 | WHITEBOARD SYSTEMS™ v2: New visual identity, prompts library, first asset generation |
 | 3.0.0-alpha.4 | 2025-12-31 | Phase 3 Complete: Workflow Orchestration - 4 workflow guides, automatic triggers in CLAUDE.md |
