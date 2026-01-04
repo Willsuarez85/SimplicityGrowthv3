@@ -503,39 +503,44 @@ Each week must include:
 
 # PART 4: VISUAL IDENTITY
 
+> **Visual Philosophy:** Human Direction. AI Execution.
+> sistemas > personas | claridad > carisma | direccion humana > automatizacion ciega
+
 ---
 
 ## 10. Color System
 
-### Base Palette (90-95% of visuals)
+### Base Palette (92-95% of visuals)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
 │                          BASE COLORS                                     │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
-│  DEEP BLACK          NEUTRAL GRAYS           CLEAN WHITE                │
-│  #000000             #1A1A1A (90%)           #FFFFFF                    │
-│                      #333333 (80%)                                      │
-│                      #666666 (60%)                                      │
-│                      #999999 (40%)                                      │
-│                      #CCCCCC (20%)                                      │
-│                      #E5E5E5 (10%)                                      │
+│  PURE BLACK          GRAYS                    WHITES                    │
+│  #1A1A1A             #666666 (Mid)            #FFFFFF (Pure)            │
+│  #000000             #999999 (Light)          #EDEDED (Paper)           │
+│                                                                          │
+│  BACKGROUNDS                                                            │
+│  Dark: #2B2B2B (Oscuro ejecutivo)                                       │
+│  Light: #EDEDED (Gris papel whiteboard)                                 │
 │                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
 
-### Accent Color (5-8% maximum)
+### Accent Colors (5-8% maximum)
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                          ACCENT COLOR                                    │
+│                          ACCENT COLORS                                   │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                          │
-│  SAGE GREEN: #87A96B                                                     │
+│  VERDE PRINCIPAL: #87A96B (Sage Green)                                  │
+│  VERDE CLARO: #A8C686 (Para highlights sutiles)                         │
 │                                                                          │
-│  USE FOR: Underlines, highlights, CTAs, micro-accents                   │
-│  NEVER FOR: Backgrounds, large areas, primary text                      │
+│  USE FOR: Checkmarks, success indicators, single highlight points       │
+│  RULE: Verde SENALA, no DECORA                                          │
+│  NEVER FOR: Backgrounds, large areas, decorative elements               │
 │                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -545,7 +550,8 @@ Each week must include:
 | Rule | Description |
 |------|-------------|
 | Monochromatic First | Always design in black/white/gray first |
-| Accent Sparingly | Sage green only for emphasis (5-8% max) |
+| Green Signals Only | Verde only highlights KEY elements (success, checkmarks, human decisions) |
+| One Accent Per Visual | Maximum ONE green element per composition |
 | High Contrast | Maintain strong contrast for legibility |
 | No Gradients | Flat colors only, no gradients |
 | No Other Colors | Never introduce additional colors |
@@ -595,8 +601,14 @@ MICRO (Regular/Medium): 12-14px labels, metadata
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     WHITEBOARD/MARKER SYSTEM                            │
+│              WHITEBOARD SYSTEMS × MODERN EXECUTIVE UI                   │
 ├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  HYBRID SYSTEM                                                          │
+│  • Whiteboard marker foundation (hand-drawn quality)                    │
+│  • Modern UI overlay (clean, executive finish)                          │
+│  • Systems thinking visualization (not decoration)                      │
+│  • Human direction always visible                                       │
 │                                                                          │
 │  STROKE STYLE                                                           │
 │  • Marker-style strokes (2-4px weight)                                  │
@@ -604,16 +616,38 @@ MICRO (Regular/Medium): 12-14px labels, metadata
 │  • Hand-drawn feel without being childish                               │
 │  • Confident, intentional marks                                         │
 │                                                                          │
-│  COMPOSITIONS                                                           │
-│  • Simple geometric shapes (boxes, circles, arrows)                     │
-│  • Flow diagrams and connections                                        │
-│  • Annotations and labels                                               │
-│  • Hierarchy through size and weight                                    │
+│  VISUAL PHILOSOPHY                                                      │
+│  • sistemas > personas                                                  │
+│  • claridad > carisma                                                   │
+│  • direccion humana > automatizacion ciega                              │
+│  • estructura > estetica                                                │
 │                                                                          │
-│  FEELING                                                                │
-│  • "I'm working through this with you"                                  │
-│  • "This is how I think about it"                                       │
-│  • "Simple enough to sketch on a whiteboard"                            │
+└─────────────────────────────────────────────────────────────────────────┘
+```
+
+### 4 Core Diagram Patterns
+
+```
+┌─────────────────────────────────────────────────────────────────────────┐
+│                      MANDATORY VISUAL LANGUAGE                          │
+├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  1. INPUT → PROCESS → OUTPUT                                            │
+│     Three boxes connected by arrows. Any AI explanation uses this.      │
+│     Left box "INPUT", center "PROCESS" (larger), right "OUTPUT"         │
+│                                                                          │
+│  2. HUMAN IN THE LOOP (OBLIGATORIO)                                     │
+│     Circular flow: TRIGGER → AI AGENT → HUMAN REVIEW → EXECUTE → RESULTS│
+│     "HUMAN REVIEW" always highlighted with #87A96B border               │
+│     The human ALWAYS decides. This is core AIpreneur philosophy.        │
+│                                                                          │
+│  3. LEARNING LOOP                                                       │
+│     Maximum 4 nodes: Learn → Build → Optimize → Scale                   │
+│     Never more than 4 steps. Shows growth without overwhelm.            │
+│                                                                          │
+│  4. VALUE LADDER                                                        │
+│     Vertical progression: Free → Low Tier → Premium → Enterprise        │
+│     Stacked rectangles growing in size. Business model visualization.   │
 │                                                                          │
 └─────────────────────────────────────────────────────────────────────────┘
 ```
@@ -622,8 +656,8 @@ MICRO (Regular/Medium): 12-14px labels, metadata
 
 | Mode | Background | Stroke | Use Case |
 |------|------------|--------|----------|
-| Light | White (#FFFFFF) | Black (#000000) | Tutorials, explainers |
-| Dark | Black (#000000) | White (#FFFFFF) | Impact, drama |
+| Light | #EDEDED (paper gray) | Black (#000000) | Tutorials, explainers |
+| Dark | #2B2B2B (executive dark) | White (#FFFFFF) | Impact, authority |
 
 **Rule:** Never mix modes in a single asset.
 
@@ -634,18 +668,37 @@ MICRO (Regular/Medium): 12-14px labels, metadata
 - Circles and ellipses
 - Arrows (straight and curved)
 - Underlines and highlights
-- Check marks and X marks
+- Check marks (green #87A96B for emphasis)
 - Simple line-drawn icons
 - Flow connections
+- Whiteboard cartoon characters (monochromatic)
 
 **Not Allowed:**
 - Decorative illustrations
 - Complex graphics
-- Photorealistic elements
-- 3D effects
+- Photorealistic elements in diagrams
+- 3D effects or renders
 - Shadows and gradients
-- Colored fills
+- Colored fills (except single green accent)
 - Patterns or textures
+- Neon colors
+- Emojis
+- Futuristic/tech hype visuals
+- Influencer aesthetics
+
+### 5-Question Quality Test
+
+Before approving ANY visual:
+
+| # | Question | Required Answer |
+|---|----------|-----------------|
+| 1 | Does this explain a system? | YES |
+| 2 | Is it understandable without context? | YES |
+| 3 | Is there a human directing? | YES (visible) |
+| 4 | Is green signaling, not decorating? | YES |
+| 5 | Does it feel calm, not anxious? | YES |
+
+**If any answer is NO, revise before publishing.**
 
 ---
 
@@ -848,35 +901,42 @@ Technical: "high contrast", "sharp", "crisp lines"
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                     AIPRENEUR BRAND QUICK REF v3.0                      │
+│                     AIPRENEUR BRAND QUICK REF v3.1                      │
 ├─────────────────────────────────────────────────────────────────────────┤
+│                                                                          │
+│  VISUAL PHILOSOPHY                                                      │
+│  "Human Direction. AI Execution."                                       │
+│  sistemas > personas | claridad > carisma | estructura > estetica       │
 │                                                                          │
 │  POSITIONING                                                            │
 │  Spanish + Claude Code + MCP + Hispanic Entrepreneurs = ZERO COMPETITION│
 │                                                                          │
+│  VISUAL STYLE                                                           │
+│  Whiteboard Systems × Modern Executive UI                               │
+│  Hand-drawn foundation + Clean executive finish                         │
+│                                                                          │
+│  4 CORE DIAGRAMS                                                        │
+│  1. INPUT → PROCESS → OUTPUT (any AI explanation)                       │
+│  2. HUMAN IN THE LOOP (human ALWAYS decides - green highlight)          │
+│  3. LEARNING LOOP (4 nodes max: Learn→Build→Optimize→Scale)             │
+│  4. VALUE LADDER (Free→Low→Premium→Enterprise)                          │
+│                                                                          │
+│  COLORS                                                                 │
+│  Base (92-95%): #000000 / #FFFFFF / #2B2B2B / #EDEDED                   │
+│  Accent (5-8%): #87A96B (senala, no decora)                             │
+│                                                                          │
 │  PLATFORMS (PHASE 1)                                                    │
 │  YouTube (Depth/Authority) + Instagram (Discovery/Identity)             │
 │                                                                          │
-│  4 CONTENT PILLARS                                                      │
-│  IA Aplicada (30%) + Sistemas (30%) + Metodo (25%) + Marco Mental (15%)│
-│                                                                          │
-│  COLORS                                                                 │
-│  Base: #000000 / #FFFFFF / Grays                                        │
-│  Accent: #87A96B (5-8% max)                                             │
-│                                                                          │
-│  AVATAR                                                                 │
-│  Hispanic male, late 30s, short dark hair, trimmed beard, brown eyes   │
-│  Black t-shirt, neutral confident expression, editorial portrait        │
-│                                                                          │
 │  IMAGE MODEL                                                            │
-│  Primary: Imagen 4 | Backup: Ideogram V3 (text/diagrams)               │
+│  Diagrams: Ideogram V3 | Photos: Imagen 4 | Iterations: FLUX Dev        │
 │                                                                          │
-│  VOICE                                                                  │
-│  Clear, direct, confident, practical, honest                            │
-│  "Un amigo que sabe de sistemas explicandote algo complejo"            │
+│  QUALITY TEST (5 QUESTIONS)                                             │
+│  1. Explica un sistema?  2. Se entiende sin contexto?                   │
+│  3. Hay humano dirigiendo?  4. Verde senala?  5. Se siente calmado?     │
 │                                                                          │
-│  FILTER QUESTION                                                        │
-│  "Esto ayuda a un AIpreneur a implementar IA real en su negocio?"      │
+│  PROHIBIDO                                                              │
+│  Neon | Emojis | Gradientes | 3D | Futurismo | Influencer aesthetics    │
 │                                                                          │
 │  MANTRA                                                                 │
 │  "Sistemas, no herramientas. Implementacion, no inspiracion."          │
@@ -893,9 +953,10 @@ Technical: "high contrast", "sharp", "crisp lines"
 | 1.0 | 2025-12-31 | Initial brand profile |
 | 2.0 | 2026-01-01 | Added competitor analysis, expanded voice |
 | 3.0 | 2026-01-03 | Platform update (YouTube + Instagram), 4 pillars, Imagen 4 specs, Community/Monetization objectives, Avatar reference |
+| 3.1 | 2026-01-03 | **Visual Update:** "Human Direction. AI Execution." philosophy, Whiteboard Systems × Modern Executive UI hybrid, 4 core diagram patterns, expanded color palette, 5-question quality test |
 
 ---
 
-*Brand Profile v3.0 - AIPreneur by William Suarez*
+*Brand Profile v3.1 - AIPreneur by William Suarez*
 *Updated: 2026-01-03*
 *Status: APPROVED*

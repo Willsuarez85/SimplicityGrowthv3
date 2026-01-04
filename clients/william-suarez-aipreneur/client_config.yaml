@@ -1,0 +1,134 @@
+# ============================================================
+# CLIENT CONFIGURATION: William Suarez - AIPRENEUR
+# ============================================================
+# Configuración específica para el cliente AIPRENEUR
+# Este cliente requiere extensiones personalizadas debido a:
+# - Enfoque en educación AI (no restaurantes/realtors)
+# - Contenido long-form (YouTube 8-15 min)
+# - Productos digitales (cursos)
+# ============================================================
+
+# ------------------------------------------------------------
+# INFORMACIÓN BÁSICA
+# ------------------------------------------------------------
+client:
+  slug: "william-suarez-aipreneur"
+  name: "William Suarez - AIPRENEUR"
+  industry: "AI Education / Digital Entrepreneurship"
+  status: "active"
+  created: "2025-12-31"
+  
+# ------------------------------------------------------------
+# EXTENSIONES ACTIVAS
+# ------------------------------------------------------------
+extensions:
+  agents:
+    - ai-course-creator.md           # Agente para contenido educativo de AI
+  
+  templates:
+    - youtube_longform_script.md     # Script para videos 8-15 min
+    - course_module_outline.md       # Outline de módulos de curso
+  
+  knowledge:
+    - ai_education_market_2026.md    # Tendencias del mercado de educación AI
+
+# ------------------------------------------------------------
+# OVERRIDES DE COMPORTAMIENTO
+# ------------------------------------------------------------
+overrides:
+  
+  # Contenido - diferente al default
+  content:
+    default_length: "long"           # 8-15 min (no 30-90s)
+    primary_format: "youtube"        # YouTube first (no Reels first)
+    language: "bilingual"            # Spanglish natural
+  
+  # Plataformas - YouTube es prioridad
+  platforms:
+    priority:
+      - "youtube"                    # 1º YouTube long-form
+      - "instagram"                  # 2º Clips y carruseles
+      - "tiktok"                     # 3º Clips virales
+      - "linkedin"                   # 4º B2B content
+    
+  # Tono - más técnico
+  tone:
+    override: true
+    description: |
+      Más técnico que otros clientes. Usa términos de AI sin 
+      explicar todo. Asume audiencia tech-savvy. Pero mantiene
+      accesibilidad para principiantes cuando el contenido lo requiere.
+  
+  # Frecuencia
+  frequency:
+    posts_per_week: 7
+    platforms_per_post: 3
+    youtube_per_month: 4             # 1 video largo/semana
+
+# ------------------------------------------------------------
+# CARACTERÍSTICAS ESPECIALES
+# ------------------------------------------------------------
+features:
+  
+  # ✅ Tiene cursos/productos digitales
+  digital_products: true
+  product_types:
+    - "Online courses"
+    - "Digital templates"
+    - "AI prompt libraries"
+  
+  # ✅ Contenido long-form
+  long_form_content: true
+  long_form_types:
+    - "YouTube tutorials (8-15 min)"
+    - "Course modules (30-60 min)"
+    - "Live workshops"
+  
+  # ✅ Múltiples avatares
+  multiple_avatars: true
+  avatar_roles:
+    - "Educator"        # Tutoriales paso a paso
+    - "Thought Leader"  # Opiniones y tendencias
+    - "Builder"         # Mostrando sistemas reales
+  
+  # Video profesional
+  professional_video: true
+  
+  # Dashboard personalizado
+  custom_dashboard: true
+
+# ------------------------------------------------------------
+# NOTAS DEL CLIENTE
+# ------------------------------------------------------------
+notes: |
+  William Suarez / AIPRENEUR es diferente a los otros clientes:
+  
+  1. AUDIENCIA TÉCNICA
+     - Emprendedores digitales
+     - Profesionales tech-savvy
+     - Personas aprendiendo AI
+  
+  2. CONTENIDO EDUCATIVO
+     - Enfoque en enseñar, no solo entretener
+     - Tutoriales paso a paso
+     - Frameworks y metodologías propias (IDEAL, etc.)
+  
+  3. PRODUCTO = CONTENIDO
+     - El contenido lleva a cursos
+     - Lead magnets importantes
+     - Funnels de conversión
+  
+  4. LENGUAJE ESPECÍFICO
+     - "Agentes AI", "Automatización", "Sistemas"
+     - Frameworks propietarios
+     - Bilingual pero técnico
+
+# ------------------------------------------------------------
+# METADATA
+# ------------------------------------------------------------
+_meta:
+  config_version: "1.0"
+  last_updated: "2026-01-04"
+  updated_by: "system"
+  notes: "Primera configuración del sistema híbrido"
+
