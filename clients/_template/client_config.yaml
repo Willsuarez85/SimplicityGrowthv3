@@ -1,0 +1,105 @@
+# ============================================================
+# CLIENT CONFIGURATION
+# ============================================================
+# Este archivo configura comportamientos específicos del cliente
+# que modifican cómo operan los agentes y workflows.
+#
+# IMPORTANTE: Solo modificar si el cliente necesita algo
+# diferente al comportamiento estándar del sistema.
+# ============================================================
+
+# ------------------------------------------------------------
+# INFORMACIÓN BÁSICA
+# ------------------------------------------------------------
+client:
+  slug: "[client-slug]"           # ej: "william-suarez-aipreneur"
+  name: "[Client Full Name]"       # ej: "William Suarez - AIPRENEUR"
+  industry: "[Industry]"           # ej: "AI Education", "Restaurant", "Real Estate"
+  status: "active"                 # active | paused | completed
+  created: "[YYYY-MM-DD]"
+  
+# ------------------------------------------------------------
+# EXTENSIONES ACTIVAS
+# ------------------------------------------------------------
+# Listar extensiones custom que este cliente utiliza
+extensions:
+  agents: []
+    # - ai-course-creator.md      # Descomentar si existe
+    # - youtube-strategist.md
+  
+  templates: []
+    # - youtube_script_template.md
+    # - course_module_template.md
+  
+  knowledge: []
+    # - ai_education_trends.md
+    # - competitor_deep_dive.md
+
+# ------------------------------------------------------------
+# OVERRIDES DE COMPORTAMIENTO
+# ------------------------------------------------------------
+# Estos valores sobrescriben los defaults del sistema
+overrides:
+  
+  # Contenido
+  content:
+    default_length: "short"        # short (30-90s) | medium (2-5min) | long (8-15min)
+    primary_format: "reels"        # reels | stories | youtube | carousel | all
+    language: "bilingual"          # spanish | english | bilingual
+  
+  # Plataformas (orden de prioridad)
+  platforms:
+    priority:
+      - "instagram"
+      - "tiktok"
+      - "youtube"
+    
+  # Tono
+  tone:
+    override: false                # true si hay override específico
+    description: ""                # "Más técnico que otros clientes"
+  
+  # Frecuencia
+  frequency:
+    posts_per_week: 5
+    platforms_per_post: 2
+
+# ------------------------------------------------------------
+# CARACTERÍSTICAS ESPECIALES
+# ------------------------------------------------------------
+# Funcionalidades específicas para este cliente
+features:
+  
+  # ¿Cliente tiene cursos/productos digitales?
+  digital_products: false
+  
+  # ¿Cliente necesita contenido long-form?
+  long_form_content: false
+  
+  # ¿Cliente tiene múltiples avatares?
+  multiple_avatars: false
+  
+  # ¿Cliente requiere contenido en video profesional?
+  professional_video: false
+  
+  # ¿Cliente necesita dashboard de assets personalizado?
+  custom_dashboard: false
+
+# ------------------------------------------------------------
+# NOTAS DEL CLIENTE
+# ------------------------------------------------------------
+notes: |
+  Notas adicionales sobre este cliente que los agentes
+  deben tener en cuenta durante la ejecución.
+  
+  - Punto 1
+  - Punto 2
+
+# ------------------------------------------------------------
+# METADATA
+# ------------------------------------------------------------
+_meta:
+  config_version: "1.0"
+  last_updated: "[YYYY-MM-DD]"
+  updated_by: "system"
+

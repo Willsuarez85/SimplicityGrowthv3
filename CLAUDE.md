@@ -120,7 +120,98 @@ clients/[client-name]/
 ├── 02-strategy/          # Brand DNA, content strategy
 ├── 03-creative/          # Storyboards, scripts, prompts
 ├── 04-assets/            # Generated images, videos, references
-└── 05-deliverables/      # PDFs, handoffs, presentations
+├── 05-deliverables/      # PDFs, handoffs, presentations
+├── _extensions/          # 🆕 Client-specific extensions (hybrid system)
+│   ├── agents/           # Custom agents
+│   ├── templates/        # Custom templates
+│   └── knowledge/        # Industry-specific knowledge
+└── client_config.yaml    # 🆕 Client configuration
+```
+
+---
+
+## 🆕 Hybrid System: Client Extensions
+
+### Protocol: Loading Extensions
+
+**Before executing any workflow for a client:**
+
+```bash
+# Step 1: Check for client config
+if exists clients/[client]/client_config.yaml:
+    read client_config.yaml
+    
+# Step 2: Load base agents
+load /.claude/agents/*.md
+
+# Step 3: Check for extensions
+if client_config.extensions.agents is not empty:
+    load clients/[client]/_extensions/agents/*.md
+    
+# Step 4: Apply overrides
+if client_config.overrides exists:
+    apply content_length, platform_priority, tone overrides
+```
+
+### When to Use Extensions
+
+| Client Type | Use Extensions? |
+|-------------|-----------------|
+| Standard restaurant | ❌ No - use base system |
+| Standard realtor | ❌ No - use base system |
+| AI course creator | ✅ Yes - needs custom agents |
+| E-commerce complex | ✅ Yes - needs custom templates |
+| Enterprise client | ✅ Yes - needs custom everything |
+
+### Creating Custom Agents
+
+Place in `clients/[client]/_extensions/agents/`:
+
+```markdown
+---
+name: custom-agent-name
+description: When to use this agent
+model: sonnet
+color: orange
+---
+
+[Agent instructions...]
+
+## Integration with Base System
+This agent extends the base creative-director by adding...
+
+## Memory Query Protocol
+[Standard memory queries...]
+```
+
+### Activating Extensions
+
+In `client_config.yaml`:
+
+```yaml
+extensions:
+  agents:
+    - ai-course-creator.md
+    - youtube-strategist.md
+  templates:
+    - youtube_script_template.md
+  knowledge:
+    - ai_education_trends.md
+```
+
+### Override Examples
+
+```yaml
+# For long-form content client (William Suarez)
+overrides:
+  content:
+    default_length: "long"        # 8-15 min videos
+    primary_format: "youtube"
+  platforms:
+    priority:
+      - "youtube"
+      - "instagram"
+      - "tiktok"
 ```
 
 ---

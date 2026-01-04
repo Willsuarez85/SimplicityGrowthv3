@@ -1,0 +1,73 @@
+# ============================================================
+# CLIENT CONFIGURATION TEMPLATE
+# ============================================================
+# Copiar este archivo a clients/[client-slug]/client_config.yaml
+# y personalizar según las necesidades del cliente.
+# ============================================================
+
+# ------------------------------------------------------------
+# INFORMACIÓN BÁSICA
+# ------------------------------------------------------------
+client:
+  slug: "[client-slug]"           # REQUERIDO: lowercase, hyphens
+  name: "[Client Full Name]"       # REQUERIDO: Nombre completo
+  industry: "[Industry]"           # REQUERIDO: Categoría de industria
+  status: "active"                 # active | paused | completed
+  created: "[YYYY-MM-DD]"
+  
+# ------------------------------------------------------------
+# EXTENSIONES ACTIVAS
+# ------------------------------------------------------------
+# Solo agregar si el cliente tiene extensiones custom
+extensions:
+  agents: []
+  templates: []
+  knowledge: []
+
+# ------------------------------------------------------------
+# OVERRIDES DE COMPORTAMIENTO
+# ------------------------------------------------------------
+overrides:
+  content:
+    default_length: "short"        # short | medium | long
+    primary_format: "reels"        # reels | stories | youtube | carousel
+    language: "bilingual"          # spanish | english | bilingual
+  
+  platforms:
+    priority:
+      - "instagram"
+      - "tiktok"
+      - "youtube"
+    
+  tone:
+    override: false
+    description: ""
+  
+  frequency:
+    posts_per_week: 5
+    platforms_per_post: 2
+
+# ------------------------------------------------------------
+# CARACTERÍSTICAS ESPECIALES
+# ------------------------------------------------------------
+features:
+  digital_products: false
+  long_form_content: false
+  multiple_avatars: false
+  professional_video: false
+  custom_dashboard: false
+
+# ------------------------------------------------------------
+# NOTAS DEL CLIENTE
+# ------------------------------------------------------------
+notes: |
+  [Agregar notas específicas del cliente aquí]
+
+# ------------------------------------------------------------
+# METADATA
+# ------------------------------------------------------------
+_meta:
+  config_version: "1.0"
+  last_updated: "[YYYY-MM-DD]"
+  updated_by: "system"
+
