@@ -75,3 +75,5 @@ El sistema carga extensiones automáticamente cuando detecta archivos en estas c
 
 *Parte del sistema SimplicityAgents v3 - Modelo Híbrido*
 
+
+

@@ -1,0 +1,160 @@
+# ============================================================
+# LA ÚNICA SUPERMARKET INTERNACIONAL
+# ============================================================
+# Mexican Supermarket | Charlotte, NC
+# "Todo lo tradicional de México en un solo lugar"
+# ============================================================
+
+# ------------------------------------------------------------
+# INFORMACIÓN BÁSICA
+# ------------------------------------------------------------
+client:
+  slug: "la-unica-supermarket"
+  name: "La Única Supermarket Internacional"
+  industry: "Retail - Mexican Supermarket"
+  location: "Independence Ave, Charlotte, NC"
+  status: "active"
+  created: "2026-01-04"
+  language: "spanish"
+
+# ------------------------------------------------------------
+# BRAND IDENTITY
+# ------------------------------------------------------------
+brand:
+  tagline: "Todo lo tradicional de México en un solo lugar"
+  big_idea: "Corazón de las Carolinas"
+
+  values:
+    - "Autenticidad"
+    - "Comunidad"
+    - "Calidez"
+    - "Completitud"
+    - "Orgullo Cultural"
+
+  archetypes:
+    primary: "El Cuidador"
+    secondary: "El Hombre Común"
+    tertiary: "El Creador"
+
+  departments:
+    - name: "Taquería"
+      description: "Tacos, tortas, burritos preparados al momento"
+    - name: "Produce"
+      description: "Frutas y verduras frescas, chiles, nopales"
+    - name: "Tortillería"
+      description: "Tortillas recién hechas"
+    - name: "Carnicería"
+      description: "Carnes y mariscos frescos, cortes mexicanos"
+      performance: "+16.7% growth"
+      highlight: true
+    - name: "Panadería"
+      description: "Pan dulce tradicional, pasteles"
+    - name: "Supermercado/Abarrotes"
+      description: "Productos importados de México y Latinoamérica"
+
+# ------------------------------------------------------------
+# VISUAL IDENTITY
+# ------------------------------------------------------------
+visual:
+  key_element: "Red/white checkered pattern (mantel tradicional)"
+  colors:
+    primary: "Red"
+    secondary: "White"
+    accent: "Green (Mexican flag reference)"
+  cultural_elements:
+    - "Piñatas"
+    - "Latin American flags"
+    - "Traditional Mexican patterns"
+  photography_style: "Warm, authentic, family-oriented"
+
+# ------------------------------------------------------------
+# COMPETITIVE LANDSCAPE
+# ------------------------------------------------------------
+competitors:
+  direct:
+    - name: "Wow Supermarket"
+      location: "Charlotte, NC"
+    - name: "Central Latino"
+      location: "Charlotte, NC"
+    - name: "Compare Foods"
+      location: "Charlotte, NC"
+    - name: "El Rey Supermarket"
+      location: "Charlotte, NC"
+
+  reference_brands:
+    - name: "Cardenas Markets"
+      why: "Similar positioning, successful chain"
+    - name: "Talpa Supermercados"
+      why: "Regional success model"
+
+# ------------------------------------------------------------
+# BUSINESS PERFORMANCE
+# ------------------------------------------------------------
+performance:
+  sales: "$2,286,952"
+  gross_margin: "46.62%"
+  strongest_department: "Carnicería"
+  strongest_growth: "+16.7%"
+
+# ------------------------------------------------------------
+# EXTENSIONES ACTIVAS
+# ------------------------------------------------------------
+extensions:
+  agents: []
+  templates: []
+  knowledge: []
+
+# ------------------------------------------------------------
+# OVERRIDES DE COMPORTAMIENTO
+# ------------------------------------------------------------
+overrides:
+  content:
+    default_length: "short"
+    primary_format: "reels"
+    language: "bilingual"
+
+  platforms:
+    priority:
+      - "instagram"
+      - "facebook"
+      - "tiktok"
+
+  tone:
+    override: true
+    description: "Cálido, familiar, orgulloso pero accesible. Como hablar con un vecino de confianza."
+
+  frequency:
+    posts_per_week: 5
+    platforms_per_post: 2
+
+# ------------------------------------------------------------
+# CARACTERÍSTICAS ESPECIALES
+# ------------------------------------------------------------
+features:
+  digital_products: false
+  long_form_content: false
+  multiple_avatars: true
+  professional_video: false
+  custom_dashboard: false
+  in_store_experience: true
+  community_events: true
+
+# ------------------------------------------------------------
+# NOTAS DEL CLIENTE
+# ------------------------------------------------------------
+notes: |
+  - Cliente onboarding: Enero 2026
+  - Objetivo principal: Posicionarse como el corazón de la comunidad latina en Charlotte
+  - Diferenciador clave: Experiencia completa mexicana (6 departamentos especializados)
+  - Carnicería es el departamento estrella - considerar para contenido hero
+  - El patrón de cuadros rojos/blancos es elemento visual distintivo - usar consistentemente
+  - Comunidad multicultural: México, Guatemala, Honduras, El Salvador, Colombia
+
+# ------------------------------------------------------------
+# METADATA
+# ------------------------------------------------------------
+_meta:
+  config_version: "1.0"
+  last_updated: "2026-01-04"
+  updated_by: "system"
+  onboarding_session: "2026-01-04_la-unica-onboarding"

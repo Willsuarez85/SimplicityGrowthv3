@@ -82,3 +82,5 @@ Puedes invocar el agente directamente:
 
 *Parte del sistema híbrido SimplicityAgents v3*
 
+
+

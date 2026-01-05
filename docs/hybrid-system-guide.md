@@ -402,3 +402,5 @@ Si un cliente estándar necesita extensiones después:
 
 *Guía del Sistema Híbrido - SimplicityAgents v3*
 
+
+
