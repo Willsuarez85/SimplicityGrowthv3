@@ -19,20 +19,30 @@ export function ContentViewer({ clientSlug, filePath }: ContentViewerProps) {
     setLoading(true);
     setError(null);
 
+    // New API structure: /api/files/[clientSlug]/[...path]
     fetch(`/api/files/${clientSlug}/${filePath}`)
-      .then(res => res.json())
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(data => {
+            throw new Error(data.error || 'Failed to load file');
+          });
+        }
+        return res.json();
+      })
       .then(data => {
         if (data.error) {
           setError(data.error);
         } else if (data.type === 'text' && data.content) {
           setContent(data.content);
+        } else if (data.type === 'image') {
+          setError('Use ImageViewer component for images');
         } else {
-          setError('Unable to display this file type');
+          setError(`Unable to display this file type: ${data.type || 'unknown'}`);
         }
       })
       .catch(err => {
-        setError('Failed to load file');
-        console.error(err);
+        setError(err.message || 'Failed to load file');
+        console.error('Error loading file:', err);
       })
       .finally(() => setLoading(false));
   }, [clientSlug, filePath]);

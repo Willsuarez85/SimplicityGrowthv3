@@ -1,4 +1,5 @@
 'use client';
+/* eslint-disable @next/next/no-img-element */
 
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';

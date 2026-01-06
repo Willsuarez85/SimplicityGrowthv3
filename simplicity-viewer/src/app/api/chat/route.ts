@@ -34,7 +34,6 @@ function computeSimpleDiff(before: string, after: string) {
   const changes: Array<{ type: 'add' | 'remove' | 'unchanged'; value: string }> = [];
 
   // Simple line-by-line diff
-  const maxLen = Math.max(beforeLines.length, afterLines.length);
   let beforeIdx = 0;
   let afterIdx = 0;
 
@@ -166,7 +165,7 @@ What changes would you like to make?`,
 export async function POST(request: NextRequest) {
   try {
     const body: ChatRequest = await request.json();
-    const { message, fileContent, filePath, history } = body;
+    const { message, fileContent, filePath: _filePath, history: _history } = body;
 
     if (!message) {
       return NextResponse.json(

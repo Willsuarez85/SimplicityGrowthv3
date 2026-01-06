@@ -1,8 +1,9 @@
 'use client';
 
+import { useState } from 'react';
 import { cn } from '@/lib/utils';
 import { Breadcrumb, buildBreadcrumbsFromPath } from '@/components/navigation/Breadcrumb';
-import { Edit3, Clock, FileText, ChevronDown } from 'lucide-react';
+import { Edit3, Clock, FileText, ChevronDown, Download } from 'lucide-react';
 
 interface FileHeaderProps {
   fileName: string;
@@ -11,6 +12,7 @@ interface FileHeaderProps {
   clientName: string;
   lastModified?: string;
   onEditClick?: () => void;
+  onDownloadClick?: () => void;
   isEditMode?: boolean;
   className?: string;
 }
@@ -22,6 +24,7 @@ export function FileHeader({
   clientName,
   lastModified,
   onEditClick,
+  onDownloadClick,
   isEditMode = false,
   className,
 }: FileHeaderProps) {
@@ -76,23 +79,43 @@ export function FileHeader({
 
         {/* Right: Actions */}
         <div className="flex items-center gap-3 flex-shrink-0">
+          {/* Download Button */}
+          {onDownloadClick && (
+            <button
+              onClick={onDownloadClick}
+              className={cn(
+                'inline-flex items-center gap-2',
+                'px-4 py-2 rounded-full',
+                'text-sm font-medium',
+                'bg-white border border-simplicity-gray-200 text-simplicity-charcoal',
+                'hover:bg-simplicity-gray-50 hover:border-simplicity-gray-300',
+                'transition-all duration-200',
+                'focus:outline-none focus-visible:ring-2 focus-visible:ring-simplicity-turquoise focus-visible:ring-offset-2'
+              )}
+            >
+              <Download className="h-4 w-4" />
+              <span>Download</span>
+            </button>
+          )}
           {/* Edit Button - Primary turquoise accent */}
-          <button
-            onClick={onEditClick}
-            className={cn(
-              'inline-flex items-center gap-2',
-              'px-4 py-2 rounded-full',
-              'text-sm font-medium',
-              'transition-all duration-200',
-              'focus:outline-none focus-visible:ring-2 focus-visible:ring-simplicity-turquoise focus-visible:ring-offset-2',
-              isEditMode
-                ? 'bg-simplicity-turquoise text-white shadow-md'
-                : 'bg-simplicity-charcoal text-white hover:bg-simplicity-gray-800'
-            )}
-          >
-            <Edit3 className="h-4 w-4" />
-            <span>{isEditMode ? 'Editing...' : 'Edit with AI'}</span>
-          </button>
+          {onEditClick && (
+            <button
+              onClick={onEditClick}
+              className={cn(
+                'inline-flex items-center gap-2',
+                'px-4 py-2 rounded-full',
+                'text-sm font-medium',
+                'transition-all duration-200',
+                'focus:outline-none focus-visible:ring-2 focus-visible:ring-simplicity-turquoise focus-visible:ring-offset-2',
+                isEditMode
+                  ? 'bg-simplicity-turquoise text-white shadow-md'
+                  : 'bg-simplicity-charcoal text-white hover:bg-simplicity-gray-800'
+              )}
+            >
+              <Edit3 className="h-4 w-4" />
+              <span>{isEditMode ? 'Editing...' : 'Edit with AI'}</span>
+            </button>
+          )}
         </div>
       </div>
     </header>
@@ -104,14 +127,16 @@ interface CompactFileHeaderProps {
   fileName: string;
   lastModified?: string;
   onEditClick?: () => void;
+  onDownloadClick?: () => void;
   isEditMode?: boolean;
   className?: string;
 }
 
 export function CompactFileHeader({
   fileName,
-  lastModified,
+  lastModified: _lastModified,
   onEditClick,
+  onDownloadClick,
   isEditMode = false,
   className,
 }: CompactFileHeaderProps) {
@@ -139,21 +164,40 @@ export function CompactFileHeader({
         </span>
       </div>
 
-      <button
-        onClick={onEditClick}
-        className={cn(
-          'inline-flex items-center gap-1.5',
-          'px-3 py-1.5 rounded-full',
-          'text-xs font-medium',
-          'transition-all duration-200',
-          isEditMode
-            ? 'bg-simplicity-turquoise text-white'
-            : 'text-simplicity-gray-500 hover:text-simplicity-charcoal hover:bg-simplicity-gray-100'
+      <div className="flex items-center gap-2">
+        {onDownloadClick && (
+          <button
+            onClick={onDownloadClick}
+            className={cn(
+              'inline-flex items-center gap-1.5',
+              'px-2 py-1.5 rounded-md',
+              'text-xs font-medium',
+              'text-simplicity-gray-500 hover:text-simplicity-charcoal hover:bg-simplicity-gray-100',
+              'transition-all duration-200'
+            )}
+            title="Download file"
+          >
+            <Download className="h-3 w-3" />
+          </button>
         )}
-      >
-        <Edit3 className="h-3 w-3" />
-        <span>{isEditMode ? 'Editing' : 'Edit'}</span>
-      </button>
+        {onEditClick && (
+          <button
+            onClick={onEditClick}
+            className={cn(
+              'inline-flex items-center gap-1.5',
+              'px-3 py-1.5 rounded-full',
+              'text-xs font-medium',
+              'transition-all duration-200',
+              isEditMode
+                ? 'bg-simplicity-turquoise text-white'
+                : 'text-simplicity-gray-500 hover:text-simplicity-charcoal hover:bg-simplicity-gray-100'
+            )}
+          >
+            <Edit3 className="h-3 w-3" />
+            <span>{isEditMode ? 'Editing' : 'Edit'}</span>
+          </button>
+        )}
+      </div>
     </header>
   );
 }
@@ -174,20 +218,60 @@ export function FileInfoDropdown({
   wordCount,
   className,
 }: FileInfoDropdownProps) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const formattedDate = lastModified
+    ? new Date(lastModified).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric',
+      })
+    : null;
+
   return (
-    <button
-      className={cn(
-        'inline-flex items-center gap-1.5',
-        'px-2 py-1 rounded-md',
-        'text-xs text-simplicity-gray-500',
-        'hover:bg-simplicity-gray-100 hover:text-simplicity-charcoal',
-        'transition-colors',
-        className
+    <div className="relative">
+      <button
+        onClick={() => setIsOpen(!isOpen)}
+        className={cn(
+          'inline-flex items-center gap-1.5',
+          'px-2 py-1 rounded-md',
+          'text-xs text-simplicity-gray-500',
+          'hover:bg-simplicity-gray-100 hover:text-simplicity-charcoal',
+          'transition-colors',
+          className
+        )}
+      >
+        <span>File Info</span>
+        <ChevronDown className={cn('h-3 w-3 transition-transform', isOpen && 'rotate-180')} />
+      </button>
+
+      {isOpen && (
+        <div className="absolute top-full left-0 mt-1 w-64 bg-white rounded-lg shadow-lg border border-simplicity-gray-200 p-3 z-50">
+          <div className="space-y-2 text-xs">
+            <div>
+              <span className="text-simplicity-gray-400">Name:</span>
+              <p className="font-medium text-simplicity-charcoal truncate">{fileName}</p>
+            </div>
+            <div>
+              <span className="text-simplicity-gray-400">Path:</span>
+              <p className="font-mono text-simplicity-gray-600 truncate">{filePath}</p>
+            </div>
+            {formattedDate && (
+              <div>
+                <span className="text-simplicity-gray-400">Modified:</span>
+                <p className="text-simplicity-charcoal">{formattedDate}</p>
+              </div>
+            )}
+            {wordCount !== undefined && (
+              <div>
+                <span className="text-simplicity-gray-400">Word count:</span>
+                <p className="text-simplicity-charcoal">{wordCount.toLocaleString()} words</p>
+              </div>
+            )}
+          </div>
+        </div>
       )}
-    >
-      <span>File Info</span>
-      <ChevronDown className="h-3 w-3" />
-    </button>
+    </div>
   );
 }
 

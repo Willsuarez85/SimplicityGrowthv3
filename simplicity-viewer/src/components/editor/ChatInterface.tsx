@@ -4,7 +4,7 @@ import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 import { useChat, formatMessageTime, getRoleDisplayName } from '@/hooks/useChat';
 import type { ChatMessage } from '@/hooks/useChat';
-import { Send, Loader2, Check, X, User, Bot, AlertCircle, Sparkles } from 'lucide-react';
+import { Send, Loader2, Check, X, User, Bot, AlertCircle, Sparkles, RotateCcw } from 'lucide-react';
 
 interface ChatInterfaceProps {
   filePath: string;
@@ -68,6 +68,22 @@ export function ChatInterface({
 
   return (
     <div className={cn('flex flex-col h-full', className)}>
+      {/* Header with New Chat button */}
+      {messages.length > 0 && (
+        <div className="flex items-center justify-between px-4 py-2 border-b border-simplicity-gray-200">
+          <span className="text-xs text-simplicity-gray-400">
+            {messages.length} message{messages.length !== 1 ? 's' : ''}
+          </span>
+          <button
+            onClick={clearChat}
+            className="inline-flex items-center gap-1.5 px-2 py-1 text-xs text-simplicity-gray-500 hover:text-simplicity-charcoal hover:bg-simplicity-gray-100 rounded transition-colors"
+          >
+            <RotateCcw className="h-3 w-3" />
+            New Chat
+          </button>
+        </div>
+      )}
+
       {/* Messages Area */}
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.length === 0 ? (
@@ -83,6 +99,14 @@ export function ChatInterface({
           <div className="flex items-center gap-2 text-simplicity-gray-400">
             <Loader2 className="h-4 w-4 animate-spin" />
             <span className="text-sm">AI is thinking...</span>
+          </div>
+        )}
+
+        {/* Error message */}
+        {error && (
+          <div className="flex items-center gap-2 text-red-500 bg-red-50 px-4 py-2 rounded-lg">
+            <AlertCircle className="h-4 w-4" />
+            <span className="text-sm">{error}</span>
           </div>
         )}
 
@@ -385,7 +409,7 @@ function QuickAction({ label, onClick }: QuickActionProps) {
 }
 
 // Empty state for chat
-function ChatEmptyState() {
+export function ChatEmptyState() {
   return (
     <div className="flex flex-col items-center justify-center h-full text-center py-12">
       <div className="w-12 h-12 rounded-xl bg-simplicity-turquoise/10 flex items-center justify-center mb-4">
@@ -399,9 +423,9 @@ function ChatEmptyState() {
       </p>
       <div className="text-xs text-simplicity-gray-400 space-y-1">
         <p>Try saying:</p>
-        <p className="text-simplicity-gray-500">"Add a section about competitors"</p>
-        <p className="text-simplicity-gray-500">"Summarize this document"</p>
-        <p className="text-simplicity-gray-500">"Fix the formatting"</p>
+        <p className="text-simplicity-gray-500">&quot;Add a section about competitors&quot;</p>
+        <p className="text-simplicity-gray-500">&quot;Summarize this document&quot;</p>
+        <p className="text-simplicity-gray-500">&quot;Fix the formatting&quot;</p>
       </div>
     </div>
   );

@@ -1,0 +1,303 @@
+# Ifixx Services - Client Configuration
+# Status: Active Client - Brand DNA Complete
+# Updated: January 2026
+
+client:
+  name: "Ifixx Services"
+  slug: "ifixx"
+  status: "active"
+  location: "Charlotte, NC"
+  website: "https://ifixxnc.com/"
+  onboarding_date: "2026-01-05"
+
+# Owners & Contact
+contact:
+  owners:
+    - name: "Jaime"
+      role: "Co-Owner"
+    - name: "Hamed"
+      role: "Co-Owner"
+  phone: "(980) 391-6833"
+  email: "ifixx.hs@gmail.com"
+  structure: "Family-owned, locally operated"
+  bilingual: true  # English/Spanish
+
+# Business Profile
+business:
+  years_in_market: 5
+  projects_completed: "100+"
+  team_size: 5
+  credentials:
+    - "Licensed & Insured"
+    - "Latino-owned business"
+  service_area: "Charlotte, NC metro"
+
+# Strategic Positioning (Research-Based Decision)
+positioning:
+  primary_focus: "Handyman & Emergency Services"
+  secondary_focus: "Kitchen & Bath Remodeling"
+  viability_scores:
+    handyman: 7.95  # Recommended path
+    kitchen_bath: 5.45  # Viable but harder
+
+  core_statement: "Ifixx is the first call when something goes wrong at home."
+
+  what_we_are:
+    - "Fast, reliable help when things break"
+    - "Direct owner-to-client service"
+    - "Local, family-owned handyman service"
+
+  what_we_are_not:
+    - "Not a big contractor"
+    - "Not a franchise with call centers"
+    - "Not a luxury remodeler"
+
+# Services by Priority
+services:
+  primary:
+    emergency_services:
+      name: "Emergency Home Repairs"
+      priority: 1
+      response: "Same-day / next-day"
+      items:
+        - "Burst Pipes & Leaks"
+        - "Water Heater Failures"
+        - "Flooding"
+        - "Electrical Outages"
+        - "Broken Windows/Doors"
+        - "Roof Leaks"
+        - "HVAC Emergencies"
+        - "Gas Leaks"
+        - "Fire Damage"
+        - "Storm Damage"
+        - "Frozen Pipes"
+
+    handyman_services:
+      name: "General Handyman"
+      priority: 2
+      categories:
+        painting_drywall:
+          - "Interior painting"
+          - "Exterior painting"
+          - "Drywall repair"
+          - "Texture matching"
+          - "Wallpaper removal"
+          - "Ceiling repair"
+        electrical:
+          - "Outlet installation"
+          - "Light fixture replacement"
+          - "Switch upgrades"
+          - "Ceiling fan installation"
+          - "Smoke detector installation"
+          - "Basic wiring"
+        doors_windows:
+          - "Door installation"
+          - "Lock installation"
+          - "Window repair"
+          - "Weatherstripping"
+          - "Screen repair"
+          - "Sliding door adjustment"
+        carpentry:
+          - "Cabinet repair"
+          - "Shelf installation"
+          - "Crown molding"
+          - "Baseboard installation"
+          - "Deck repair"
+          - "Fence repair"
+        plumbing:
+          - "Faucet replacement"
+          - "Toilet repair"
+          - "Garbage disposal installation"
+          - "Shower head replacement"
+          - "Minor pipe repair"
+          - "Caulking"
+        general_repairs:
+          - "Furniture assembly"
+          - "Picture hanging"
+          - "TV mounting"
+          - "Gutter cleaning"
+          - "Pressure washing"
+          - "Minor roof repair"
+
+  secondary:
+    transformation_services:
+      name: "Home Transformation"
+      priority: 3
+      items:
+        - "Open floor plan conversions"
+        - "Whole-house renovations"
+        - "Interior redesigns"
+        - "Modern updates"
+        - "Layout reconfiguration"
+        - "Multi-room renovations"
+        - "Historical home updates"
+        - "Energy efficiency upgrades"
+
+    kitchen_bath:
+      name: "Kitchen & Bath Remodeling"
+      priority: 4
+      items:
+        - "Kitchen transformations"
+        - "Bathroom renovations"
+        - "Room makeovers"
+        - "Outdoor living (decks, patios)"
+
+# Brand Identity
+brand:
+  taglines:
+    primary: "Fast. Honest. Local Home Repairs."
+    alternatives:
+      - "Your local handyman when it matters most."
+      - "Emergency home repairs you can trust."
+      - "One call. One fix. Done right."
+      - "5 Years Transforming Homes"
+      - "Your Trusted Remodeling Team"
+
+  positioning_rule: "Ifixx solves problems, not projects."
+
+  values:
+    - name: "Honesty & Transparency"
+      traits:
+        - "Clear diagnosis"
+        - "Straight answers"
+        - "No unnecessary work"
+        - "No fear-based selling"
+    - name: "Reliability"
+      traits:
+        - "Show up as promised"
+        - "Clear communication"
+        - "Consistent quality"
+    - name: "Speed with Responsibility"
+      traits:
+        - "Fast response"
+        - "No rushed or careless fixes"
+    - name: "Family-Owned Care"
+      traits:
+        - "Respect for the home"
+        - "Respect for the customer"
+        - "Personal accountability"
+    - name: "Local Knowledge"
+      traits:
+        - "Familiarity with Charlotte homes"
+        - "Understanding common local problems"
+
+  colors:
+    primary:
+      - name: "White"
+        hex: "#ffffff"
+        usage: "Clean backgrounds"
+      - name: "Yellow"
+        hex: "#ffd600"
+        usage: "CTAs, action, attention"
+      - name: "Red"
+        hex: "#e53e3e"
+        usage: "Urgency & alerts"
+    secondary:
+      - name: "Light Gray"
+        hex: "#f9fafb"
+        usage: "Secondary sections"
+      - name: "Dark Gray"
+        hex: "#1f2937"
+        usage: "Text, structure"
+    intent: "Clarity, urgency, calm, trust"
+
+  typography:
+    style: "Sans-serif"
+    traits:
+      - "Readable"
+      - "Neutral"
+      - "Professional"
+      - "Accessible"
+
+  tone_of_voice:
+    - trait: "Reassuring"
+      example: "We've handled this before."
+    - trait: "Direct"
+      example: "This is the issue. This is the fix. This is the cost."
+    - trait: "Human"
+      example: "You talk directly with Jaime or Hamed."
+    - trait: "Competent"
+      example: "Experienced, prepared, and dependable."
+    - trait: "Local"
+      example: "We work in Charlotte homes every week."
+
+# Market Gaps to Target (Priority Order)
+market_gaps:
+  - gap: "Emergency 24/7 Service"
+    priority: 1
+    competition: "Almost none"
+    difficulty: "Low-Medium"
+  - gap: "Online Booking"
+    priority: 2
+    competition: "Minimal"
+    difficulty: "Medium"
+  - gap: "Transparent Pricing"
+    priority: 3
+    competition: "None"
+    difficulty: "Low"
+  - gap: "Property Management Specialist"
+    priority: 4
+    competition: "Limited"
+    difficulty: "Low-Medium"
+  - gap: "Subscription Model"
+    priority: 5
+    competition: "None"
+    difficulty: "Low"
+
+# Differentiators
+differentiators:
+  vs_franchises:
+    - "No call center"
+    - "No scripts"
+    - "Owner accountability"
+  vs_big_contractors:
+    - "Faster response"
+    - "Better fit for small & urgent jobs"
+  vs_random_handymen:
+    - "Professional approach"
+    - "Clear communication"
+    - "Reliable follow-through"
+    - "Consistent standards"
+
+# Key Messages
+key_messages:
+  - "Fast help when something breaks at home."
+  - "Local, family-owned handyman service."
+  - "Emergency repairs without stress."
+  - "Honest diagnosis. Fair pricing."
+  - "Charlotte homeowners trust Ifixx."
+
+# Research Documents
+research_documents:
+  niche_comparison: "niche_comparison_analysis.md"
+  market_research: "01-research/market-research/"
+  competitor_analysis: "01-research/competitor-analysis/"
+  kb_research: "01-research/kb-research/"
+
+# Implementation Roadmap
+roadmap:
+  phase_1:
+    name: "Foundation"
+    timeline: "Months 1-3"
+    actions:
+      - "Position as 'Charlotte's Emergency Handyman'"
+      - "Implement online booking"
+      - "Publish transparent pricing for common jobs"
+      - "Launch Nextdoor presence"
+      - "Aggressive review collection"
+  phase_2:
+    name: "Growth"
+    timeline: "Months 4-8"
+    actions:
+      - "Launch after-hours emergency service"
+      - "Develop property management partnerships"
+      - "Video content marketing (YouTube, TikTok)"
+      - "Subscription membership pilot"
+  phase_3:
+    name: "Scale"
+    timeline: "Months 9-18"
+    actions:
+      - "Add technicians as volume justifies"
+      - "Geographic expansion (Huntersville, Fort Mill, etc.)"
+      - "Begin capturing kitchen/bath leads from base"
+      - "Evaluate kitchen/bath expansion"
