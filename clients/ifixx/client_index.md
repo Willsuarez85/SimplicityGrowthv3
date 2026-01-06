@@ -154,13 +154,15 @@ Based on comprehensive market research comparing Kitchen & Bath Remodeling vs. H
 
 | Color | Hex | Usage |
 |-------|-----|-------|
-| **White** | `#ffffff` | Clean backgrounds |
-| **Yellow** | `#ffd600` | CTAs, action, attention |
-| **Red** | `#e53e3e` | Urgency & alerts |
-| **Light Gray** | `#f9fafb` | Secondary sections |
-| **Dark Gray** | `#1f2937` | Text, structure |
+| **Ifixx Gold** | `#e4bc5d` | Logo, premium accents, CTAs |
+| **Emergency Red** | `#ac1318` | Logo, urgency & alerts |
+| **Charcoal Black** | `#1c191a` | Backgrounds, headers, text |
+| **White** | `#ffffff` | Clean backgrounds, space |
+| **Light Gray** | `#f5f5f5` | Secondary sections |
 
-**Intent:** Clarity, urgency, calm, trust
+**Intent:** Trust, professionalism, urgency, clarity
+
+> **Note:** Colors corrected to match official IFIXX logo (Jan 2026). See visual_identity_guide_v2.md for complete specifications.
 
 ### Typography
 - Style: Sans-serif
@@ -263,12 +265,13 @@ clients/ifixx/
 │   ├── competitor-analysis/    # Competitor mapping
 │   └── kb-research/            # K&B market analysis (reference)
 ├── 02-strategy/
-│   └── brand-dna/              # Brand DNA documents
+│   └── brand-dna/              # Brand DNA documents + Visual Identity Guide V2
 ├── 03-creative/
 │   ├── storyboards/
 │   ├── scripts/
 │   └── prompts/
 ├── 04-assets/
+│   ├── brand-moodboard/        # ✅ Official brand moodboard (v1.0)
 │   ├── images/
 │   ├── videos/
 │   └── references/
