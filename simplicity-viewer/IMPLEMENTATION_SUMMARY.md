@@ -83,3 +83,4 @@
 - Todos los paths deben ser relativos al cliente (sin incluir clientSlug en el path)
 - La API valida seguridad asegurando que todos los paths estén dentro de `CLIENTS_PATH`
 
+

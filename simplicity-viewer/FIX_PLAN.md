@@ -225,3 +225,4 @@ export async function PUT(
 - Considerar usar query params para algunas operaciones (download, edit mode)
 - Agregar validación de seguridad en todas las rutas API
 
+
