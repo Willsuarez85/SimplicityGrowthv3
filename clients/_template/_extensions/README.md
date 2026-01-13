@@ -78,3 +78,5 @@ El sistema carga extensiones automáticamente cuando detecta archivos en estas c
 
 
 
+
+

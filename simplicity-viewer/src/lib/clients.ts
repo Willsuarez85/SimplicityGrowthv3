@@ -264,11 +264,17 @@ export function getClient(slug: string): Client | null {
   const config = getClientConfig(slug);
   if (!config) return null;
 
+  // Validate status - must be one of: active, onboarding, paused
+  const validStatuses = ['active', 'onboarding', 'paused'];
+  const status = config.status && validStatuses.includes(config.status)
+    ? config.status
+    : 'active'; // Default to 'active' if invalid or missing
+
   return {
     slug: config.slug || slug,
     name: config.name || slug,
     industry: config.industry || 'Unknown',
-    status: config.status || 'unknown',
+    status,
     phases: getPhaseStatuses(slug),
     assets: getAssets(slug),
     deliverables: getDeliverables(slug),

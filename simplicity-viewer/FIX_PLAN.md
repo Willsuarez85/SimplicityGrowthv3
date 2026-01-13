@@ -226,3 +226,5 @@ export async function PUT(
 - Agregar validación de seguridad en todas las rutas API
 
 
+
+

@@ -84,3 +84,5 @@
 - La API valida seguridad asegurando que todos los paths estén dentro de `CLIENTS_PATH`
 
 
+
+

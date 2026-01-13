@@ -1,12 +1,11 @@
 # MCP Configuration (contains sensitive tokens)
 .mcp.json
 
-# Python virtual environments
-generated-assets/venv/
-venv/
-.venv/
-env/
-.env/
+# Python virtual environments (anywhere in project)
+**/venv/
+**/.venv/
+**/env/
+**/.env/
 
 # Python cache
 __pycache__/
@@ -22,14 +21,14 @@ __pycache__/
 *.swo
 *~
 
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
+# OS generated files (anywhere in project)
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
 
 # Logs
 *.log
@@ -40,8 +39,12 @@ logs/
 *.temp
 .cache/
 
-# Node modules (if any)
-node_modules/
+# Node modules (anywhere in project)
+**/node_modules/
+
+# Next.js build outputs
+**/.next/
+**/out/
 
 # Environment variables
 .env
@@ -51,5 +54,9 @@ node_modules/
 # Cursor specific
 .cursor/plans/
 
-# Claude embedded r
+# Claude embedded resources
 .claude/anthropic-skills/
+
+# Temporary work folder (keep README only)
+_temp/
+!_temp/README.md

@@ -209,3 +209,5 @@ Basado en este analysis, los pilares para AIPRENEUR deberían ser:
 
 
 
+
+

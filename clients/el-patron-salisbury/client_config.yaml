@@ -1,0 +1,70 @@
+# Client Configuration - El Patrón
+# Generated: 2026-01-08
+
+client:
+  name: "El Patrón"
+  slug: "el-patron-salisbury"
+  status: "active"
+  industry: "Food & Beverage - Mexican Restaurant"
+  sub_industry: "Casual Dining"
+  location:
+    city: "Salisbury"
+    state: "North Carolina"
+    country: "United States"
+
+  # Business Context
+  positioning: "Casual Mexican dining - authentic meets Tex-Mex"
+  target_audience: "Local families, young professionals"
+
+  # Critical Business Data
+  business_metrics:
+    annual_revenue_2023: "$2.38M"
+    annual_revenue_2024: "$2.36M"
+    annual_revenue_2025: "$1.93M"
+    revenue_decline_3yr: "-$450K (-18.9%)"
+    urgency_level: "CRITICAL"
+
+  # Key Products
+  signature_items:
+    - "ACP (Arroz con Pollo)"
+    - "Cheese Dip"
+    - "Cuervo Margarita Jumbo"
+    - "Cheerwine Margarita"
+
+  # Key Challenges
+  challenges:
+    - "18% revenue decline in 2025"
+    - "Bar sales down $157K in 3 years"
+    - "Menu bloat: 330+ items (need to cut to ~180)"
+    - "Dine-in traffic declining"
+
+  # Opportunities
+  opportunities:
+    - "To-go orders growing (25% of sales)"
+    - "Catering untapped (only 4% of sales)"
+    - "Bar/Happy Hour revival potential"
+    - "Menu optimization for efficiency"
+
+# Extensions
+extensions:
+  agents: []
+  templates: []
+  knowledge:
+    - "mexican_casual_dining_trends.md"
+
+# Platform Priority
+platforms:
+  priority:
+    - "facebook"      # Local awareness
+    - "instagram"     # Visual food content
+    - "google_business" # Local SEO critical
+
+# Content Strategy Defaults
+overrides:
+  content:
+    primary_format: "short_form_video"
+    default_length: "short"
+    style: "local_community_focused"
+  tone:
+    primary: "warm_welcoming"
+    secondary: "authentic_family"

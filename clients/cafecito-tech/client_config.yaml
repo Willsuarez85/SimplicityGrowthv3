@@ -1,0 +1,216 @@
+# Cafecito Tech - Client Configuration
+# Event Series: Monthly Tech Networking for Latino Professionals
+# Last Updated: 2026-01-10
+
+# ============================================
+# CLIENT IDENTITY
+# ============================================
+client:
+  name: "Cafecito Tech"
+  slug: "cafecito-tech"
+  type: "event_series"
+  industry: "events_community"
+  status: "onboarding"
+  parent_organization: "Link Foundation"
+  program: "Community InLink"
+  location:
+    city: "Charlotte"
+    state: "NC"
+    country: "USA"
+
+# ============================================
+# EVENT-SPECIFIC CONTEXT
+# ============================================
+event_series:
+  format: "monthly_networking"
+  frequency: "monthly"
+  target_audience:
+    primary: "Latino tech professionals"
+    secondary: "Tech-curious professionals seeking career transition"
+    tertiary: "Companies seeking diverse tech talent"
+
+  success_metrics:
+    - "event_attendance"
+    - "attendance_growth_rate"
+    - "sponsor_funding_secured"
+    - "professional_database_growth"
+    - "linkedin_engagement"
+    - "email_list_growth"
+
+  kpis:
+    attendance_target: "TBD"
+    sponsor_target: "TBD"
+    database_growth: "TBD"
+    engagement_rate: "TBD"
+
+# ============================================
+# CONTENT OVERRIDES
+# ============================================
+overrides:
+  content:
+    default_length: "short"  # Event promos are concise
+    primary_format: "carousel_post"  # LinkedIn/Instagram carousels
+    secondary_format: "short_video"  # Event highlights, testimonials
+
+  platforms:
+    priority:
+      - "linkedin"     # Primary: Professional networking
+      - "instagram"    # Secondary: Community vibes
+      - "email"        # Direct: Attendee/sponsor comms
+
+    linkedin:
+      focus: "event_promotion"
+      content_types:
+        - "event_announcements"
+        - "speaker_spotlights"
+        - "sponsor_features"
+        - "attendee_testimonials"
+        - "linkedin_events_feature"
+
+    instagram:
+      focus: "community_building"
+      content_types:
+        - "event_highlights"
+        - "behind_the_scenes"
+        - "attendee_spotlights"
+        - "cultural_moments"
+        - "stories_for_engagement"
+
+  tone:
+    professional_context: "warm_professional"  # LinkedIn
+    community_context: "authentic_casual"      # Instagram
+    bilingual_approach: "natural_code_switching"
+
+  language:
+    primary: "english"
+    secondary: "spanish"
+    code_switching: true
+    translation_required: false  # Natural bilingual, not translated posts
+
+# ============================================
+# BRAND CONTEXT
+# ============================================
+brand_context:
+  parent_visual_identity:
+    primary_color: "#FF6B35"  # Link Foundation orange
+    relationship: "informed_by_not_constrained"
+
+  event_positioning:
+    unique_value: "TBD - awaiting brand DNA"
+    competitive_advantage: "TBD - awaiting market research"
+
+  cultural_authenticity:
+    latino_identity: "central_but_inclusive"
+    professional_credibility: "essential"
+    community_warmth: "differentiator"
+
+# ============================================
+# EXTENSIONS
+# ============================================
+extensions:
+  agents: []  # Event-specific agents TBD
+  templates: []  # Event-specific templates TBD
+  knowledge: []  # Event industry knowledge TBD
+
+  # Potential future extensions:
+  # - event-promotion-specialist.md (LinkedIn Events expert)
+  # - community-engagement-specialist.md (Instagram community builder)
+  # - sponsor-relations-agent.md (Sponsor content & reporting)
+
+# ============================================
+# WORKFLOW PREFERENCES
+# ============================================
+workflow:
+  research_phase:
+    focus_areas:
+      - "competing_tech_events"
+      - "linkedin_event_promotion_trends"
+      - "instagram_community_building"
+      - "bilingual_professional_content"
+
+  strategy_phase:
+    priority_deliverables:
+      - "event_brand_identity"
+      - "content_calendar_template"
+      - "sponsor_value_proposition"
+      - "attendee_journey_map"
+
+  creative_phase:
+    primary_assets:
+      - "event_announcement_templates"
+      - "speaker_spotlight_templates"
+      - "attendee_testimonial_templates"
+      - "sponsor_feature_templates"
+
+# ============================================
+# TEAM & STAKEHOLDERS
+# ============================================
+stakeholders:
+  client_contact:
+    name: "TBD"
+    role: "TBD"
+    email: "TBD"
+
+  decision_makers:
+    - role: "TBD"
+      approval_areas: ["brand", "content", "sponsors"]
+
+# ============================================
+# DELIVERABLES PREFERENCES
+# ============================================
+deliverables:
+  format_preferences:
+    brand_package: "pdf"
+    content_calendar: "notion"
+    creative_assets: "canva_editable"
+    sponsor_reports: "pdf"
+
+  review_cycle:
+    standard: "TBD"
+    rush: "TBD"
+
+# ============================================
+# NOTES
+# ============================================
+notes: |
+  Event Series Client Notes:
+
+  - This is NOT a product/service client - success metrics focus on attendance,
+    engagement, and community growth, not direct sales conversions
+
+  - Bilingual approach is natural code-switching, not translation. Content should
+    feel authentic to bilingual professionals, not like translated corporate speak
+
+  - Parent organization (Link Foundation) provides visual foundation but event
+    series has room for unique brand expression within that framework
+
+  - Platform strategy differs from typical clients:
+    * LinkedIn = Professional credibility + event promotion
+    * Instagram = Community vibes + cultural authenticity
+    * Email = Direct communication (not social media focused)
+
+  - Content should balance:
+    * Professional credibility (we're serious about tech careers)
+    * Cultural authenticity (we get the Latino professional experience)
+    * Community warmth (this is your tribe, not just networking)
+
+# ============================================
+# STATUS
+# ============================================
+status:
+  current_phase: "setup"
+  onboarding_date: "2026-01-10"
+  folder_structure: "complete"
+  memory_entities: "pending"
+  brand_dna: "pending"
+  content_strategy: "pending"
+  active_campaigns: []
+
+# ============================================
+# VERSION HISTORY
+# ============================================
+version_history:
+  - version: "1.0"
+    date: "2026-01-10"
+    agent: "client-file-architect"
+    changes: "Initial configuration created during setup"
