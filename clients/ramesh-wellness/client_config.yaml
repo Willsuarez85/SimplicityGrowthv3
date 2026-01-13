@@ -1,0 +1,124 @@
+# Ramesh Wellness Coaching - Client Configuration
+# Generated: January 13, 2026
+# Status: Active Client (Post-Validation)
+
+client:
+  name: "Ramesh Wellness Coaching"
+  slug: "ramesh-wellness"
+  industry: "Health & Wellness Coaching"
+  sub_industry: "Menopause & Functional Medicine"
+  location: "United States (Remote/Digital)"
+  language: "en"
+  status: "active"
+  onboarding_date: "2026-01-13"
+
+# Business Context
+business:
+  type: "Personal Brand / Coaching Practice"
+  stage: "MVP Launch"
+  model: "1:1 Coaching + Digital Products"
+
+  target_audience:
+    primary: "Professional women in finance/corporate, ages 50-65"
+    secondary: "Executive women experiencing perimenopause/menopause"
+    psychographic: "High-achievers who want data-driven, science-based solutions"
+
+  services:
+    - name: "12-Week 1:1 Program"
+      price: "$750"
+      primary: true
+    - name: "Single Session"
+      price: "$90-150"
+    - name: "Group Coaching (future)"
+      price: "$300-500"
+    - name: "Digital Products (future)"
+      price: "$50-200"
+
+  positioning:
+    tagline: "Functional Medicine Coaching for Executive Women"
+    big_idea: "Performance Optimization Through Hormonal Health"
+    differentiation:
+      - "Corporate/finance background - speaks their language"
+      - "Functional medicine approach - root cause, not symptoms"
+      - "Data-driven methodology - appeals to analytical minds"
+      - "Executive-friendly - results-oriented, busy schedule aware"
+
+# Brand Identity
+brand:
+  archetype_primary: "Sage"
+  archetype_secondary: "Caregiver"
+
+  personality:
+    - "Knowledgeable but approachable"
+    - "Data-driven yet empathetic"
+    - "Professional but warm"
+    - "Confident without being clinical"
+
+  tone_keywords:
+    - "Evidence-based"
+    - "Empowering"
+    - "Understanding"
+    - "Results-focused"
+    - "Sophisticated"
+
+# Content Strategy
+content:
+  primary_platform: "youtube"
+  secondary_platforms:
+    - "google_ads"
+    - "linkedin"
+    - "instagram"
+
+  content_pillars:
+    - "Menopause Education & Demystification"
+    - "Functional Medicine Approach"
+    - "Corporate Woman's Wellness"
+    - "Hormone Optimization Science"
+    - "Success Stories & Transformations"
+
+  formats:
+    priority:
+      - "youtube_long_form"
+      - "google_ads_landing"
+      - "linkedin_articles"
+    secondary:
+      - "instagram_reels"
+      - "email_newsletter"
+
+# Validated Market Data (from Lean Validation)
+market_validation:
+  date: "2026-01-13"
+  decision: "GO"
+  confidence: "70%"
+
+  search_demand:
+    monthly_searches: "2,500-3,000"
+    avg_cpc: "$4.70"
+    commercial_intent: "HIGH"
+
+  economics:
+    ltv: "$900"
+    cac_blended: "$200-300"
+    ltv_cac_ratio: "3.0-4.5:1"
+
+  competitor_pricing:
+    range: "$650-900 per 12-week program"
+    validated: true
+
+# Extensions (none needed - standard coaching client)
+extensions:
+  agents: []
+  templates: []
+  knowledge: []
+
+# Overrides
+overrides:
+  content:
+    default_length: "medium"
+    primary_format: "youtube"
+  platforms:
+    priority:
+      - "youtube"
+      - "google"
+      - "linkedin"
+      - "instagram"
