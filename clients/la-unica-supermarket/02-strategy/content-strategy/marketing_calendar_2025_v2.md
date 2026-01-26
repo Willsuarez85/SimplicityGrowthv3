@@ -1,5 +1,5 @@
-# Calendario de Marketing 2025 - La Única Supermarket
-## Versión 2.0 (Corregida)
+# Calendario de Marketing 2025-2026 - La Única Supermarket
+## Versión 3.0 (Actualizado Q1-Q2 2026)
 
 > **Cliente:** La Única Supermarket Internacional
 > **Ubicación:** Independence Ave, Charlotte, NC
@@ -22,12 +22,14 @@
 
 | Mes | Promoción | Fechas | Departamentos Focus |
 |-----|-----------|--------|---------------------|
-| Enero | Año Nuevo + Rosca | 1-6 | Comida Preparada, Panadería |
-| Febrero | Super Bowl | 7-9 | Comida Preparada, Carnicería, Bebidas |
-| Feb-Abril | Cuaresma | Mié/Vie | Mariscos, Comida Preparada |
+| Enero | **TAMALES SEASON** + Año Nuevo | Todo el mes | Comida Preparada, Panadería |
+| Febrero | San Valentín (principal) + Super Bowl (reducido) | 1-14 + 5-9 | Comida Preparada, Flores, Panadería |
+| Feb-Abril | **CUARESMA:** Ofertón Camarón, Miércoles Mariscos, Especial Atún | Mié/Vie | Mariscos, Comida Preparada |
 | Abril | ABRILVERSARIO | Todo el mes | Todos (ancla: Carnicería) |
 | Mayo | Día de las Madres | 5-11 | Comida Preparada, Flores, Panadería |
+| Junio | **MUNDIAL** ⚽ | Todo el mes | Comida Preparada, Carnicería |
 | **Siempre** | **CARRITO LOCO** | Activación continua | Registro → Rifa $300 |
+| **Siempre** | **LLEGO Y RESUELVO** | Menú fijo | Comida Preparada |
 
 ---
 
@@ -133,6 +135,31 @@ en comida caliente. Listo para llevar."
 - Sabor de casa sin cocinar
 - Ticket promedio más alto
 
+### 🍽️ LLEGO Y RESUELVO - Menú Base Estandarizado
+
+**Concepto:** Menú fijo todo el año con branding estacional
+> "Llego y resuelvo la comida" - Para familias que necesitan solución rápida
+
+#### Menú Base (Siempre disponible)
+
+| Categoría | Productos |
+|-----------|-----------|
+| **🥩 Proteínas por Libra** | Carnitas, Barbacoa, Costilla (+tortillas, +arroz, +salsa) |
+| **🥟 Antojitos** | Empanadas (docena), Tamales (docena) |
+| **🥑 Acompañamientos** | Guacamole (32 oz), Bandejas de maduros |
+| **🍮 Postres Familiares** | Flan familiar, Tres Leches familiar, Arroz con Leche familiar |
+| **🍞 Panadería** | Pan surtido |
+
+#### Branding Estacional (Mismo menú, diferente sello)
+
+| Temporada | Sello/Theme | Ejemplo Copy |
+|-----------|-------------|--------------|
+| **Navidad/Año Nuevo** | 🎄 Sello Navideño | "LLEGO Y RESUELVO la cena navideña" |
+| **Super Bowl** | 🏈 Sello Game Day | "LLEGO Y RESUELVO el party" |
+| **Día de las Madres** | 💕 Sello Mamá | "LLEGO Y RESUELVO para consentir a mamá" |
+| **Aniversario** | 🎉 Sello Aniversario | "LLEGO Y RESUELVO la celebración" |
+| **Mundial** | ⚽ Sello Mundial | "LLEGO Y RESUELVO el partido" |
+
 ### Productos Estrella por Temporada
 
 | Temporada | Productos Push | Upsell |
@@ -149,6 +176,7 @@ en comida caliente. Listo para llevar."
 | **Almuerzo Express** | Guisado + arroz + tortillas + agua | $9.99 |
 | **Para 2** | 2 guisados + arroz + frijoles + tortillas | $18.99 |
 | **Familiar (4-6)** | 1lb guisado + arroz + frijoles + tortillas + agua galón | $29.99 |
+| **🆕 LLEGO Y RESUELVO** | Proteína por libra + Guacamole 32oz + Tortillas | $XX.XX |
 
 ### Push de Temporada: TAMALES (Enero-Febrero)
 
@@ -207,46 +235,36 @@ Por docena o por pieza.
 
 ---
 
-## 🏈 SUPER BOWL FIESTA
-### 7-9 de Febrero 2025
+## 🏈 SUPER BOWL FIESTA (REDUCIDO)
+### 5-9 de Febrero 2026
 
-**Ancla:** Carnicería (carne asada) + Comida Preparada (para llevar)
+**⚠️ Estrategia 2026:** Reducir inversión - Solo 3 posts de contenido
+- **Feb 5:** Teaser anticipación
+- **Feb 7:** Promoción principal
+- **Feb 9:** Día del partido + promo final
 
-#### Promociones Carnicería
+**Ancla:** Comida Preparada (para llevar) + Carnicería
 
-| Paquete | Contenido | Para Personas |
-|---------|-----------|---------------|
-| **MVP Pack** | Arrachera + Chorizo + Cebollitas | 4-6 |
-| **Tailgate Pack** | Diezmillo + Pollo + Carbón | 6-8 |
-| **Party Pack** | Todo lo anterior + Tortillas | 10-12 |
-
-#### Promociones Comida Preparada
+#### Promoción Principal
 
 | Para Llevar | Descripción | Precio |
 |-------------|-------------|--------|
 | Charola Tacos | 15 tacos surtidos listos | $29.99 |
 | Guacamole XL | 1lb guacamole fresco | $9.99 |
-| Nachos Party | Nachos + queso + jalapeños | $14.99 |
-
-#### Combos Cerveza
-
-| Combo | Incluye | Precio |
-|-------|---------|--------|
-| **Six Pack Fiesta** | 6-pack + Chicharrones | $14.99 |
-| **Paquete Completo** | 12-pack + Guacamole | $24.99 |
+| **LLEGO Y RESUELVO** | Carnitas/Barbacoa por libra + Guacamole 32oz | $XX.XX |
 
 ---
 
 ## 🐟 CUARESMA DEL MAR
 ### Miércoles y Viernes (Marzo-Abril)
 
-**Promoción Principal:**
+**3 Promociones Principales:**
 
-| Oferta | Detalle |
-|--------|---------|
-| **5LB DE MAR** | 5lb Camarón O Pescado a precio especial |
-| **+ REGALO Opción A** | Tortillas (1kg) + Salsa casera GRATIS |
-| **+ REGALO Opción B** | Galletas Saladas + 6 Limones GRATIS |
+| Promoción | Detalle | Frecuencia |
+|-----------|---------|------------|
+| **🦐 OFERTÓN DE CAMARÓN** | 5 libras de camarón + limón + tostadas GRATIS | Semanal |
+| **🐟 MIÉRCOLES DE MARISCOS** | 10% OFF en TODOS los mariscos | Cada miércoles de Cuaresma |
+| **🥫 ESPECIAL DE ATÚN** | 3 latas de atún + Galletas Saladitas GRATIS | Todo Cuaresma |
 
 **Comida Preparada Cuaresma:**
 - Ceviche fresco del día

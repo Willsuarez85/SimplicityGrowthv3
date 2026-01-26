@@ -20,10 +20,10 @@ mcp__memory__open_nodes(["[client-slug]-brand", "[client-slug]-voice", "[client-
 # Create new client folder
 mkdir -p clients/[name]/{01-research/{brand-audit,competitor-analysis,trend-research},02-strategy/{brand-dna,content-strategy},03-creative/{storyboards,scripts,prompts},04-assets/{images,videos,references},05-deliverables/{presentations,handoff-packages}}
 
-# Generate image (best models)
-mcp__fal-ai__ideogram_v3     # Text/diagrams
-mcp__fal-ai__flux_dev        # Fast iteration
-mcp__fal-ai__imagen4         # Hero images
+# Generate image (DEFAULT: Nano Banana Pro via execute_custom_model)
+mcp__fal-ai__execute_custom_model endpoint="fal-ai/nano-banana"  # 🔥 DEFAULT
+mcp__fal-ai__ideogram_v3     # Fallback for text-heavy graphics
+mcp__fal-ai__flux_dev        # Fallback for fast iteration
 
 # Run Simplicity Viewer (visual client dashboard)
 cd simplicity-viewer && npm run dev  # http://localhost:3000
@@ -43,6 +43,148 @@ cd simplicity-viewer && npm run dev  # http://localhost:3000
 | prompts, fal.ai, keyframes | `prompt-asset-engineer` | AI asset generation |
 | folders, organize | `client-file-architect` | File structure |
 | deliver, handoff, PDF | `delivery-documentation-manager` | Final delivery |
+
+---
+
+## 🎯 Anthropic Skills (Installed)
+
+**Location:** `.claude/anthropic-skills/skills/`
+
+### Installation
+```bash
+# Already installed locally. To activate via plugin marketplace:
+/plugin marketplace add anthropics/skills
+/plugin install example-skills@anthropic-agent-skills
+/plugin install document-skills@anthropic-agent-skills
+
+# Or use directly by mentioning:
+"Usa brand-voice para..."
+"Usa content-atomizer para..."
+```
+
+### Marketing & Content Skills (Top Priority)
+
+| Skill | Trigger Words | Use For | Works With Agent |
+|-------|---------------|---------|------------------|
+| **brand-voice** | voice, tone, brand personality | Extract/build voice profiles | `brand-dna-architect` |
+| **positioning-angles** | positioning, angles, hook, why isn't selling | Find 3-5 selling angles | `content-strategist` |
+| **direct-response-copy** | copy, landing page, sales copy | Conversion-focused writing | `creative-director` |
+| **content-atomizer** | atomize, distribute, multi-platform | 1 content → 10+ platform assets | All agents |
+| **lead-magnet** | lead magnet, opt-in, freebie | Create lead magnets that convert | `content-strategist` |
+| **email-sequences** | email sequence, nurture, drip | Design email automation | `content-strategist` |
+| **newsletter** | newsletter, email content | Create engaging newsletters | `content-strategist` |
+| **landing-page** | landing page, conversion page | Build landing page structure | `creative-director` |
+| **keyword-research** | keywords, SEO research | SEO keyword strategy | `trends-platform-analyst` |
+| **seo-content** | SEO content, blog post | SEO-optimized content | `content-strategist` |
+| **orchestrator** | complex project, multiple skills | Coordinate multi-skill workflows | Project management |
+
+### Document Skills (Production)
+
+| Skill | Format | Use For |
+|-------|--------|---------|
+| **docx** | .docx | Word documents (create/edit/track changes) |
+| **pdf** | .pdf | PDF manipulation (extract/merge/split/forms) |
+| **pptx** | .pptx | PowerPoint presentations |
+| **xlsx** | .xlsx | Excel spreadsheets with formulas |
+
+### Creative & Design Skills
+
+| Skill | Use For |
+|-------|---------|
+| **algorithmic-art** | Generative art with p5.js |
+| **canvas-design** | Visual posters and static designs |
+| **frontend-design** | High-quality web interfaces |
+| **slack-gif-creator** | Animated GIFs for Slack |
+| **theme-factory** | Visual theme systems |
+
+### Development & Technical Skills
+
+| Skill | Use For |
+|-------|---------|
+| **mcp-builder** | Create MCP servers (Python/TypeScript) |
+| **skill-creator** | Build custom skills |
+| **web-artifacts-builder** | Complex React + Tailwind artifacts |
+| **webapp-testing** | Playwright testing |
+| **doc-coauthoring** | Technical documentation workflow |
+
+### Enterprise & Communication Skills
+
+| Skill | Use For |
+|-------|---------|
+| **internal-comms** | Corporate internal communications |
+| **brand-guidelines** | Apply Anthropic brand standards |
+
+### Skill + Agent Integration Patterns
+
+```bash
+# Pattern 1: Voice Profile Creation
+1. brand-intelligence-analyst (research)
+2. brand-voice skill (extract voice)
+3. brand-dna-architect (integrate into DNA)
+
+# Pattern 2: Content Campaign
+1. positioning-angles skill (find angles)
+2. content-strategist (strategy + pillars)
+3. direct-response-copy skill (write copy)
+4. content-atomizer skill (10x distribution)
+5. creative-director (final storyboards)
+
+# Pattern 3: Lead Generation
+1. lead-magnet skill (create offer)
+2. landing-page skill (conversion page)
+3. email-sequences skill (nurture flow)
+4. creative-director (design assets)
+
+# Pattern 4: Quick Content
+1. content-atomizer skill (atomize existing)
+2. prompt-asset-engineer (generate assets)
+3. delivery-documentation-manager (package)
+```
+
+### Usage Examples
+
+```bash
+# Extract voice from existing content
+"Usa brand-voice en modo Extract. Analiza estos 5 posts
+de La Única y crea un voice profile completo."
+
+# Find positioning angles
+"Usa positioning-angles para encontrar 5 ángulos
+de posicionamiento para [cliente]."
+
+# Write conversion copy
+"Usa direct-response-copy con el voice profile de [cliente]
+para escribir landing page copy."
+
+# Atomize content for multi-platform
+"Usa content-atomizer para convertir este post en
+assets para Instagram, TikTok, LinkedIn y Twitter."
+
+# Create lead magnet
+"Usa lead-magnet para crear un PDF descargable
+sobre [topic] para [audience]."
+
+# Design landing page
+"Usa landing-page para estructurar una página
+de conversión para [producto/servicio]."
+```
+
+### When to Use Skills vs Agents
+
+| Scenario | Use | Reason |
+|----------|-----|--------|
+| Voice profile from content | **brand-voice skill** | Specialized extraction patterns |
+| Brand identity synthesis | **brand-dna-architect agent** | Multi-source synthesis + memory |
+| Finding angles | **positioning-angles skill** | Angle frameworks library |
+| Content strategy | **content-strategist agent** | Strategic planning + context |
+| Writing copy | **direct-response-copy skill** | Copywriting frameworks |
+| Creative execution | **creative-director agent** | Video-specific storyboards |
+| Multi-platform atomization | **content-atomizer skill** | Platform templates |
+| AI prompt generation | **prompt-asset-engineer agent** | fal.ai integration |
+
+**Rule of Thumb:**
+- Skills = Specialized frameworks & templates
+- Agents = Strategic thinking & synthesis + memory integration
 
 ---
 
@@ -90,16 +232,47 @@ mcp__memory__search_nodes("[client-slug]")
 
 ## fal.ai Quick Reference
 
-### Best Model by Use Case
+### 🔥 MODELO PREDETERMINADO: Nano Banana Pro
 
-| Use Case | Model | Command |
-|----------|-------|---------|
-| Text/diagrams/graphics | Ideogram v3 | `mcp__fal-ai__ideogram_v3` |
-| Fast iteration | FLUX Dev | `mcp__fal-ai__flux_dev` |
-| Hero images | Imagen 4 | `mcp__fal-ai__imagen4` |
-| Premium 4K | Nano Banana Pro | `mcp__fal-ai__nano_banana_pro` |
-| Video from text | Veo 3 | `mcp__fal-ai__veo3` |
-| Video from image | Kling Master | `mcp__fal-ai__kling_master_image` |
+**SIEMPRE usar Nano Banana Pro para generación de imágenes a menos que se especifique otro modelo.**
+
+Nano Banana Pro ofrece calidad premium 4K y requiere `execute_custom_model`:
+
+```bash
+# Comando por defecto para CUALQUIER imagen
+mcp__fal-ai__execute_custom_model
+  endpoint: "fal-ai/nano-banana"
+  input_params: {"prompt": "[tu prompt]", "image_size": "portrait_4_3"}
+  category_hint: "image"
+```
+
+### Modelos por Caso de Uso
+
+| Prioridad | Use Case | Model | Método |
+|-----------|----------|-------|--------|
+| 🥇 DEFAULT | **Todas las imágenes** | Nano Banana Pro | `execute_custom_model` endpoint: `fal-ai/nano-banana` |
+| 🥈 Fallback | Text-heavy graphics | Ideogram v3 | `mcp__fal-ai__ideogram_v3` |
+| 🥉 Fallback | Fast iteration | FLUX Dev | `mcp__fal-ai__flux_dev` |
+| Opcional | Photorealistic | Imagen 4 | `mcp__fal-ai__imagen4` |
+| Video | Text to video | Veo 3 | `mcp__fal-ai__veo3` |
+| Video | Image to video | Kling Master | `mcp__fal-ai__kling_master_image` |
+
+### Protocolo de Generación de Imágenes
+
+```bash
+# Paso 1: SIEMPRE intentar primero con Nano Banana Pro
+mcp__fal-ai__execute_custom_model({
+  "endpoint": "fal-ai/nano-banana",
+  "input_params": {"prompt": "...", "image_size": "portrait_4_3"},
+  "category_hint": "image"
+})
+
+# Paso 2: Si falla, usar Ideogram v3 (mejor para texto)
+mcp__fal-ai__ideogram_v3
+
+# Paso 3: Si falla, usar FLUX Dev (más estable)
+mcp__fal-ai__flux_dev
+```
 
 Assets auto-save to `/generated-assets/`
 

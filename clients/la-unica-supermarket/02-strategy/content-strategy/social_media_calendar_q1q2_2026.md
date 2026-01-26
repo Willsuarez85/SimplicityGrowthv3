@@ -1,10 +1,24 @@
 # Calendario de Redes Sociales Q1-Q2 2026
 ## La Única Supermarket Internacional
 
-**Período:** Enero - Junio 2026  
-**Plataformas:** Instagram (principal), Facebook, TikTok  
-**Frecuencia:** 12-14 posts por mes (mínimo 10)  
+**Período:** Enero - Junio 2026
+**Plataformas:** Instagram (principal), Facebook, TikTok
+**Frecuencia:** 8-12 posts estáticos/carruseles por mes + 4-8 Reels
+**Tipos de Contenido:** UGC, POV, Ads temáticos del mes, Ads de descubrimiento de tienda
 **Voz:** 70% Español | 20% Inglés | 10% Spanglish
+
+---
+
+## 📋 OVERVIEW - Resumen Mensual Q1-Q2 2026
+
+| Mes | Tema Principal | Enfoque de Contenido | Evento Especial |
+|-----|----------------|---------------------|-----------------|
+| **ENERO** | 🫔 **TAMALES SEASON** | Tamales recién hechos, recetas de temporada, delivery de comida preparada | Año Nuevo + Temporada de Tamales |
+| **FEBRERO** | 💕 **SAN VALENTÍN** | Amor, flores, chocolates, postres románticos, recetas en pareja | San Valentín (principal) + Super Bowl (3 posts) |
+| **MARZO** | 🐟 **CUARESMA DEL MAR** | Mariscos, camarón, atún, recetas de Cuaresma | Ofertón Camarón + Miércoles de Mariscos |
+| **ABRIL** | 🎉 **ABRILVERSARIO** | Aniversario de La Única - promociones semanales por departamento | FIESTA EN EL PARKING (Gran Final) |
+| **MAYO** | 💐 **DÍA DE LAS MADRES** | Homenaje a mamá, comida preparada, flores, pasteles | Semana de las Madres (5-11 Mayo) |
+| **JUNIO** | ⚽ **MUNDIAL** | Snacks para partidos, comida para ver el fútbol, reuniones | Copa América / Eurocopa 2026 |
 
 ---
 
@@ -29,6 +43,33 @@
 | Produce | 2-3 posts | Frescura, frutas de temporada |
 | Tortillería | 1-2 posts | Tortillas recién hechas |
 | Supermercado | 2-3 posts | Productos importados, ofertas |
+| **Comida Preparada** | **2-3 posts** | **Menú listo para llevar, "Llego y resuelvo"** |
+
+---
+
+### 🍽️ COMIDA PREPARADA - Menú Base
+
+**Concepto:** "Llego y Resuelvo la Comida" - Comida lista para familias y fines de semana
+
+**Menú Estandarizado (todo el año):**
+| Categoría | Productos | Formato |
+|-----------|-----------|---------|
+| **Postres Familiares** | Flan, Tres Leches, Arroz con Leche | Tamaño familiar |
+| **Antojitos** | Empanadas (docena), Tamales (docena), Bandejas de Maduros | Por docena/bandeja |
+| **Acompañamientos** | Guacamole (32 oz), Pan Surtido | Listos para servir |
+
+**Proteínas por Libra:**
+| Proteína | Formato | Add-ons opcionales |
+|----------|---------|-------------------|
+| Carnitas | Por libra | +Tortillas, +Arroz, +Salsa |
+| Barbacoa | Por libra | +Tortillas, +Arroz, +Salsa |
+| Costilla | Por libra | +Tortillas, +Arroz, +Salsa |
+
+**Branding Estacional (mismo menú, diferente "sello"):**
+- 🎄 **Navidad/Año Nuevo:** "Cena Navideña La Única"
+- 🏈 **Super Bowl:** "Game Day Packs La Única"
+- 🎉 **Aniversario:** "Fiesta Aniversario La Única"
+- ⚽ **Mundial:** "Paquete Mundialista La Única"
 
 ---
 
@@ -57,149 +98,193 @@
 
 ## ENERO 2026
 
-### Tema del Mes: "Año Nuevo, Tradiciones de Siempre"
+### Tema del Mes: "Temporada de Tamales y Tradición"
+**Enfoque Principal:** TAMALES + Contenido variado (recetas, delivery, trends, comerciales)
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| Ene 1 | Feliz Año Nuevo | Reel | Comunidad | General | "¡Feliz 2026 desde el corazón de las Carolinas!" |
-| Ene 2 | Menudo para la cruda | Reel | Tradición | Taquería | "El remedio de los abuelos nunca falla 🍲" |
-| Ene 4 | Preparando Rosca | Behind-scenes | Frescura | Panadería | "Así preparamos tu Rosca de Reyes..." |
-| Ene 5 | Rosca disponible | Carousel | Tradición | Panadería | "Mañana es Día de Reyes 👑 ¿Ya tienes tu Rosca?" |
-| Ene 6 | Día de Reyes | Reel | Tradición | Panadería | "¡Feliz Día de Reyes! La tradición continúa 🎁" |
-| Ene 8 | Cortes de la semana | Reel | Frescura | Carnicería | "Cortes frescos, cortados hoy para ti 🥩" |
-| Ene 11 | Frutas de temporada | Carousel | Frescura | Produce | "Naranjas, mandarinas, toronjas... vitamin C season 🍊" |
-| Ene 15 | Tamales Candelaria promo | Reel | Tradición | Taquería | "¿Sacaste el niño? Los tamales te esperan Feb 2 🫔" |
-| Ene 18 | Pan dulce Saturday | Reel | Tu Cocina | Panadería | "Sábado de pan dulce y cafecito ☕" |
-| Ene 22 | Carnicería spotlight | Reel | Frescura | Carnicería | "Conoce a Don Manuel, 15 años cortando calidad 🔪" |
-| Ene 25 | Receta pozole | Reel | Tu Cocina | Supermercado | "Pozole rojo para calentar el invierno ❄️" |
-| Ene 28 | Tortillas frescas | Reel | Frescura | Tortillería | "Recién salidas del comal, así de fresh 🫓" |
-| Ene 31 | Febrero preview | Story | Comunidad | General | "Febrero viene con todo: Candelaria, Super Bowl, amor 💕" |
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| Ene 1 | Feliz Año Nuevo | Reel | UGC | Comunidad | General | "¡Feliz 2026 desde el corazón de las Carolinas!" |
+| Ene 3 | **TAMALES para Reyes** | Reel | Ad Temático | Tradición | Comida Preparada | "Este 6 de enero no pueden faltar los tamales 🫔 ¡Encarga los tuyos!" |
+| Ene 4 | Rosca de Reyes disponible | Carousel | Ad Temático | Tradición | Panadería | "Mañana es Día de Reyes 👑 ¿Ya tienes tu Rosca y tus TAMALES?" |
+| Ene 6 | Día de Reyes | Reel | UGC | Tradición | Panadería | "¡Feliz Día de Reyes! Rosca + Tamales = tradición completa 🎁🫔" |
+| Ene 8 | **RECETA: Salsa verde para tamales** | Reel | Trend | Tu Cocina | Comida Preparada | "La salsa perfecta para tus tamales 🌶️ Receta fácil en 3 pasos" |
+| Ene 11 | **COMERCIAL: Tour por la tienda** | Reel | Ad Descubrimiento | Frescura | General | "Conoce TODA la tienda en 60 segundos 🛒 Carnicería, Taquería, Panadería..." |
+| Ene 15 | **TAMALES Candelaria promo** | Reel | Ad Temático | Tradición | Comida Preparada | "¿Sacaste el niño? Los TAMALES para Candelaria te esperan Feb 2 🫔" |
+| Ene 18 | **DELIVERY: Llego y Resuelvo** | Carousel | Ad Descubrimiento | Tu Cocina | Comida Preparada | "🍽️ ¿No tienes tiempo? Te lo llevamos: Carnitas, Tamales, Postres familiares 🚗" |
+| Ene 20 | **TREND: POV Comprando en La Única** | Reel | Trend/POV | Comunidad | General | "POV: Tu mamá te manda al súper y terminas con el carrito lleno 😂🛒" |
+| Ene 22 | **RECETA: Atole de champurrado** | Carousel | Tu Cocina | Tradición | Panadería | "El acompañante perfecto para los tamales 🍫☕ Receta casera" |
+| Ene 25 | Carnicería spotlight | Reel | UGC | Frescura | Carnicería | "Conoce a Don Manuel, 15 años cortando calidad 🔪" |
+| Ene 28 | **Pedidos de TAMALES Candelaria** | Reel | Ad Temático | Tradición | Comida Preparada | "Solo 5 días para Candelaria 🫔 ¡Haz tu pedido de tamales AHORA!" |
 
-**Total Enero: 13 posts**
+**Total Enero: 12 posts (6 carruseles + 6 Reels)**
+**Contenido diversificado:** 4 Tamales, 2 Recetas, 2 Trends/POV, 2 Ads Delivery/Comerciales, 2 UGC
 
 ---
 
 ## FEBRERO 2026
 
-### Tema del Mes: "Amor, Tradición y Touchdown"
+### Tema del Mes: "El Mes del Amor"
+**Enfoque Principal:** SAN VALENTÍN - Amor, flores, chocolates, postres, recetas románticas
+**Secundario:** Super Bowl (REDUCIDO a 3 posts), Candelaria, inicio Cuaresma
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| Feb 1 | Cuenta regresiva Candelaria | Reel | Tradición | Taquería | "1 día para los tamales 🫔 ¿Listos?" |
-| Feb 2 | Día de la Candelaria | Reel | Tradición | Taquería | "¡Hoy es día de tamales! Quien sacó el niño... ya sabe 👶" |
-| **Feb 5** | **Super Bowl prep** | **Reel** | **Comunidad** | **Carnicería** | **"Game day se acerca 🏈 Tu parrillada te espera"** |
-| **Feb 7** | **Super Bowl snacks** | **Carousel** | **Tu Cocina** | **Supermercado** | **"Alitas, nachos, guacamole... todo para el Big Game 🏈"** |
-| **Feb 8** | **Super Bowl Sunday** | **Reel** | **Comunidad** | **Carnicería** | **"¡Feliz Super Bowl! La mejor carne para la mejor fiesta 🏈🥩"** |
-| Feb 10 | Post-game / Pre-Valentine | Story | Comunidad | General | "Del football al amor... San Valentín viene 💕" |
-| Feb 12 | San Valentín menu ideas | Carousel | Tu Cocina | Carnicería | "Cena romántica en casa: ribeye + camarones 🦐❤️" |
-| Feb 14 | San Valentín | Reel | Tradición | Panadería | "El amor sabe mejor con pastel 🎂💕" |
-| Feb 17 | Martes de Cuaresma preview | Reel | Tradición | Supermercado | "Mañana inicia Cuaresma 🐟 Mariscos frescos te esperan" |
-| Feb 18 | Miércoles de Ceniza | Reel | Tradición | Supermercado | "Inicia Cuaresma: mariscos frescos todos los días 🐟" |
-| Feb 20 | Viernes de Cuaresma 1 | Reel | Tradición | Supermercado | "Primer viernes de vigilia: ceviche, camarones, tilapia 🦐" |
-| Feb 22 | Receta capirotada | Reel | Tu Cocina | Panadería | "Capirotada: el postre de Cuaresma que tu abuela hacía 🍞" |
-| Feb 25 | Paquete Cuaresma | Carousel | Frescura | Supermercado | "Paquete Cuaresma La Única: todo para tu vigilia 🐟" |
-| Feb 27 | Viernes de Cuaresma 2 | Reel | Tradición | Supermercado | "Viernes de mariscos frescos 🦐 ¿Qué vas a preparar?" |
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| Feb 1 | Cuenta regresiva Candelaria | Reel | UGC | Tradición | Comida Preparada | "1 día para los tamales 🫔 ¡Últimos pedidos!" |
+| Feb 2 | Día de la Candelaria + TAMALES | Reel | Ad Temático | Tradición | Comida Preparada | "¡Hoy es día de tamales! Quien sacó el niño... ya sabe 👶🫔" |
+| Feb 4 | **💕 San Valentín countdown** | Carousel | Ad Temático | Tu Cocina | General | "10 días para San Valentín 💕 ¿Ya planeaste tu cena romántica?" |
+| **Feb 5** | **🏈 Super Bowl prep** | **Reel** | **Ad Temático** | **Comunidad** | **Carnicería** | **"Game day en 3 días 🏈 Carne premium para tu parrillada"** |
+| Feb 7 | **💕 Flores y chocolates** | Carousel | Ad Descubrimiento | Tu Cocina | Supermercado | "Flores frescas + chocolates importados 🌹🍫 Todo para tu San Valentín" |
+| **Feb 8** | **🏈 Super Bowl Sunday** | **Reel** | **Ad Temático** | **Comunidad** | **Carnicería** | **"¡Feliz Super Bowl! La mejor carne para el Big Game 🏈🥩"** |
+| **Feb 9** | **🏈 Super Bowl snacks** | **Carousel** | **Ad Temático** | **Tu Cocina** | **Supermercado** | **"Alitas, nachos, guac... ¡Hoy es el día! 🏈"** |
+| Feb 10 | **💕 Receta cena romántica** | Reel | POV | Tu Cocina | Carnicería | "POV: Preparas cena de San Valentín con ribeye y camarones 🦐❤️" |
+| Feb 12 | **💕 Postres para el amor** | Carousel | Ad Descubrimiento | Tu Cocina | Panadería | "Tres Leches, Flan, pasteles... endulza tu San Valentín 🎂💕" |
+| Feb 14 | **💕 SAN VALENTÍN** | Reel | UGC | Tradición | Panadería | "¡Feliz San Valentín! El amor sabe mejor en La Única 💕🎂" |
+| Feb 18 | Miércoles de Ceniza | Reel | Ad Temático | Tradición | Supermercado | "Inicia Cuaresma 🐟 Mariscos frescos para tu vigilia" |
+| Feb 20 | Viernes de Cuaresma 1 | Carousel | Ad Temático | Tradición | Supermercado | "Primer viernes de vigilia: ceviche, camarones, tilapia 🦐" |
 
-**Total Febrero: 14 posts**
+**Total Febrero: 12 posts (7 estáticos/carruseles + 5 Reels)**
+**Posts San Valentín: 6 (enfoque principal)**
+**Posts Super Bowl: 3 (REDUCIDO - solo lo esencial)**
 
 ---
 
 ## MARZO 2026
 
 ### Tema del Mes: "Cuaresma en Familia"
+**Enfoque Principal:** CUARESMA - Mariscos, Atún, promociones especiales
+**Promociones Activas:**
+- 🦐 **Ofertón de Camarón:** 5 libras + limón + tostadas GRATIS
+- 🐟 **Miércoles de Mariscos:** 10% OFF en mariscos todos los miércoles
+- 🥫 **Especial de Atún:** 3 latas de atún + Galletas Saladitas GRATIS
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| Mar 1 | Domingo de mariscos | Reel | Frescura | Supermercado | "Domingo familiar con mariscos frescos 🐟" |
-| Mar 4 | Receta pescado empapelado | Reel | Tu Cocina | Supermercado | "Pescado empapelado: fácil, saludable, delicioso 🐟" |
-| Mar 6 | Viernes de Cuaresma 3 | Reel | Tradición | Supermercado | "Otro viernes, otra receta de mariscos 🦐" |
-| Mar 8 | Día de la Mujer | Reel | Comunidad | General | "Feliz día a todas las mujeres que hacen La Única especial 💜" |
-| Mar 11 | Carnicería midweek | Reel | Frescura | Carnicería | "Miércoles de cortes especiales 🥩" |
-| Mar 13 | Viernes de Cuaresma 4 | Reel | Tradición | Supermercado | "Camarones a la diabla para este viernes 🌶️🦐" |
-| Mar 15 | Pan dulce domingo | Carousel | Tu Cocina | Panadería | "Domingo de conchas, cuernos y orejas 🍞" |
-| Mar 18 | Receta tostadas de ceviche | Reel | Tu Cocina | Supermercado | "Tostadas de ceviche: el snack perfecto de Cuaresma 🥄" |
-| Mar 20 | Viernes de Cuaresma 5 | Reel | Tradición | Supermercado | "Un viernes más de tradición 🐟" |
-| Mar 22 | Frutas de primavera | Carousel | Frescura | Produce | "La primavera llegó con frutas frescas 🍓🥭" |
-| Mar 25 | Tortillería spotlight | Reel | Frescura | Tortillería | "500 tortillas cada hora, hechas aquí mismo 🫓" |
-| Mar 27 | Viernes de Cuaresma 6 | Reel | Tradición | Supermercado | "Casi llegamos a Semana Santa 🐟" |
-| Mar 29 | Preview Semana Santa | Story | Tradición | General | "La próxima semana: Semana Santa 🙏" |
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| Mar 1 | Domingo de mariscos | Reel | UGC | Frescura | Supermercado | "Domingo familiar con mariscos frescos 🐟" |
+| Mar 4 | **🦐 OFERTÓN DE CAMARÓN** | Carousel | Ad Temático | Tradición | Supermercado | "5 LIBRAS de camarón + limón + tostadas GRATIS 🦐🍋 ¡Solo en Cuaresma!" |
+| Mar 6 | Viernes de Cuaresma 3 | Reel | POV | Tradición | Supermercado | "POV: Viernes de vigilia y llegas a La Única por mariscos 🦐" |
+| Mar 8 | Día de la Mujer | Reel | UGC | Comunidad | General | "Feliz día a todas las mujeres que hacen La Única especial 💜" |
+| Mar 11 | **🐟 MIÉRCOLES DE MARISCOS** | Carousel | Ad Temático | Tradición | Supermercado | "¡10% OFF en TODOS los mariscos! Solo los miércoles de Cuaresma 🐟" |
+| Mar 13 | Viernes de Cuaresma 4 | Reel | POV | Tradición | Supermercado | "Camarones a la diabla para este viernes 🌶️🦐" |
+| Mar 15 | **🥫 ESPECIAL DE ATÚN** | Carousel | Ad Temático | Tu Cocina | Supermercado | "3 latas de atún + Galletas Saladitas GRATIS 🥫 ¡Perfecto para Cuaresma!" |
+| Mar 18 | **🐟 MIÉRCOLES DE MARISCOS** | Reel | Ad Temático | Tradición | Supermercado | "Otro miércoles, otro 10% OFF en mariscos 🐟 ¿Qué vas a preparar?" |
+| Mar 20 | Viernes de Cuaresma 5 | Reel | UGC | Tradición | Supermercado | "Un viernes más de tradición 🐟" |
+| Mar 22 | Comida Preparada Familiar | Carousel | Ad Descubrimiento | Tu Cocina | Comida Preparada | "🍽️ LLEGO Y RESUELVO: Carnitas por libra + Empanadas + Postres familiares 🍮🏠" |
+| Mar 25 | **🐟 MIÉRCOLES DE MARISCOS** | Reel | Ad Temático | Tradición | Supermercado | "Último miércoles de marzo con 10% OFF 🐟 ¡Aprovecha!" |
+| Mar 27 | Viernes de Cuaresma 6 + Preview | Reel | POV | Tradición | Supermercado | "Casi llegamos a Semana Santa... prepárate 🐟🙏" |
 
-**Total Marzo: 13 posts**
+**Total Marzo: 12 posts (6 estáticos/carruseles + 6 Reels)**
+**Posts Promociones Cuaresma: 5 (Ofertón Camarón, Miércoles Mariscos, Especial Atún)**
 
 ---
 
 ## ABRIL 2026
 
-### Tema del Mes: "Semana Santa y Nuevos Comienzos"
+### Tema del Mes: "Semana Santa + ABRILVERSARIO 🎉"
+**Enfoque Principal:**
+1. **SEMANA SANTA** (1ra-2da semana) - Cierre de Cuaresma, mariscos, tradición
+2. **ABRILVERSARIO** (todo el mes) - Celebración aniversario con actividades semanales en tienda
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| Abr 1 | Abril comienza | Story | Comunidad | General | "Abril: mes de reflexión, familia y tradición 🌸" |
-| Abr 3 | Viernes de Cuaresma 7 | Reel | Tradición | Supermercado | "Último viernes antes de Semana Santa 🐟" |
-| Abr 5 | Domingo de Ramos | Reel | Tradición | General | "Domingo de Ramos: inicia Semana Santa 🌿" |
-| Abr 8 | Prep Semana Santa | Carousel | Tu Cocina | Supermercado | "Todo lo que necesitas para Semana Santa 🐟🍞" |
-| Abr 10 | Viernes Santo | Reel | Tradición | Supermercado | "Viernes Santo: día de vigilia y reflexión 🙏🐟" |
-| Abr 12 | Domingo de Pascua | Reel | Tradición | General | "¡Felices Pascuas! La familia se reúne 🐣" |
-| Abr 15 | Vuelta a la normalidad | Reel | Frescura | Carnicería | "Terminó Cuaresma... ¡regresa la carne! 🥩" |
-| Abr 18 | Carnicería spotlight | Reel | Frescura | Carnicería | "Arrachera, bistec, costilla... lo extrañamos 🥩" |
-| Abr 22 | Taquería Tuesday | Reel | Tradición | Taquería | "Martes de tacos: 3 por $5 🌮" |
-| Abr 25 | Preview Día del Niño | Carousel | Comunidad | Supermercado | "Este 30: Día del Niño 🧒 Dulces, piñatas, sonrisas" |
-| Abr 28 | Productos mexicanos | Reel | Tradición | Supermercado | "Mazapán, Lucas, Pulparindo... sabores de la infancia 🍬" |
-| Abr 30 | Día del Niño | Reel | Comunidad | Supermercado | "¡Feliz Día del Niño! 🧒🎈 Los pequeños son nuestra alegría" |
+**Promociones Activas (hasta Semana Santa):**
+- 🦐 **Ofertón de Camarón:** 5 libras + limón + tostadas GRATIS (últimos días)
+- 🐟 **Miércoles de Mariscos:** 10% OFF en mariscos (últimos miércoles)
+- 🥫 **Especial de Atún:** 3 latas de atún + Galletas Saladitas GRATIS
 
-**Total Abril: 12 posts**
+**🎉 ABRILVERSARIO - Actividades Semanales en Tienda:**
+| Semana | Tema | Promoción | Actividad en Tienda |
+|--------|------|-----------|---------------------|
+| Semana 1 (Abr 1-5) | 🥩 **SEMANA DE LA CARNICERÍA** | 20% OFF en cortes selectos | Degustación de cortes |
+| Semana 2 (Abr 6-12) | 🥖 **SEMANA PANADERÍA + TORTILLERÍA** | 2x1 en pan dulce | Tortillas recién hechas gratis |
+| Semana 3 (Abr 13-19) | 🌮🥩 **COMBOS TAQUERÍA + CARNICERÍA** | Combo taco + agua especial + ofertas carne | Degustación tacos + muestras carnicería |
+| Semana 4 (Abr 20-26) | 🎊 **FIESTA EN EL PARKING** | Rifas múltiples + premios + descuentos | Música en vivo + Food trucks + Rifas cada hora |
+
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| Abr 1 | **🎉 ARRANCA ABRILVERSARIO + Semana Carnicería** | Carousel | Ad Temático | Comunidad | Carnicería | "¡ABRILVERSARIO! 🎉 Semana 1: CARNICERÍA 20% OFF en cortes selectos 🥩" |
+| Abr 3 | Viernes de Cuaresma FINAL | Reel | POV | Tradición | Supermercado | "POV: Último viernes de vigilia antes de Semana Santa 🐟🙏" |
+| Abr 5 | Domingo de Ramos | Reel | UGC | Tradición | General | "Domingo de Ramos: inicia Semana Santa 🌿" |
+| Abr 6 | **🥖 SEMANA 2: PANADERÍA + TORTILLERÍA** | Carousel | Ad Temático | Comunidad | Panadería | "🎉 Abrilversario Semana 2: 2x1 en PAN DULCE 🥖 + Tortillas recién hechas" |
+| Abr 8 | Prep Semana Santa | Carousel | Ad Descubrimiento | Tu Cocina | Supermercado | "Todo lo que necesitas para Semana Santa 🐟🍞" |
+| Abr 10 | Viernes Santo | Reel | UGC | Tradición | Supermercado | "Viernes Santo: día de vigilia y reflexión 🙏🐟" |
+| Abr 12 | Domingo de Pascua | Reel | UGC | Tradición | General | "¡Felices Pascuas! La familia se reúne 🐣" |
+| Abr 13 | **🌮🥩 SEMANA 3: COMBOS TAQUERÍA + CARNICERÍA** | Carousel | Ad Temático | Comunidad | Taquería + Carnicería | "🎉 Abrilversario Semana 3: Combo TACO + AGUA especial 🌮 + Ofertas en Carnicería 🥩" |
+| Abr 15 | **🥩 Regresa la carne** | Reel | Ad Descubrimiento | Frescura | Carnicería | "Terminó Cuaresma... ¡regresa la carne! 🥩 Arrachera, bistec, costilla" |
+| Abr 18 | Comida Preparada Familiar | Carousel | Ad Descubrimiento | Tu Cocina | Comida Preparada | "🍽️ LLEGO Y RESUELVO: Barbacoa + Costilla por libra, Guacamole 32oz, Postres 🥟🍮" |
+| Abr 20 | **🎊 SEMANA 4: FIESTA EN EL PARKING** | Carousel | Ad Temático | Comunidad | General | "🎉 ¡ÚLTIMA SEMANA! FIESTA EN EL PARKING este sábado: Música en vivo + Rifas + Food trucks" |
+| Abr 22 | Countdown FIESTA EN EL PARKING | Reel | POV | Comunidad | General | "POV: Faltan 3 días para la FIESTA EN EL PARKING 🎉 Rifas cada hora + Música en vivo" |
+| Abr 25 | **🎊 SÁBADO ABRILVERSARIO - FIESTA EN EL PARKING** | Reel | UGC | Comunidad | General | "¡HOY ES EL DÍA! 🎉 FIESTA EN EL PARKING: Rifas cada hora + Música en vivo + Food trucks. ¡Te esperamos!" |
+| Abr 30 | Día del Niño | Reel | UGC | Comunidad | Supermercado | "¡Feliz Día del Niño! 🧒🎈 Los pequeños son nuestra alegría" |
+
+**Total Abril: 14 posts (6 estáticos/carruseles + 8 Reels)**
+**Posts ABRILVERSARIO: 6 (semanales + gran final)**
+**Posts Semana Santa/Cuaresma: 5 (cierre de temporada)**
+**Posts Comida Preparada: 1**
 
 ---
 
 ## MAYO 2026
 
-### Tema del Mes: "Celebraciones de Mayo"
+### Tema del Mes: "El Mes de Mamá 💕"
+**Enfoque Principal:** DÍA DE LAS MADRES (Mexicano 10 de Mayo + Internacional 11 de Mayo)
+**Secundario:** Cinco de Mayo (reducido), Memorial Day parrilladas
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| May 1 | Día del Trabajo | Reel | Comunidad | General | "Feliz día a todos los trabajadores 💪" |
-| May 2 | Cinco de Mayo prep | Carousel | Tradición | Carnicería | "Carnitas, barbacoa, birria... ¿qué vas a preparar? 🇲🇽" |
-| May 4 | Cinco de Mayo eve | Reel | Tradición | Supermercado | "Mañana celebramos 🇲🇽 ¿Ya tienes todo listo?" |
-| May 5 | Cinco de Mayo | Reel | Tradición | Carnicería | "¡Viva México! 🇲🇽 Celebra con auténtico sabor" |
-| May 6 | Post-Cinco recap | Story | Comunidad | General | "Gracias por celebrar con nosotros 🇲🇽" |
-| May 8 | Día de las Madres prep | Carousel | Tradición | Panadería | "Este domingo es Día de las Madres 💐 Pasteles, flores, amor" |
-| May 9 | Flores para mamá | Reel | Tradición | General | "Las flores más frescas para la mujer más especial 💐" |
-| May 10 | Día de las Madres | Reel | Tradición | Panadería | "¡Feliz Día Mamá! 💕 Gracias por todo" |
-| May 13 | Carnicería midweek | Reel | Frescura | Carnicería | "Cortes especiales para mitad de semana 🥩" |
-| May 16 | Receta carne asada | Reel | Tu Cocina | Carnicería | "La carne asada perfecta: tips del carnicero 🥩🔥" |
-| May 20 | Frutas de verano preview | Carousel | Frescura | Produce | "Se acerca el verano: mangos, sandía, melón 🍉" |
-| May 23 | Taquería Saturday | Reel | Tradición | Taquería | "Sábado de antojitos: tacos, gorditas, sopes 🌮" |
-| May 27 | Parrillada prep | Reel | Tu Cocina | Carnicería | "Memorial Day weekend = parrillada time 🥩🔥" |
-| May 30 | Preview Junio/Mundial | Story | Comunidad | General | "Junio viene con todo: Día del Padre y... ¡EL MUNDIAL! ⚽🇲🇽" |
+> **Nota:** En 2026, celebramos DOS Días de las Madres:
+> - **10 de Mayo (Domingo)** - Día de las Madres MEXICANO (tradición fija)
+> - **11 de Mayo (Lunes)** - Día de las Madres INTERNACIONAL (2do domingo de mayo)
+> ¡Doble oportunidad para consentir a mamá!
 
-**Total Mayo: 14 posts**
+**💐 Estrategia Día de las Madres:**
+- Semana completa de contenido (May 5-11)
+- Push fuerte: Flores, pasteles decorados, comida preparada
+- Mensaje: "Mamá no cocina este día"
+- Combo especial: Ramo + Pastel + Charola comida
+
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| May 1 | Día del Trabajo | Reel | UGC | Comunidad | General | "Feliz día a todos los trabajadores 💪" |
+| May 3 | **🇲🇽 CINCO DE MAYO** | Reel | UGC | Tradición | Carnicería | "¡Viva México! 🇲🇽 Celebra con auténtico sabor mexicano" |
+| May 5 | **💐 Countdown Día de las Madres** | Carousel | Ad Temático | Tradición | Flores | "¡5 días para consentir a mamá! 💐 Ya llegaron las flores frescas" |
+| May 6 | Pasteles para mamá | Reel | Ad Descubrimiento | Tu Cocina | Panadería | "Pasteles decorados 'MAMÁ' 🎂💕 ¡Haz tu pedido!" |
+| May 7 | **💕 Que mamá NO cocine** | Carousel | Ad Temático | Tradición | Comida Preparada | "Este fin de semana mamá NO cocina 🍽️ LLEGO Y RESUELVO: Mole, pozole, birria, carnitas" |
+| May 8 | Combo Día de las Madres | Reel | POV | Tu Cocina | General | "POV: Vienes a armar el combo perfecto para mamá 💐🎂🍽️ Ramo + Pastel + Comida = $59.99" |
+| May 9 | **💐 Último día para pedidos** | Carousel | Ad Temático | Comunidad | Panadería | "⚠️ ¡ÚLTIMO DÍA! Haz tu pedido de pastel y flores para mañana" |
+| May 10 | **💕 DÍA DE LAS MADRES MEXICANO** | Reel | UGC | Tradición | General | "¡FELIZ 10 DE MAYO! 💕🇲🇽 A todas las mamás, GRACIAS por todo" |
+| May 11 | **💕 DÍA DE LAS MADRES INTERNACIONAL** | Reel | UGC | Tradición | General | "¡Feliz Día de las Madres! 💕🌎 Segundo domingo de mayo, amor universal" |
+| May 15 | Carnicería spotlight | Reel | Ad Descubrimiento | Frescura | Carnicería | "De regreso a la rutina: cortes especiales para la semana 🥩" |
+| May 20 | Frutas de verano | Carousel | Ad Descubrimiento | Frescura | Produce | "Se acerca el verano: mangos, sandía, melón 🍉" |
+| May 27 | **Memorial Day parrillada** | Reel | Ad Temático | Tu Cocina | Carnicería | "Memorial Day weekend = parrillada time 🥩🔥" |
+| May 30 | Preview Junio/Mundial | Reel | Ad Temático | Comunidad | General | "Junio viene con todo: Día del Padre y... ¡EL MUNDIAL! ⚽🇲🇽" |
+
+**Total Mayo: 13 posts (5 estáticos/carruseles + 8 Reels)**
+**Posts Día de las Madres: 7 (semana completa May 5-11)**
+**Posts Cinco de Mayo: 1 (reducido)**
+**Posts Comida Preparada: 2**
 
 ---
 
 ## JUNIO 2026
 
 ### Tema del Mes: "Papá, Parrillada y ¡MUNDIAL! ⚽"
+**Enfoque Principal:** MUNDIAL FIFA 2026 (USA-México-Canadá) + Día del Padre
+**Secundario:** Verano, parrilladas, frutas de temporada
 
-| Fecha | Contenido | Formato | Pilar | Departamento | Caption Hook |
-|-------|-----------|---------|-------|--------------|--------------|
-| Jun 1 | Bienvenido Junio | Reel | Comunidad | General | "Junio: mes del papá, el verano y ¡EL MUNDIAL! ⚽🇲🇽" |
-| Jun 3 | Frutas de verano | Carousel | Frescura | Produce | "Mango, sandía, piña... el verano llegó 🥭🍉" |
-| Jun 6 | Carnicería parrillera | Reel | Frescura | Carnicería | "Temporada de parrilla: los mejores cortes aquí 🥩🔥" |
-| **Jun 9** | **Mundial countdown** | **Reel** | **Comunidad** | **Supermercado** | **"2 días para el Mundial ⚽ ¿Ya tienes las botanas?"** |
-| **Jun 10** | **Mundial prep** | **Carousel** | **Tu Cocina** | **Carnicería** | **"Parrillada mundialista: todo lo que necesitas 🥩⚽"** |
-| **Jun 11** | **Inauguración Mundial** | **Reel** | **Comunidad** | **General** | **"¡ARRANCA EL MUNDIAL! ⚽🇲🇽 USA-México-Canadá 2026"** |
-| Jun 13 | Día del Padre prep | Carousel | Tradición | Carnicería | "Este domingo: Día del Padre 👨 Parrillada para papá" |
-| **Jun 14** | **México primer partido** | **Reel** | **Comunidad** | **Carnicería** | **"¡HOY JUEGA MÉXICO! ⚽🇲🇽 Carne lista, cerveza fría"** |
-| Jun 15 | Día del Padre | Reel | Tradición | Carnicería | "¡Feliz Día Papá! 👨 El rey de la parrilla merece lo mejor" |
-| **Jun 18** | **México segundo partido** | **Reel** | **Comunidad** | **Supermercado** | **"Segundo partido de México ⚽ ¡Vamos con todo!"** |
-| Jun 20 | Summer BBQ tips | Reel | Tu Cocina | Carnicería | "Tips para la parrillada perfecta de verano 🥩☀️" |
-| **Jun 22** | **México tercer partido** | **Reel** | **Comunidad** | **Carnicería** | **"Tercer partido grupal ⚽ ¡A clasificar México!"** |
-| Jun 24 | Micheladas mundialistas | Reel | Tu Cocina | Supermercado | "Michelada perfecta para ver el partido 🍺⚽" |
-| **Jun 26** | **Octavos de final** | **Reel** | **Comunidad** | **General** | **"¡Octavos de final! ⚽ El Mundial se pone bueno"** |
-| Jun 28 | Antojitos para partidos | Carousel | Tu Cocina | Taquería | "Nachos, alitas, tacos... snacks mundialistas 🌮⚽" |
-| Jun 30 | Preview Julio | Story | Comunidad | General | "Julio: ¡El Mundial continúa! Cuartos, semis, final ⚽🏆" |
+| Fecha | Contenido | Formato | Tipo | Pilar | Departamento | Caption Hook |
+|-------|-----------|---------|------|-------|--------------|--------------|
+| Jun 1 | Bienvenido Junio | Reel | UGC | Comunidad | General | "Junio: mes del papá, el verano y ¡EL MUNDIAL! ⚽🇲🇽" |
+| Jun 3 | Frutas de verano | Carousel | Ad Descubrimiento | Frescura | Produce | "Mango, sandía, piña... el verano llegó 🥭🍉" |
+| Jun 6 | Carnicería parrillera | Reel | Ad Descubrimiento | Frescura | Carnicería | "Temporada de parrilla: los mejores cortes aquí 🥩🔥" |
+| **Jun 10** | **⚽ Mundial prep** | **Carousel** | **Ad Temático** | **Tu Cocina** | **Carnicería** | **"Parrillada mundialista: todo lo que necesitas 🥩⚽"** |
+| **Jun 11** | **⚽ INAUGURACIÓN MUNDIAL** | **Reel** | **Ad Temático** | **Comunidad** | **General** | **"¡ARRANCA EL MUNDIAL! ⚽🇲🇽 USA-México-Canadá 2026"** |
+| Jun 13 | **👨 Día del Padre prep** | Carousel | Ad Temático | Tradición | Carnicería | "Este domingo: Día del Padre 👨 Parrillada para papá" |
+| **Jun 14** | **⚽ México primer partido** | **Reel** | **Ad Temático** | **Comunidad** | **Carnicería** | **"¡HOY JUEGA MÉXICO! ⚽🇲🇽 Carne lista, cerveza fría"** |
+| Jun 15 | **👨 DÍA DEL PADRE** | Reel | UGC | Tradición | Carnicería | "¡Feliz Día Papá! 👨 El rey de la parrilla merece lo mejor" |
+| Jun 17 | Comida Preparada Familiar | Carousel | Ad Descubrimiento | Tu Cocina | Comida Preparada | "🍽️ LLEGO Y RESUELVO para el Mundial: Carnitas, Barbacoa por libra + Guac 32oz ⚽🍮" |
+| **Jun 18** | **⚽ México segundo partido** | **Reel** | **Ad Temático** | **Comunidad** | **Supermercado** | **"Segundo partido de México ⚽ ¡Vamos con todo!"** |
+| **Jun 22** | **⚽ México tercer partido** | **Reel** | **Ad Temático** | **Comunidad** | **Carnicería** | **"Tercer partido grupal ⚽ ¡A clasificar México!"** |
+| Jun 28 | Antojitos mundialistas | Carousel | Ad Temático | Tu Cocina | Taquería | "Nachos, alitas, tacos... snacks para el partido 🌮⚽" |
 
-**Total Junio: 16 posts**
+**Total Junio: 12 posts (5 estáticos/carruseles + 7 Reels)**
+**Posts Mundial: 6 (enfoque principal)**
+**Posts Comida Preparada: 1**
 
 ---
 
